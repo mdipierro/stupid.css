@@ -63,8 +63,7 @@
       </div>
     </header>
     <div class="fill relative">
-      <img src="http://data.whicdn.com/images/220248377/large.gif"
-           class="fill"/>
+      <img src="http://data.whicdn.com/images/220248377/large.gif" style="max-height:200px" class="fill"/>
       <div style="left:50%;top:0;color:white;">
         <h1 style="margin-left:-50%">stupid.css</h1>
       </div>
@@ -90,21 +89,24 @@
         <h5>Subsubsubsection <tt>&lt;h5&gt;</tt></h5>
         <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <h2>Buttons</h2>
-        <p>By default buttons are styled. You can style a link as button with the <tt>.btn</tt> class and, optionally, <tt>.rounded</tt> class for rounded corners. Use standard <a href="http://www.w3schools.com/colors/colors_names.asp">html colors names</a> like <tt>.red</tt> to set the background. Foreground and borders are adjusted automatically. You can use the <tt>.pulse</tt> class to catch attention of the users.</p>
-        <div class="center padded">
-          <a class="btn red rounded" href="#">Click me</a>
-          <a class="btn navy rounded" href="#">Click me</a>
-          <a class="btn green rounded" href="#">Click me</a>
-          <a class="btn orange" href="#">Click me</a>
-          <a class="btn white pulse" href="#">Click me</a>
-        </div>     
-        <h2>Lists</h2>
-        <p>Lists do not have bullets but are indented.</p>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
+        <p>By default buttons are styled. You can style a link as button with the <tt>.btn</tt> class and, optionally, <tt>.rounded</tt> class for rounded corners. Use standard <a href="http://www.w3schools.com/colors/colors_names.asp">html colors names</a> like <tt>.red</tt> to set the background. Foreground and borders are adjusted automatically. You can use the <tt>.pulse</tt> class to catch attention of the users. Text color is adjusted automatically based on background color.</p>
+        <div class="center spaced padded">
+          <a class="btn red" href="#"><tt>.btn.red</tt></a>
+          <a class="btn navy" href="#"><tt>.btn.navy</tt></a>
+          <a class="btn green" href="#"><tt>.btn.green</tt></a>
+          <a class="btn orange rounded" href="#"><tt>.btn.orange.rounded</tt></a>
+          <a class="btn white pulse" href="#"><tt>.btn.white.pulse</tt></a>
+        </div>
+        <div class="center spaced padded">
+          <a class="btn small" href="#"><tt>.btn.small</tt></a>
+          <a class="btn" href="#"><tt>.btn</tt> (normal)</a>
+          <a class="btn large purple rounded" href="#"><tt>.btn.large.purple.rounded</tt></a>
+        </div>
+        <div class="center spaced padded">          
+          <a class="btn small oval" href="#"><tt>.btn.small.oval</tt></a>
+          <a class="btn oval" href="#"><tt>.btn.oval</tt> (normal)</a>
+          <a class="btn large oval olive" href="#"><tt>.btn.large.oval.olive</tt></a>
+        </div>
         <h2>Icons</h2>
         <p><a href="stupid.css">Stupid.css</a> does not come with fonts but plays well with <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a>.</p>
         <div class="center">
@@ -141,6 +143,13 @@
             </ul>
           </div>
         </div>
+        <h2>Lists</h2>
+        <p>Lists do not have bullets but are indented.</p>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
         <h2>Tables</h2>
         <p>Tables are also automatically styled. Use <tt>.center</tt> to center the table in the page and <tt>.fill</tt> to fill the page width.</p>
         <table class="center fill">
@@ -243,10 +252,25 @@
           </div>
         </div>
       </div>
+      <div class="container padded center">
+        <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+      </div>
+      <div class="container padded center">
+        <div class="third"><p>A centered <tt>.third</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+      </div>
+      <div class="container padded center">
+        <div class="half"><p>A centered <tt>.half</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+      </div>
+      <div class="container padded center">
+        <div class="twothirds"><p>A centered <tt>.twothird</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+      </div>
+      <div class="container padded center">
+        <div class="threequarters"><p>A centered <tt>.threequarters</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+      </div>
     </main>
     <footer class="black container padded">
       <div class="fill">
-        <p>This is a <tt>.&lt;footer class="black container padded" /&gt;</tt> element. You can use the grid here too.</p>
+        <p>This is a <tt>&lt;footer class="black container padded" /&gt;</tt> element. You can use the grid here too.</p>
       </div>
       <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
       <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>

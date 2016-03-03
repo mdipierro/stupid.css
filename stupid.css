@@ -25,6 +25,9 @@ header, footer {with: 100%;}
 /******** buttons ********/
 .btn, button, [type=button], [type=submit] { padding: 0.5em 1em !important; margin: 0 0.5em 0.5em 0; background-color: #26a69a; color:white;}
 .btn:hover, button:hover, [type=button]:hover, [type=submit]:hover { box-shadow: 0 0 1em #666; text-decoration:none; cursor:pointer;}
+.btn.small, table.btn { padding: 0.25em 0.5em !important; font-size: 0.8em }
+.btn.large { padding: 1em 2em !important; font-size:1.2em;}
+.btn.oval { border-radius:50%}
 
 /******** helpers ********/
 .rounded { -moz-border-radius: 5px; border-radius: 5px; }
@@ -40,6 +43,7 @@ header, footer {with: 100%;}
 .lifted {box-shadow: 0.3em 0.3em 1em #666;}
 .relative {position: relative;}
 .relative>div {position:absolute;}
+.spaced {margin-bottom:20px;margin-top:20px}
 
 /******** forms ********/
 input:not([type]), [type=text], [type=password], [type=file]:before { outline: none; padding: 0.5em 1em; margin: 0.5px; border-bottom: 1px solid #ddd;}
