@@ -240,3 +240,35 @@ a:not(.btn):hover {
 a:not(.btn):hover:after {
   width: 100%;
 }
+
+/********* modal ********/
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);   
+  padding-top: 20vh;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+.modal div {
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal .close:not(.btn) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+.modal .close {
+  transition: all 200ms;
+}
