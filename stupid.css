@@ -216,10 +216,10 @@ ul.menu>li>ul>li:first-child:before{
 }
 
 /********* underline effect ********/
-a:not(.btn) {
+a:not(.btn):not(.noeffect) {
   position: relative;
 }
-a:not(.btn):after {
+a:not(.btn):not(.noeffect):after {
   display: block;
   position: absolute;
   left: 0;
@@ -230,10 +230,10 @@ a:not(.btn):after {
   content: "";
   transition: width 0.2s;
 }
-a:not(.btn):hover {
+a:not(.btn):not(.noeffect):hover {
   color: #26a69a;
 }
-a:not(.btn):hover:after {
+a:not(.btn):not(.noeffect):hover:after {
   width: 100%;
 }
 
