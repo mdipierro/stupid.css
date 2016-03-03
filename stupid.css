@@ -177,11 +177,11 @@ ul.menu.right { float: right }
 ul.menu a { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
 ul.menu li { position:relative; float:left; margin:0; padding:0 }
 ul.menu li:hover { background: rgba(0,0,0,0.1); }
-ul.menu ul { display:none; position:absolute; top:110%; background: white; padding:0; z-index: 1000 }
+ul.menu ul { visibility:hidden; opacity:0;  position:absolute; top:110%; background: white; padding:0; z-index: 1000; transition:visibility 0s linear 0.2s, opacity 0.2s linear;}
 ul.menu ul li { float:none; width:200px }
 ul.menu ul a { padding:10px 15px; color: #333; font-weight:700; font-size:12px; line-height:16px; }
 ul.menu ul ul { top:0; left:100%; z-index: 2000 }
-ul.menu li:hover > ul { display:block }
+ul.menu li:hover > ul { visibility:visible; opacity:1;}
 ul.menu ul {list-style-type: none; border: 1px solid #e1e1e1; box-shadow: 0.3em 0.3em 1em #666;}
 ul.menu>li>ul>li:first-child:before{
   content:'';
