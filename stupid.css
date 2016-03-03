@@ -170,7 +170,6 @@ ul.menu {
 }
 ul.menu a {
   display:block;
-  color:inherit;
   padding:0 15px;
   text-decoration: none;
 }
