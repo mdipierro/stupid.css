@@ -1,0 +1,37 @@
+/* links */
+a { color: #8AD7C7;}
+a:not(.btn):not(.noeffect):after { background-color: #8AD7C7; }
+a:not(.btn):not(.noeffect):hover { color: #8AD7C7; }
+a:not(.btn):not(.noeffect):hover:after { color: #8AD7C7; }
+
+/* buttons */
+.btn, button, [type=button], [type=submit] { background-color: orange; color:white;}
+.btn-default { background-color: orange; color:white;}
+.btn-primary { background-color: black; color:white;}
+.btn-error { background-color: red; color:white;}
+.btn-alert { background-color: yellow; color:white; color: black; }
+.btn-info { background-color: blue; color:white;}
+
+/* tables */
+tbody tr:hover {background-color: #fbf6d9;}
+thead tr { background-color: #f1f1f1;}
+tbody tr { border-bottom: 2px solid #f1f1f1;}
+
+/* menu */
+ul.menu ul { background: black; }
+ul.menu ul a { color: white; }
+ul.menu ul { border: 1px solid black; box-shadow: 0.3em 0.3em 1em #eee;}
+ul.menu>li>ul>li:first-child:before{ border-bottom-color: black; }
+
+/* page main, header, and footer */
+header, main {
+  background-color: #1F7DA9;
+  color: white;
+}
+header a {
+  color: white;
+}
+footer {
+  background-color: #0E2A20;
+  color: white;
+}
