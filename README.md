@@ -4,4 +4,6 @@
 
 [THEME EXAMPLE](http://htmlpreview.github.io/?https://raw.githubusercontent.com/mdipierro/stupid.css/master/themes/marine-theme.html)
 
+Help us make more themes. It is easy!
+
 LICENSE is BSD
