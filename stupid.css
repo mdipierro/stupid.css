@@ -38,6 +38,8 @@ header, footer {with: 100%;}
 .nowrap { white-space: nowrap; overflow-x: hidden }
 .fill {width:100%;}
 .lifted {box-shadow: 0.3em 0.3em 1em #666;}
+.relative {position: relative;}
+.relative>div {position:absolute;}
 
 /******** forms ********/
 input:not([type]), [type=text], [type=password], [type=file]:before { outline: none; padding: 0.5em 1em; margin: 0.5px; border-bottom: 1px solid #ddd;}
