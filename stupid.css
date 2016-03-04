@@ -183,6 +183,10 @@ ul.menu ul li { float:none; width:200px }
 ul.menu ul ul { top:0; left:100%; z-index: 2000 }
 ul.menu li:hover > ul { visibility:visible; opacity:1;}
 ul.menu>li>ul>li:first-child:before{ content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; }
+ul.menu>li>ul>li:first-child:before{ border-bottom-color: white; }
+ul.menu.dark ul { background: black; border: 1px solid black; }
+ul.menu.dark ul a { color: white; }
+ul.menu.dark>li>ul>li:first-child:before{ border-bottom-color: black; }
 
 /******** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
 .pulse:after {
