@@ -29,3 +29,8 @@ a:not(.btn):not(.noeffect):hover:after { color: #8AD7C7; }
 tbody tr:hover {background-color: #fbf6d9;}
 thead tr { background-color: #f1f1f1;}
 tbody tr { border-bottom: 2px solid #f1f1f1;}
+
+/* menu (dark) */
+ul.menu ul { background: black; border: 1px solid black; }
+ul.menu ul a { color: white; }
+ul.menu>li>ul>li:first-child:before{ border-bottom-color: black; }
