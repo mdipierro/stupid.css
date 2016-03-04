@@ -126,4 +126,8 @@
       <div class="fill"><p>Made by <a href="mailto:massimo.dipierro@gmail.com">Massimo</a> at <a href="http://experts4solutions.com">experts4solutions</a> - Copyright 2016 - BSD License</p></div>
     </footer>
   </body>  
+  <script>
+    // prevent android horizontal scrolling
+    var scrollEventHandler = function(){window.scroll(0, window.pageYOffset);} window.addEventListener("scroll", scrollEventHandler, false);
+  </script>
 </html>
