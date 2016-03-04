@@ -49,8 +49,9 @@ header, footer {with:100%}
 
 /*** helpers ***/
 .rounded {-moz-border-radius:5px; border-radius:5px}
-.padded {padding:10px 20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
-.center {text-align:center; margin-left:auto; margin-right:auto}
+.padded {padding:10px 20px !important; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
+.center {text-align:center !important; margin-left:auto; margin-right:auto}
+.center>div {text-align:left}
 .right {right:0; text-align:right}
 .middle div {vertical-align:middle !important}
 .bottom div {vertical-align:bottom !important}
@@ -64,7 +65,7 @@ header, footer {with:100%}
 .spaced {margin-bottom:20px; margin-top:20px}
 
 /*** forms ***/
-input:not([type]), [type=text], [type=password], [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd}
+input:not([type]), [type=text], [type=password], [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd; width:100%}
 textarea {width:100%; border:1px solid #ddd; padding:4px 8px; outline:none; outline:none}
 select {-webkit-appearance:none; outline:none; padding:0.5em 1em; border-radius:0; margin:0.5px; border-bottom:1px solid #ddd}
 input, textarea, select {font-size:12px}
