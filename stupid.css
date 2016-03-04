@@ -6,7 +6,7 @@
 
 /******** basic styles ********/
 * { border: 0; margin: 0; padding: 0; font-familiy: Helvetica}
-body { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; overflow-x:hidden;}
+body { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; overflow-x:hidden;width:100%}
 table {border-collapse:collapse}
 tbody tr:hover {background-color: #fbf6d9;}
 td, th { padding: 5px; vertical-align:top; text-align:left; border: 0}
@@ -19,7 +19,15 @@ p, li { font-family: "Times New Roman", Georgia, Serif; margin-bottom: 0.5em; te
 label, strong { font-weight: bold }
 ul {list-style-type: none; padding-left: 20px;}
 a:hover { cursor:pointer }
-h1{font-weight:strong;font-size:4em;text-transform:uppercase;margin:1.0em 0 0.25em 0;}h2{font-weight:strong;font-size:2.4em;text-transform:uppercase;margin:0.9em 0 0.25em 0;}h3{font-weight:strong;font-size:1.8em;text-transform:uppercase;margin:0.8em 0 0.25em 0;}h4{font-weight:strong;font-size:1.6em;text-transform:uppercase;margin:0.7em 0 0.25em 0;}h5{font-weight:strong;font-size:1.4em;text-transform:uppercase;margin:0.6em 0 0.25em 0;}h6{font-weight:strong;font-size:1.2em;text-transform:uppercase;margin:0.5em 0 0.25em 0;}
+h1,h2,h3,h4,h5,h6{font-weight:strong;}
+
+@media (min-width:600px) {
+  h1{font-size:4em;text-transform:uppercase;margin:1.0em 0 0.25em 0;}h2{font-size:2.4em;text-transform:uppercase;margin:0.9em 0 0.25em 0;}h3{font-size:1.8em;text-transform:uppercase;margin:0.8em 0 0.25em 0;}h4{font-size:1.6em;text-transform:uppercase;margin:0.7em 0 0.25em 0;}h5{font-size:1.4em;text-transform:uppercase;margin:0.6em 0 0.25em 0;}h6{font-size:1.2em;text-transform:uppercase;margin:0.5em 0 0.25em 0;}
+}
+@media (max-width:599px) {
+  h1{font-size:2em;text-transform:uppercase;margin:1.0em 0 0.25em 0;}h2{font-size:1.8em;text-transform:uppercase;margin:0.9em 0 0.25em 0;}h3{font-size:1.6em;text-transform:uppercase;margin:0.8em 0 0.25em 0;}h4{font-size:1.4em;text-transform:uppercase;margin:0.7em 0 0.25em 0;}h5{font-size:1.2em;text-transform:uppercase;margin:0.6em 0 0.25em 0;}h6{font-size:1.0em;text-transform:uppercase;margin:0.5em 0 0.25em 0;}
+}
+
 header, footer {with: 100%;}
 
 /******** buttons ********/
