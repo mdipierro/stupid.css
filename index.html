@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <script>
       var url = 'http://mdipierro.github.io/stupid.css/index.html';
-      if(window.location.href!=url) window.location=url;
+      if(window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
     </script>
   </head>
   <body>    
