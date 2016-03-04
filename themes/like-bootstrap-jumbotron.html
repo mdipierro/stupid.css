@@ -117,6 +117,6 @@
   </body>  
   <script>
     // prevent android horizontal scrolling
-    var scrollEventHandler = function(){window.scroll(0, window.pageYOffset);} window.addEventListener("scroll", scrollEventHandler, false);
+    window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
   </script>
 </html>
