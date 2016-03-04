@@ -23,10 +23,10 @@ h1{font-weight:strong;font-size:4em;text-transform:uppercase;margin:1.0em 0 0.25
 header, footer {with: 100%;}
 
 /******** buttons ********/
-.btn, button, [type=button], [type=submit] { padding: 0.5em 1em !important; margin: 0 0.5em 0.5em 0; background-color: #26a69a; color:white;}
+.btn, button, [type=button], [type=submit] { padding: 0.5em 1em !important; margin: 0 0.5em 0.5em 0; line-height: 2em; background-color: #26a69a; color:white;}
 .btn:hover, button:hover, [type=button]:hover, [type=submit]:hover { box-shadow: 0 0 1em #666; text-decoration:none; cursor:pointer;}
-.btn.small, table .btn { padding: 0.25em 0.5em !important; font-size: 0.8em }
-.btn.large { padding: 1em 2em !important; font-size:1.2em;}
+.btn.small, table .btn { padding: 0.25em 0.5em !important; font-size: 0.8em; line-height: 1.3em; }
+.btn.large { padding: 1em 2em !important; font-size:1.2em; line-height:3em; }
 .btn.oval { border-radius:50%}
 
 /******** helpers ********/
@@ -176,7 +176,6 @@ ul.menu a {
 ul.menu.right { float: right }
 ul.menu a { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
 ul.menu li { position:relative; float:left; margin:0; padding:0 }
-ul.menu li:hover { background: rgba(0,0,0,0.1) }
 ul.menu ul { background: white; border: 1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index: 1000; transition: all 0.2s ease-out; list-style-type: none; box-shadow: 0.3em 0.3em 1em #666;}
 ul.menu ul a { padding:10px 15px; color: #333; font-weight:700; font-size:12px; line-height:16px }
 ul.menu ul li { float:none; width:200px }
