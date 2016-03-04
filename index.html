@@ -5,11 +5,11 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <script>
       var url = 'http://mdipierro.github.io/stupid.css/index.html';
-      if(window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
+      if(window.location.href.split(':')[0]!='file' && window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
     </script>
   </head>
   <body>    
