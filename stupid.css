@@ -177,17 +177,8 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
 }
 
 /**** dropdown menu from http://codepen.io/philhoyt/pen/ujHzd ***/
-ul.menu {
-  list-style:none;
-  position:relative;
-  margin:0;
-  padding:0;
-}
-ul.menu a {
-  display:block;
-  padding:0 15px;
-  text-decoration:none;
-}
+ul.menu {list-style:none; position:relative; margin:0; padding:0}
+ul.menu a {display:block; padding:0 15px; text-decoration:none}
 ul.menu.right {float:right}
 ul.menu a {font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif}
 ul.menu li {position:relative; float:left; margin:0; padding:0}
