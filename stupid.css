@@ -50,7 +50,7 @@ header, footer {with:100%}
 /*** helpers ***/
 .rounded {-moz-border-radius:5px; border-radius:5px}
 .padded {padding:10px 20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
-.center {text-align:center; margin-left:auto; margin-right:auto; padding-left:10px; padding-right:30px}
+.center {text-align:center; margin-left:auto; margin-right:auto}
 .right {right:0; text-align:right}
 .middle div {vertical-align:middle !important}
 .bottom div {vertical-align:bottom !important}
