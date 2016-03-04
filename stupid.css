@@ -16,9 +16,9 @@ thead th { font-weight:string; padding: 5px; vertical-align:bottom; text-align:l
 tbody th { font-weight:string; padding: 5px; vertical-align:top; text-align:left;}
 a { text-decoration: none; color: #26a69a; white-space:nowrap}
 p, li { font-family: "Times New Roman", Georgia, Serif; margin-bottom: 0.5em; text-align:justify;}
-label, strong { font-weight: bold; }
+label, strong { font-weight: bold }
 ul {list-style-type: none; padding-left: 20px;}
-a:hover { cursor:pointer; }
+a:hover { cursor:pointer }
 h1{font-weight:strong;font-size:4em;text-transform:uppercase;margin:1.0em 0 0.25em 0;}h2{font-weight:strong;font-size:2.4em;text-transform:uppercase;margin:0.9em 0 0.25em 0;}h3{font-weight:strong;font-size:1.8em;text-transform:uppercase;margin:0.8em 0 0.25em 0;}h4{font-weight:strong;font-size:1.6em;text-transform:uppercase;margin:0.7em 0 0.25em 0;}h5{font-weight:strong;font-size:1.4em;text-transform:uppercase;margin:0.6em 0 0.25em 0;}h6{font-weight:strong;font-size:1.2em;text-transform:uppercase;margin:0.5em 0 0.25em 0;}
 header, footer {with: 100%;}
 
@@ -30,7 +30,7 @@ header, footer {with: 100%;}
 .btn.oval { border-radius:50%}
 
 /******** helpers ********/
-.rounded { -moz-border-radius: 5px; border-radius: 5px; }
+.rounded { -moz-border-radius: 5px; border-radius: 5px }
 .padded {padding: 10px 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .right {right:0; text-align:right;}
 .center {text-align:center;margin-left:auto; margin-right:auto;}
@@ -56,7 +56,7 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
 /******** grid ********/
 .container {margin-right: -20px}
 .container>.quarter, .container>.half, .container>.third, .container>.twothirds, .container>.threequarters, .container>.fill{display:inline-block; padding: 5px 20px 5px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; vertical-align: top;}
-.container>.fill {width:100%; margin-right:-20px; }
+.container>.fill {width:100%; margin-right:-20px }
 .container img {max-width:100%;}
 @media (min-width:800px) {
   .quarter {width: 25%; margin-right:-5px;}
@@ -69,13 +69,13 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
   .quarter.compressible {width: 25%; margin-right:-5px;}
   .half.compressible {width: 50%; margin-right:-10px;}
   .threequarters.compressible {width: 75%; margin-right:-15px;}
-  .quarter:not(.compressible), .half:not(.compressible), .threequarters:not(.compressible) {width:100%; margin-right:-20px; }
+  .quarter:not(.compressible), .half:not(.compressible), .threequarters:not(.compressible) {width:100%; margin-right:-20px }
   .third {width: 33.33%; margin-right:-6.66px;}
   .twothirds {width: 66.66%; margin-right:-13.33px;}
   label.quarter:not(.compressible).right, label.half:not(.compressible).right, label.threequarters:not(.compressible).right   {float:left; text-align:left}
 }
 @media (max-width:599px) {
-  .quarter:not(.compressible), .half:not(.compressible), .third:not(.compressible), .twothirds:not(.compressible), .threequarters:not(.compressible) {width:100%; margin-right:-20px; }
+  .quarter:not(.compressible), .half:not(.compressible), .third:not(.compressible), .twothirds:not(.compressible), .threequarters:not(.compressible) {width:100%; margin-right:-20px }
   label.quarter:not(.compressible).right, label.half:not(.compressible).right, label.threequarters:not(.compressible).right,
   label.third:not(.compressible).right, label.twothirds:not(.compressible).right   {float:left; text-align:left}
   .quarter.compressible {width: 25%; margin-right:-5px;}
@@ -131,34 +131,34 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
   animation-delay: 1.15s;
 }
 @-webkit-keyframes indeterminate {
-  0% { left: -35%; right: 100%; }
-  60% { left: 100%; right: -90%; }
-  100% { left: 100%; right: -90%; }
+  0% { left: -35%; right: 100% }
+  60% { left: 100%; right: -90% }
+  100% { left: 100%; right: -90% }
 }
 @-moz-keyframes indeterminate {
-  0% { left: -35%; right: 100%; }
-  60% { left: 100%; right: -90%; }
-  100% { left: 100%; right: -90%; }
+  0% { left: -35%; right: 100% }
+  60% { left: 100%; right: -90% }
+  100% { left: 100%; right: -90% }
 }
 @keyframes indeterminate {
-  0% { left: -35%; right: 100%; }
-  60% { left: 100%; right: -90%; }
-  100% { left: 100%; right: -90%; }
+  0% { left: -35%; right: 100% }
+  60% { left: 100%; right: -90% }
+  100% { left: 100%; right: -90% }
 }
 @-webkit-keyframes indeterminate-short {
-  0% { left: -200%; right: 100%; }
-  60% { left: 107%; right: -8%; }
-  100% { left: 107%; right: -8%; }
+  0% { left: -200%; right: 100% }
+  60% { left: 107%; right: -8% }
+  100% { left: 107%; right: -8% }
 }
 @-moz-keyframes indeterminate-short {
-  0% { left: -200%; right: 100%; }
-  60% { left: 107%; right: -8%; }
-  100% { left: 107%; right: -8%; }
+  0% { left: -200%; right: 100% }
+  60% { left: 107%; right: -8% }
+  100% { left: 107%; right: -8% }
 }
 @keyframes indeterminate-short {
-  0% { left: -200%; right: 100%; }
-  60% { left: 107%; right: -8%; }
-  100% { left: 107%; right: -8%; }
+  0% { left: -200%; right: 100% }
+  60% { left: 107%; right: -8% }
+  100% { left: 107%; right: -8% }
 }
 
 /********* dropdown menu from http://codepen.io/philhoyt/pen/ujHzd ********/
@@ -176,17 +176,17 @@ ul.menu a {
 ul.menu.right { float: right }
 ul.menu a { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
 ul.menu li { position:relative; float:left; margin:0; padding:0 }
-ul.menu li:hover { background: rgba(0,0,0,0.1); }
+ul.menu li:hover { background: rgba(0,0,0,0.1) }
 ul.menu ul { background: white; border: 1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index: 1000; transition: all 0.2s ease-out; list-style-type: none; box-shadow: 0.3em 0.3em 1em #666;}
-ul.menu ul a { padding:10px 15px; color: #333; font-weight:700; font-size:12px; line-height:16px; }
+ul.menu ul a { padding:10px 15px; color: #333; font-weight:700; font-size:12px; line-height:16px }
 ul.menu ul li { float:none; width:200px }
 ul.menu ul ul { top:0; left:100%; z-index: 2000 }
 ul.menu li:hover > ul { visibility:visible; opacity:1;}
-ul.menu>li>ul>li:first-child:before{ content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; }
-ul.menu>li>ul>li:first-child:before{ border-bottom-color: white; }
-ul.menu.dark ul { background: black; border: 1px solid black; }
-ul.menu.dark ul a { color: white; }
-ul.menu.dark>li>ul>li:first-child:before{ border-bottom-color: black; }
+ul.menu>li>ul>li:first-child:before{ content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px }
+ul.menu>li>ul>li:first-child:before{ border-bottom-color: white }
+ul.menu.dark ul { background: black; border: 1px solid black }
+ul.menu.dark ul a { color: white }
+ul.menu.dark>li>ul>li:first-child:before{ border-bottom-color: black }
 
 /******** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
 .pulse:after {
@@ -263,8 +263,8 @@ a:not(.btn):not(.noeffect):hover:after {
 }
 
 /******** tooltips from http://codepen.io/trezy/pen/Khnzy *******/
-[data-tooltip] { position: relative; }
-[data-tooltip]:hover:after,[data-tooltip]:hover:before { display: block; }
+[data-tooltip] { position: relative }
+[data-tooltip]:hover:after,[data-tooltip]:hover:before { display: block }
 [data-tooltip]:before, [data-tooltip]:after {
   display: none;
   position: absolute;
@@ -294,4 +294,4 @@ a:not(.btn):not(.noeffect):hover:after {
 
 
 /******** colors ********/
-.aliceblue{background-color:#f0f8ff;color:black}.antiquewhite{background-color:#faebd7;color:black}.aqua{background-color:#00ffff;color:white}.aquamarine{background-color:#7fffd4;color:black}.azure{background-color:#f0ffff;color:black}.beige{background-color:#f5f5dc;color:black}.bisque{background-color:#ffe4c4;color:black}.black{background-color:#000000;color:white}.blanchedalmond{background-color:#ffebcd;color:black}.blue{background-color:#0000ff;color:white}.blueviolet{background-color:#8a2be2;color:white}.brown{background-color:#a52a2a;color:white}.burlywood{background-color:#deb887;color:black}.cadetblue{background-color:#5f9ea0;color:white}.chartreuse{background-color:#7fff00;color:white}.chocolate{background-color:#d2691e;color:white}.coral{background-color:#ff7f50;color:white}.cornflowerblue{background-color:#6495ed;color:white}.cornsilk{background-color:#fff8dc;color:black}.crimson{background-color:#dc143c;color:white}.cyan{background-color:#00ffff;color:white}.darkblue{background-color:#00008b;color:white}.darkcyan{background-color:#008b8b;color:white}.darkgoldenrod{background-color:#b8860b;color:white}.darkgray{background-color:#a9a9a9;color:white}.darkgreen{background-color:#006400;color:white}.darkgrey{background-color:#a9a9a9;color:white}.darkkhaki{background-color:#bdb76b;color:white}.darkmagenta{background-color:#8b008b;color:white}.darkolivegreen{background-color:#556b2f;color:white}.darkorange{background-color:#ff8c00;color:white}.darkorchid{background-color:#9932cc;color:white}.darkred{background-color:#8b0000;color:white}.darksalmon{background-color:#e9967a;color:white}.darkseagreen{background-color:#8fbc8f;color:white}.darkslateblue{background-color:#483d8b;color:white}.darkslategray{background-color:#2f4f4f;color:white}.darkslategrey{background-color:#2f4f4f;color:white}.darkturquoise{background-color:#00ced1;color:white}.darkviolet{background-color:#9400d3;color:white}.deeppink{background-color:#ff1493;color:white}.deepskyblue{background-color:#00bfff;color:white}.dimgray{background-color:#696969;color:white}.dimgrey{background-color:#696969;color:white}.dodgerblue{background-color:#1e90ff;color:white}.firebrick{background-color:#b22222;color:white}.floralwhite{background-color:#fffaf0;color:black}.forestgreen{background-color:#228b22;color:white}.fuchsia{background-color:#ff00ff;color:white}.gainsboro{background-color:#dcdcdc;color:black}.ghostwhite{background-color:#f8f8ff;color:black}.gold{background-color:#ffd700;color:white}.goldenrod{background-color:#daa520;color:white}.gray{background-color:#808080;color:white}.green{background-color:#008000;color:white}.greenyellow{background-color:#adff2f;color:white}.grey{background-color:#808080;color:white}.honeydew{background-color:#f0fff0;color:black}.hotpink{background-color:#ff69b4;color:black}.indianred{background-color:#cd5c5c;color:white}.indigo{background-color:#4b0082;color:white}.ivory{background-color:#fffff0;color:black}.khaki{background-color:#f0e68c;color:black}.lavender{background-color:#e6e6fa;color:black}.lavenderblush{background-color:#fff0f5;color:black}.lawngreen{background-color:#7cfc00;color:white}.lemonchiffon{background-color:#fffacd;color:black}.lightblue{background-color:#add8e6;color:black}.lightcoral{background-color:#f08080;color:white}.lightcyan{background-color:#e0ffff;color:black}.lightgoldenrodyellow{background-color:#fafad2;color:black}.lightgray{background-color:#d3d3d3;color:black}.lightgreen{background-color:#90ee90;color:black}.lightgrey{background-color:#d3d3d3;color:black}.lightpink{background-color:#ffb6c1;color:black}.lightsalmon{background-color:#ffa07a;color:black}.lightseagreen{background-color:#20b2aa;color:white}.lightskyblue{background-color:#87cefa;color:black}.lightslategray{background-color:#778899;color:white}.lightslategrey{background-color:#778899;color:white}.lightsteelblue{background-color:#b0c4de;color:black}.lightyellow{background-color:#ffffe0;color:black}.lime{background-color:#00ff00;color:white}.limegreen{background-color:#32cd32;color:white}.linen{background-color:#faf0e6;color:black}.magenta{background-color:#ff00ff;color:white}.maroon{background-color:#800000;color:white}.mediumaquamarine{background-color:#66cdaa;color:white}.mediumblue{background-color:#0000cd;color:white}.mediumorchid{background-color:#ba55d3;color:white}.mediumpurple{background-color:#9370db;color:white}.mediumseagreen{background-color:#3cb371;color:white}.mediumslateblue{background-color:#7b68ee;color:white}.mediumspringgreen{background-color:#00fa9a;color:white}.mediumturquoise{background-color:#48d1cc;color:white}.mediumvioletred{background-color:#c71585;color:white}.midnightblue{background-color:#191970;color:white}.mintcream{background-color:#f5fffa;color:black}.mistyrose{background-color:#ffe4e1;color:black}.moccasin{background-color:#ffe4b5;color:black}.navajowhite{background-color:#ffdead;color:black}.navy{background-color:#000080;color:white}.oldlace{background-color:#fdf5e6;color:black}.olive{background-color:#808000;color:white}.olivedrab{background-color:#6b8e23;color:white}.orange{background-color:#ffa500;color:white}.orangered{background-color:#ff4500;color:white}.orchid{background-color:#da70d6;color:black}.palegoldenrod{background-color:#eee8aa;color:black}.palegreen{background-color:#98fb98;color:black}.paleturquoise{background-color:#afeeee;color:black}.palevioletred{background-color:#db7093;color:white}.papayawhip{background-color:#ffefd5;color:black}.peachpuff{background-color:#ffdab9;color:black}.peru{background-color:#cd853f;color:white}.pink{background-color:#ffc0cb;color:black}.plum{background-color:#dda0dd;color:black}.powderblue{background-color:#b0e0e6;color:black}.purple{background-color:#800080;color:white}.red{background-color:#ff0000;color:white}.rosybrown{background-color:#bc8f8f;color:white}.royalblue{background-color:#4169e1;color:white}.saddlebrown{background-color:#8b4513;color:white}.salmon{background-color:#fa8072;color:white}.sandybrown{background-color:#f4a460;color:white}.seagreen{background-color:#2e8b57;color:white}.seashell{background-color:#fff5ee;color:black}.sienna{background-color:#a0522d;color:white}.silver{background-color:#c0c0c0;color:black}.skyblue{background-color:#87ceeb;color:black}.slateblue{background-color:#6a5acd;color:white}.slategray{background-color:#708090;color:white}.slategrey{background-color:#708090;color:white}.snow{background-color:#fffafa;color:black}.springgreen{background-color:#00ff7f;color:white}.steelblue{background-color:#4682b4;color:white}.tan{background-color:#d2b48c;color:black}.teal{background-color:#008080;color:white}.thistle{background-color:#d8bfd8;color:black}.tomato{background-color:#ff6347;color:white}.turquoise{background-color:#40e0d0;color:white}.violet{background-color:#ee82ee;color:black}.wheat{background-color:#f5deb3;color:black}.white{background-color:#ffffff;color:black}.whitesmoke{background-color:#f5f5f5;color:black}.yellow{background-color:#ffff00;color:white}.yellowgreen{background-color:#9acd32;color:white}.white{-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd; box-shadow:inset 0px 0px 0px 1px #ddd;}
+.aliceblue{background-color:#f0f8ff;color:black}.antiquewhite{background-color:#faebd7;color:black}.aqua{background-color:#00ffff;color:white}.aquamarine{background-color:#7fffd4;color:black}.azure{background-color:#f0ffff;color:black}.beige{background-color:#f5f5dc;color:black}.bisque{background-color:#ffe4c4;color:black}.black{background-color:#000000;color:white}.blanchedalmond{background-color:#ffebcd;color:black}.blue{background-color:#0000ff;color:white}.blueviolet{background-color:#8a2be2;color:white}.brown{background-color:#a52a2a;color:white}.burlywood{background-color:#deb887;color:black}.cadetblue{background-color:#5f9ea0;color:white}.chartreuse{background-color:#7fff00;color:white}.chocolate{background-color:#d2691e;color:white}.coral{background-color:#ff7f50;color:white}.cornflowerblue{background-color:#6495ed;color:white}.cornsilk{background-color:#fff8dc;color:black}.crimson{background-color:#dc143c;color:white}.cyan{background-color:#00ffff;color:white}.darkblue{background-color:#00008b;color:white}.darkcyan{background-color:#008b8b;color:white}.darkgoldenrod{background-color:#b8860b;color:white}.darkgray{background-color:#a9a9a9;color:white}.darkgreen{background-color:#006400;color:white}.darkgrey{background-color:#a9a9a9;color:white}.darkkhaki{background-color:#bdb76b;color:white}.darkmagenta{background-color:#8b008b;color:white}.darkolivegreen{background-color:#556b2f;color:white}.darkorange{background-color:#ff8c00;color:white}.darkorchid{background-color:#9932cc;color:white}.darkred{background-color:#8b0000;color:white}.darksalmon{background-color:#e9967a;color:white}.darkseagreen{background-color:#8fbc8f;color:white}.darkslateblue{background-color:#483d8b;color:white}.darkslategray{background-color:#2f4f4f;color:white}.darkslategrey{background-color:#2f4f4f;color:white}.darkturquoise{background-color:#00ced1;color:white}.darkviolet{background-color:#9400d3;color:white}.deeppink{background-color:#ff1493;color:white}.deepskyblue{background-color:#00bfff;color:white}.dimgray{background-color:#696969;color:white}.dimgrey{background-color:#696969;color:white}.dodgerblue{background-color:#1e90ff;color:white}.firebrick{background-color:#b22222;color:white}.floralwhite{background-color:#fffaf0;color:black}.forestgreen{background-color:#228b22;color:white}.fuchsia{background-color:#ff00ff;color:white}.gainsboro{background-color:#dcdcdc;color:black}.ghostwhite{background-color:#f8f8ff;color:black}.gold{background-color:#ffd700;color:white}.goldenrod{background-color:#daa520;color:white}.gray{background-color:#808080;color:white}.green{background-color:#008000;color:white}.greenyellow{background-color:#adff2f;color:white}.grey{background-color:#808080;color:white}.honeydew{background-color:#f0fff0;color:black}.hotpink{background-color:#ff69b4;color:black}.indianred{background-color:#cd5c5c;color:white}.indigo{background-color:#4b0082;color:white}.ivory{background-color:#fffff0;color:black}.khaki{background-color:#f0e68c;color:black}.lavender{background-color:#e6e6fa;color:black}.lavenderblush{background-color:#fff0f5;color:black}.lawngreen{background-color:#7cfc00;color:white}.lemonchiffon{background-color:#fffacd;color:black}.lightblue{background-color:#add8e6;color:black}.lightcoral{background-color:#f08080;color:white}.lightcyan{background-color:#e0ffff;color:black}.lightgoldenrodyellow{background-color:#fafad2;color:black}.lightgray{background-color:#d3d3d3;color:black}.lightgreen{background-color:#90ee90;color:black}.lightgrey{background-color:#d3d3d3;color:black}.lightpink{background-color:#ffb6c1;color:black}.lightsalmon{background-color:#ffa07a;color:black}.lightseagreen{background-color:#20b2aa;color:white}.lightskyblue{background-color:#87cefa;color:black}.lightslategray{background-color:#778899;color:white}.lightslategrey{background-color:#778899;color:white}.lightsteelblue{background-color:#b0c4de;color:black}.lightyellow{background-color:#ffffe0;color:black}.lime{background-color:#00ff00;color:white}.limegreen{background-color:#32cd32;color:white}.linen{background-color:#faf0e6;color:black}.magenta{background-color:#ff00ff;color:white}.maroon{background-color:#800000;color:white}.mediumaquamarine{background-color:#66cdaa;color:white}.mediumblue{background-color:#0000cd;color:white}.mediumorchid{background-color:#ba55d3;color:white}.mediumpurple{background-color:#9370db;color:white}.mediumseagreen{background-color:#3cb371;color:white}.mediumslateblue{background-color:#7b68ee;color:white}.mediumspringgreen{background-color:#00fa9a;color:white}.mediumturquoise{background-color:#48d1cc;color:white}.mediumvioletred{background-color:#c71585;color:white}.midnightblue{background-color:#191970;color:white}.mintcream{background-color:#f5fffa;color:black}.mistyrose{background-color:#ffe4e1;color:black}.moccasin{background-color:#ffe4b5;color:black}.navajowhite{background-color:#ffdead;color:black}.navy{background-color:#000080;color:white}.oldlace{background-color:#fdf5e6;color:black}.olive{background-color:#808000;color:white}.olivedrab{background-color:#6b8e23;color:white}.orange{background-color:#ffa500;color:white}.orangered{background-color:#ff4500;color:white}.orchid{background-color:#da70d6;color:black}.palegoldenrod{background-color:#eee8aa;color:black}.palegreen{background-color:#98fb98;color:black}.paleturquoise{background-color:#afeeee;color:black}.palevioletred{background-color:#db7093;color:white}.papayawhip{background-color:#ffefd5;color:black}.peachpuff{background-color:#ffdab9;color:black}.peru{background-color:#cd853f;color:white}.pink{background-color:#ffc0cb;color:black}.plum{background-color:#dda0dd;color:black}.powderblue{background-color:#b0e0e6;color:black}.purple{background-color:#800080;color:white}.red{background-color:#ff0000;color:white}.rosybrown{background-color:#bc8f8f;color:white}.royalblue{background-color:#4169e1;color:white}.saddlebrown{background-color:#8b4513;color:white}.salmon{background-color:#fa8072;color:white}.sandybrown{background-color:#f4a460;color:white}.seagreen{background-color:#2e8b57;color:white}.seashell{background-color:#fff5ee;color:black}.sienna{background-color:#a0522d;color:white}.silver{background-color:#c0c0c0;color:black}.skyblue{background-color:#87ceeb;color:black}.slateblue{background-color:#6a5acd;color:white}.slategray{background-color:#708090;color:white}.slategrey{background-color:#708090;color:white}.snow{background-color:#fffafa;color:black}.springgreen{background-color:#00ff7f;color:white}.steelblue{background-color:#4682b4;color:white}.tan{background-color:#d2b48c;color:black}.teal{background-color:#008080;color:white}.thistle{background-color:#d8bfd8;color:black}.tomato{background-color:#ff6347;color:white}.turquoise{background-color:#40e0d0;color:white}.violet{background-color:#ee82ee;color:black}.wheat{background-color:#f5deb3;color:black}.white{background-color:#ffffff;color:black}.whitesmoke{background-color:#f5f5f5;color:black}.yellow{background-color:#ffff00;color:white}.yellowgreen{background-color:#9acd32;color:white}.white{-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd; box-shadow:inset 0px 0px 0px 1px #ddd;}.glass{color:black; background:rgba(255,255,255,0.5)}
