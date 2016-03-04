@@ -48,8 +48,8 @@ header, footer {with:100%}
 /*** helpers ***/
 .rounded {-moz-border-radius:5px; border-radius:5px}
 .padded {padding:10px 20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
+.center {text-align:center; margin-left:auto; margin-right:auto; padding-left:10px; padding-right:30px}
 .right {right:0; text-align:right}
-.center {text-align:center; margin-left:auto; margin-right:auto}
 .middle div {vertical-align:middle !important}
 .bottom div {vertical-align:bottom !important}
 .xscroll {overflow-x:scroll; width:100%}
@@ -74,6 +74,7 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
 .container>.fill {width:100%; margin-right:-20px}
 .container img {max-width:100%}
 @media (min-width:800px) {
+  .max900 {max-width:900px; margin-left:auto; margin-right:auto}
   .quarter {width:25%; margin-right:-5px}
   .half {width:50%; margin-right:-10px}
   .third {width:33.33%; margin-right:-6.66px}
@@ -89,8 +90,8 @@ select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover,
   .twothirds {width:66.66%; margin-right:-13.33px}
   label.quarter:not(.compressible).right, label.half:not(.compressible).right, label.threequarters:not(.compressible).right   {float:left; text-align:left}
 }
-@media (max-width:599px) {
-  .quarter:not(.compressible), .half:not(.compressible), .third:not(.compressible), .twothirds:not(.compressible), .threequarters:not(.compressible) {width:100%; margin-right:-20px}
+@media (max-width:599px) {  
+  .quarter:not(.compressible), .half:not(.compressible), .third:not(.compressible), .twothirds:not(.compressible), .threequarters:not(.compressible) {width:100%;}
   label.quarter:not(.compressible).right, label.half:not(.compressible).right, label.threequarters:not(.compressible).right,
   label.third:not(.compressible).right, label.twothirds:not(.compressible).right   {float:left; text-align:left}
   .quarter.compressible {width:25%; margin-right:-5px}
@@ -191,6 +192,12 @@ ul.menu>li>ul>li:first-child:before{content:''; position:absolute; width:1px; he
 ul.menu.dark ul {background:black; border:1px solid black}
 ul.menu.dark ul a {color:white}
 ul.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
+
+@media (max-width:599px) {
+  header ul.menu li {min-width:90vw}
+  header ul.menu.right {float:left}
+  header ul.menu ul ul {top:2.5em; left:-1px; z-index:2000}
+}
 
 /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
 .pulse:after {
