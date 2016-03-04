@@ -13,18 +13,18 @@ footer {
 }
 
 /* links */
-a { color: #8AD7C7;}
-a:not(.btn):not(.noeffect):after { background-color: #8AD7C7; }
-a:not(.btn):not(.noeffect):hover { color: #8AD7C7; }
-a:not(.btn):not(.noeffect):hover:after { color: #8AD7C7; }
+a { color: #1C959E;}
+a:not(.btn):not(.noeffect):after { background-color: #1C959E; }
+a:not(.btn):not(.noeffect):hover { color: #1C959E; }
+a:not(.btn):not(.noeffect):hover:after { color: #1C959E; }
 
 /* buttons */
 .btn, button, [type=button], [type=submit] { background-color: orange; color:white;}
 .btn-default { background-color: orange; color:white;}
-.btn-primary { background-color: black; color:white;}
+.btn-primary { background-color: #1C959E; color:white;}
 .btn-error { background-color: red; color:white;}
-.btn-alert { background-color: yellow; color: black; }
-.btn-info { background-color: blue; color:white;}
+.btn-alert { background-color: #D2CDB6; color: black; }
+.btn-info { background-color: #8AC7FD; color:white;}
 
 /* tables */
 tbody tr:hover {background-color: #fbf6d9;}
