@@ -1,5 +1,5 @@
-/* page main, header, and footer */
 header, main {
+  background: url('http://img13.deviantart.net/b5a4/i/2006/153/0/8/water_background_stock_by_kansheera_stock.jpg');
   background-color: #1F7DA9;
   color: white;
 }
@@ -7,6 +7,7 @@ header a {
   color: white;
 }
 footer {
+  background: url('http://content.wallpapers-room.com/resolutions/1920x1200/B/Wallpapers-room_com___Black_Background_Set_Metal_Hole_by_iAmFreeman_1920x1200.jpg'); repeat-x;
   background-color: #0E2A20;
   color: white;
 }
