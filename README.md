@@ -1,10 +1,10 @@
 # stupid.css, yet another css framework
 
-[DEMO and INFO](http://htmlpreview.github.io/?https://raw.githubusercontent.com/mdipierro/stupid.css/master/index.html)
+[DEMO and INFO](http://mdipierro.github.io/stupid.css/index.html)
 
-[THEME EXAMPLE 1](http://htmlpreview.github.io/?https://raw.githubusercontent.com/mdipierro/stupid.css/master/themes/marine-theme.html)
+[THEME EXAMPLE MARINE](http://mdipierro.github.io/stupid.css/themes/marine-theme.html)
 
-[THEME EXAMPLE 2](http://htmlpreview.github.io/?https://raw.githubusercontent.com/mdipierro/stupid.css/master/themes/like-bootstrap-jumbotron.html)
+[THEME EXAMPLE LIKE BOOTSTRAP](http://mdipierro.github.io/stupid.css/themes/like-bootstrap-jumbotron.html)
 
 Help us make more themes. It is easy!
 
