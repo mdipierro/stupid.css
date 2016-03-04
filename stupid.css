@@ -177,23 +177,12 @@ ul.menu.right { float: right }
 ul.menu a { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
 ul.menu li { position:relative; float:left; margin:0; padding:0 }
 ul.menu li:hover { background: rgba(0,0,0,0.1); }
-ul.menu ul { visibility:hidden; opacity:0;  position:absolute; top:110%; background: white; padding:0; z-index: 1000; transition: all 0.2s ease-out; }
-ul.menu ul li { float:none; width:200px }
+ul.menu ul { background: white; border: 1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index: 1000; transition: all 0.2s ease-out; list-style-type: none; box-shadow: 0.3em 0.3em 1em #666;}
 ul.menu ul a { padding:10px 15px; color: #333; font-weight:700; font-size:12px; line-height:16px; }
+ul.menu ul li { float:none; width:200px }
 ul.menu ul ul { top:0; left:100%; z-index: 2000 }
 ul.menu li:hover > ul { visibility:visible; opacity:1;}
-ul.menu ul {list-style-type: none; border: 1px solid #e1e1e1; box-shadow: 0.3em 0.3em 1em #666;}
-ul.menu>li>ul>li:first-child:before{
-  content:'';
-  position:absolute;
-  width:1px;
-  height:1px;
-  border:10px solid transparent;
-  border-bottom-color: white;
-  left:50px;
-  top:-20px;
-  margin-left:-10px;
-}
+ul.menu>li>ul>li:first-child:before{ content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; }
 
 /******** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
 .pulse:after {

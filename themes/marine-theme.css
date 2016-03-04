@@ -22,13 +22,12 @@ a:not(.btn):not(.noeffect):hover:after { color: #8AD7C7; }
 .btn-default { background-color: orange; color:white;}
 .btn-primary { background-color: black; color:white;}
 .btn-error { background-color: red; color:white;}
-.btn-alert { background-color: yellow; color:white; color: black; }
+.btn-alert { background-color: yellow; color: black; }
 .btn-info { background-color: blue; color:white;}
 
-/* menu */
-ul.menu ul { background: black; }
+/* menu (dark) */
+ul.menu ul { background: black; border: 1px solid black; }
 ul.menu ul a { color: white; }
-ul.menu ul { border: 1px solid black; }
 ul.menu>li>ul>li:first-child:before{ border-bottom-color: black; }
 
 /* tables */
