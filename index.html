@@ -12,8 +12,8 @@
       if(window.location.href.split(':')[0]!='file' && window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
     </script>
   </head>
-  <body>    
-    <header class="black padded">      
+  <body>        
+    <header class="black padded stupid-example">
       <div class="container middle max900">
         <div class="fill middle">                    
           <ul class="menu">
@@ -72,10 +72,12 @@
         </div>
       </div>
     </header>
-    <div class="fill relative">
-      <img src="http://data.whicdn.com/images/220248377/large.gif" style="max-height:200px" class="fill"/>
-      <div style="left:50%;top:0;color:white;">
-        <h1 style="margin-left:-50%">stupid.css</h1>
+    <div class="stupid-example">
+      <div class="fill relative">
+        <img src="http://bit.ly/1X2vzVu" style="max-height:200px" class="fill"/>                                 
+        <div style="left:50%;top:0;color:white;">
+          <h1 style="margin-left:-50%">stupid.css</h1>
+        </div>
       </div>
     </div>
     <main>
@@ -84,9 +86,9 @@
         <p><a href="stupid.css">Stupid.css</a> is yet another CSS frameworks, designed for those of us who are CSS challenged.</p>
         <p>It is super small (~13kb uncompressed).</p>
         <p>It it readable.</p>
-        <p>NOTHING USES JAVASCRIPT</p>
+        <p>All the effects are PURE CSS - NO JS REQUIRED (*)</p>
         <p>It flows the page content on narrow screens.</p>
-        <p>It is easy to style. Example themes:
+        <p>It is easy to style. Stupid-Example themes:
           <a href="themes/marine-theme.html">Marine</a>,
           <a href="themes/like-bootstrap-jumbotron.html">Jumbotron</a>.
         </p>
@@ -96,6 +98,7 @@
         <div class="padded spaced">
           <a class="btn" href="stupid.css">Download stupid.css <i class="fa fa-download"></i></a>
         </div>
+        <p>(*) This page only uses jQuery to allow you to click on each example and display the source code to the example in a model. The <tt>.stupid-example</tt> class is used to delimit clickable examples.</p>
         <h2>Section <tt>&lt;h2&gt;</tt></h2>
         <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <h3>Subsection <tt>&lt;h3&gt;</tt></h3>
@@ -105,27 +108,27 @@
         <h5>Subsubsubsection <tt>&lt;h5&gt;</tt></h5>
         <p> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <h2>Buttons</h2>
-        <p>By default buttons are styled. You can style a link as button with the <tt>.btn</tt> class and, optionally, <tt>.rounded</tt> class for rounded corners. Use colors names</a> like <tt>.red</tt> to set the background. A list of color names is below. Foreground and borders are adjusted automatically. You can use the <tt>.pulse</tt> class to catch attention of the users. Text color is adjusted automatically based on background color.</p>
-        <div class="center spaced padded">
+        <p>By default buttons are styled. You can style a link as button with the <tt>.btn</tt> class and, optionally, <tt>.rounded</tt> class for rounded corners. Use colors names like <tt>.red</tt> to set the background. A list of color names is below. Foreground and borders are adjusted automatically. You can use the <tt>.pulse</tt> class to catch attention of the users. Text color is adjusted automatically based on background color.</p>
+        <div class="center spaced padded stupid-example">
           <a class="btn red"><tt>.btn.red</tt></a>
           <a class="btn navy"><tt>.btn.navy</tt></a>
           <a class="btn green"><tt>.btn.green</tt></a>
           <a class="btn orange rounded"><tt>.btn.orange.rounded</tt></a>
           <a class="btn white pulse"><tt>.btn.white.pulse</tt></a>
         </div>
-        <div class="center spaced padded">
+        <div class="center spaced padded stupid-example">
           <a class="btn small"><tt>.btn.small</tt></a>
           <a class="btn"><tt>.btn</tt> (normal)</a>
           <a class="btn large purple rounded"><tt>.btn.large.purple.rounded</tt></a>
         </div>
-        <div class="center spaced padded">          
+        <div class="center spaced padded stupid-example">          
           <a class="btn small oval"><tt>.btn.small.oval</tt></a>
           <a class="btn oval"><tt>.btn.oval</tt> (normal)</a>
           <a class="btn large oval olive"><tt>.btn.large.oval.olive</tt></a>
         </div>
         <h2>Icons</h2>
         <p><a href="stupid.css">Stupid.css</a> does not come with fonts but plays well with <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a>.</p>
-        <div class="center">
+        <div class="center stupid-example">
           <button class="red rounded"><i class="fa fa-camera-retro fa-lg"></i></button>
           <button class="navy rounded"><i class="fa fa-camera-retro fa-2x"></i></button>
           <button class="green rounded"><i class="fa fa-camera-retro fa-3x"></i></button>
@@ -135,7 +138,7 @@
         <h2>Menus</h2>
         <p>Check the <tt>&lt;header&gt;</tt> source of the page to learn about menus. <a href="stupid.css">Stupid.css</a> supports menu dropdown of arbitrary depth. You can make the menu dark with <tt>.dark</tt></p>
         <div class="container">
-          <div class="fill center">
+          <div class="fill center stupid-example">
             <ul class="menu dark center">
               <li><a class="btn">Button menu &#x25bc;</a>
                 <ul>
@@ -150,7 +153,7 @@
                           <li><a>Sub Deep 1</a></li>
                           <li><a>Sub Deep 2</a></li>
                           <li><a>Sub Deep 3</a></li>
-                      </ul>
+                        </ul>
                       </li>
                     </ul>
                   </li>
@@ -159,366 +162,403 @@
             </ul>
           </div>
         </div>
-        <h2 id="modal-example">Modals</h2>
+        <h2 id="modal-stupid-example">Modals</h2>
         <p>Yes! We include pure CSS modals</p>
-        <div class="center spaced padded">
-          <a class="btn" href="#popup1">open modal</a>
-        </div>
-        <div class="modal" id="popup1">
-          <div class="twothirds rounded white padded relative">
-            <h2>Hello from modal</h2>
-            <a class="close" href="#modal-example">&times;</a>
-            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-            <div class="right">
-              <a class="close btn" href="#modal-example" >close</a>
+        <div class="stupid-example">
+          <div class="center spaced padded">
+            <a class="btn" href="#popup1">open modal</a>
+          </div>
+          <div class="modal" id="popup1">
+            <div class="twothirds rounded white padded relative">
+              <h2>Hello from modal</h2>
+              <a class="close" href="#modal-stupid-example">&times;</a>
+              <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              <div class="right">
+                <a class="close btn" href="#modal-stupid-example" >close</a>
+              </div>
             </div>
           </div>
         </div>
         <h2>Tooltips</h2>
-        <p>For tooltips, you can used the <tt>data-tooltip="..."</tt> attribute as in <a><span data-tooltip="Hello tooltip!">this example</span></a>.</p>
+        <div class="stupid-example">
+          <p>For tooltips, you can used the <tt>data-tooltip="..."</tt> attribute as in <a><span data-tooltip="Hello tooltip!">this stupid-example</span></a>.</p>
+        </div>
         <h2>Lists</h2>
         <p>Lists do not have bullets but are indented.</p>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
-        <h2>Tables</h2>
+        <div class="stupid-example">
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ul>
+        </div>
+          <h2>Tables</h2>
         <p>Tables are also automatically styled. Use <tt>.center</tt> to center the table in the page and <tt>.fill</tt> to fill the page width.</p>
-        <table class="center fill">
-          <thead>
-            <tr><td></td><th>Bla</th><th>Bla</th><th>Bla</th></tr>
-          </thead>
-          <tbody>
-            <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
-            <tr><th>Bla</th><td>Bla</td><td><a>Bla</a></td><td><a class="btn">Bla</a></td></tr>
-            <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
-          </tbody>
-        </table>
+        <div class="stupid-example">
+          <table class="center fill">
+            <thead>
+              <tr><td></td><th>Bla</th><th>Bla</th><th>Bla</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+              <tr><th>Bla</th><td>Bla</td><td><a>Bla</a></td><td><a class="btn">Bla</a></td></tr>
+              <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+            </tbody>
+          </table>
+        </div>
         <h2>Accordion</h2>
         <p>There are two types of accordions. Exclusive.</p>
-        <div class="accordion">
-          <input type="radio" name="group1" id="one"/>
-          <label for="one"><a>One</a></label>
-          <div>
-            <div class="padded white">
-              <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+        <div class="stupid-example">
+          <div class="accordion">
+            <input type="radio" name="group1" id="one"/>
+            <label for="one"><a>One</a></label>
+            <div>
+              <div class="padded white">
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="two"/>
+            <label for="two"><a>Two</a></label>
+            <div>
+              <div class="padded white">
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion">
-          <input type="radio" name="group1" id="two"/>
-          <label for="two"><a>Two</a></label>
-          <div>
-            <div class="padded white">
-              <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-            </div>
-          </div>
-        </div>
-        <div
         <p>Non exclusive:</p>
-        <div class="accordion">
-          <input type="checkbox" id="three"/>
-          <label for="three"><a>Three</a></label>
-          <div>
-            <div class="padded white">
-              <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+        <div class="stupid-example">
+          <div class="accordion">
+            <input type="checkbox" id="three"/>
+            <label for="three"><a>Three</a></label>
+            <div>
+              <div class="padded white">
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion">
-          <input type="checkbox" id="four"/>
-          <label for="four"><a>Two</a></label>
-          <div>
-            <div class="padded white">
-              <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+          <div class="accordion">
+            <input type="checkbox" id="four"/>
+            <label for="four"><a>Two</a></label>
+            <div>
+              <div class="padded white">
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              </div>
             </div>
           </div>
         </div>
         <p>The labels trigering the accordion can be in other panel:</p>
-        <div class="container">
-          <div class="quarter">
-            <div class="padded">
-              <label class="btn fill teal" for="five">One</label>
-              <label class="btn fill teal" for="six">Two</label>
-            </div>
-          </div>
-          <div class="threequarters">
-            <div class="accordion">
-              <input type="radio" name="group1" id="five"/>
-              <div>
-                <div class="padded">
-                  <p>one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one</p>
-                </div>
+        <div class="stupid-example">
+          <div class="container">
+            <div class="quarter">
+              <div class="padded">
+                <label class="btn fill teal" for="five">One</label>
+                <label class="btn fill teal" for="six">Two</label>
               </div>
             </div>
-            <div class="accordion">
-              <input type="radio" name="group1" id="six"/>
+            <div class="threequarters">
+              <div class="accordion">
+                <input type="radio" name="group1" id="five"/>
+                <div>
+                  <div class="padded">
+                    <p>one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <input type="radio" name="group1" id="six"/>
               <div>
                 <div class="padded">
                   <p>two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two two</p>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </div>
-
         <h2>Progress</h2>
         <p><a href="stupid.css">Stupid.css</a> defines a progress bar similar to <a href="http://materializecss.com">materialize.css</a>.</p>
-        <div class="container padded">
+        <div class="container padded stupid-example">
           <div class="progress fill"><div class="indeterminate"></div></div>
         </div>
         <h2>Forms</h2>
         <p><a href="stupid.css">Stupid.css</a> does not require any special structure for forms and does not require special classes. Form elements are syled as below by default. You can use the grid elements (<tt>.quarter</tt> and <tt>.half</tt>) to align the form elements.</p>        
-        <div class="container">
-          <label class="quarter right">Text input</label>
-          <div class="half">
-               <input type="text" class="fill"/>
+        <div class="stupid-example">
+          <div class="container">
+            <label class="quarter right">Text input</label>
+            <div class="half">
+              <input type="text" class="fill"/>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <label class="quarter right">Checbox input</label>
-          <div class="half">
-            <input type="checkbox"/>
+          <div class="container">
+            <label class="quarter right">Checbox input</label>
+            <div class="half">
+              <input type="checkbox"/>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <label class="quarter right">File input</label>
-          <div class="half">
-            <input type="file"/>
+          <div class="container">
+            <label class="quarter right">File input</label>
+            <div class="half">
+              <input type="file"/>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <label class="quarter right">Select Option</label>
-          <div class="half">
-            <select class="fill">
-              <option>Bla</option>
-              <option>Two</option>
-              <option>Three</option>
-            </select>
+          <div class="container">
+            <label class="quarter right">Select Option</label>
+            <div class="half">
+              <select class="fill">
+                <option>Bla</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <label class="quarter right">Textarea</label>
-          <div class="half">
-            <textarea class="fill"></textarea>
+          <div class="container">
+            <label class="quarter right">Textarea</label>
+            <div class="half">
+              <textarea class="fill"></textarea>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <label class="quarter right"></label>
-          <div class="half">
-            <input type="submit"/>
+          <div class="container">
+            <label class="quarter right"></label>
+            <div class="half">
+              <input type="submit"/>
+            </div>
           </div>
         </div>
         <h2>Cards</h2>
-        <div class="card" style="width:500px; height:200px">
-          <div>
-            <div class="white padded rounded">
-              Mousehover to see how this is done.
-            </div>
-            <div class="black padded rounded">
-              <pre>
-&lt;div class="card" style="width:500px; height:200px"&gt;
-  &lt;div&gt;
-    &lt;div class="white padded rounded"&gt;Front&lt;/div&gt;
-    &lt;div class="black padded rounded"&gt;Back&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-              </pre>
+        <div class="stupid-example">
+          <div class="card" style="width:500px; height:200px">
+            <div>
+              <div class="white padded rounded">
+                Front! Mouseover here.
+              </div>
+              <div class="black padded rounded">
+                Back!
+              </div>
             </div>
           </div>
         </div>
         <h2>GRID</h2>
         <p><a href="stupid.css">Stupid.css</a> has a simple grid system with only these classes: <tt>.container</tt>, <tt>.quarter</tt>, <tt>.third</tt>, <tt>.half</tt>, <tt>.twothirds</tt> and <tt>.threequarters</tt>. You can put as many quarters, halfs, etc. into a container. They will flow accordingly. <a href="stupid.css">Stupid.css</a> prevents them from squeezing below 200px, unless you use the class <tt>.compressible</tt>. You can use <tt>.max900</tt> to make sure a conatiner is not wider than 900px and pad it left and right.</p>
-        <div class="container">
-          <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-
-          <div class="half compressible"><p><tt>.half.compressible</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="half compressible"><p><tt>.half.compressible</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="quarter"><div class="padded orange"><p><tt>.padded.orange</tt> inside a <tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div></div>
-          <div class="threequarters"><div class="padded lifted green"><p><tt>.padded.lifted.pink</tt> inside a <tt>.threequarters</tt> .bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-            <div class="container">
-              <div class="half"><div class="padded red"><p><tt>.padded.red</tt> inside a <tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div></div>
-              <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+        <div class="stupid-example">
+          <div class="container">
+            <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            
+            <div class="half compressible"><p><tt>.half.compressible</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="half compressible"><p><tt>.half.compressible</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="quarter"><div class="padded orange"><p><tt>.padded.orange</tt> inside a <tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div></div>
+            <div class="threequarters"><div class="padded lifted green"><p><tt>.padded.lifted.pink</tt> inside a <tt>.threequarters</tt> .bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+              <div class="container">
+                <div class="half"><div class="padded red"><p><tt>.padded.red</tt> inside a <tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div></div>
+                <div class="half"><p><tt>.half</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+              </div>
+            </div>
+            <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="quarter">
+              <p><tt>.quarter</tt> Images in grid are automatically resized to fit.</p>
+              <img src="http://bit.ly/1E8lYDq">
+            </div>
+            <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="twothirds"><p><tt>.twothirds</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+            <div class="third">
+              <p><tt>.third</tt> You can also put a table in the grid and it flows with the rest.</p>
+              <table class="center fill">
+                <thead>
+                  <tr><td></td><th>Bla</th><th>Bla</th><th>Bla</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+                  <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+                  <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="quarter">
-            <p><tt>.quarter</tt> Images in grid are automatically resized to fit.</p>
-            <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg"/>
+        </div>
+        <div class="stupid-example">
+          <div class="container black max900">
+            <div class="quarter">
+              <div class="padded">
+                <h5>Sidebar</h5>    
+                <p><tt>.quarter</tt> padded sidebar in a <tt>.black.container</tt>  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+              </div>
+            </div>
+            <div class="threequarters white">          
+              <div class="padded">
+                <h5>Main content</h5>
+                <p><tt>.threequarters.white</tt> in the same <tt>.black.container</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+              </div>
+            </div>
           </div>
-          <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="quarter"><p><tt>.quarter</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="twothirds"><p><tt>.twothirds</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-          <div class="third">
-            <p><tt>.third</tt> You can also put a table in the grid and it flows with the rest.</p>
-            <table class="center fill">
-              <thead>
-                <tr><td></td><th>Bla</th><th>Bla</th><th>Bla</th></tr>
-              </thead>
+        </div>
+        <div class="stupid-example">
+          <div class="container pink max900 spaced">
+            <div class="fill padded">
+              <ul class="menu">
+                <li><a class="pink">Option One</a></li>
+                <li><a class="pink">Option Two</a></li>
+                <li><a class="pink">Option Three</a></li>
+              </ul>
+            </div>
+            <div class="threequarters white">          
+              <div class="padded">
+                <h5>Main content</h5>
+                <p><tt>.threequarters.white</tt> in <tt>.pink.container</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+              </div>
+            </div>
+            <div class="quarter">
+              <div class="padded">
+                <h5>Sidebar</h5>    
+                <p><tt>.quarter</tt> padded sidebar in a <tt>.pink.container</tt> </p>
+                <div class="container">
+                  <a class="btn teal fill">Option One</a>
+                  <a class="btn teal fill">Option Two</a>
+                  <a class="btn teal fill">Option Three</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stupid-example">
+          <div class="container padded center">
+            <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+          </div>
+          <div class="container padded center">
+            <div class="third"><p>A centered <tt>.third</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+          </div>
+          <div class="container padded center">
+            <div class="half"><p>A centered <tt>.half</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+          </div>
+          <div class="container padded center">
+            <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p></div>
+            <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p></div>
+          </div>
+          <div class="container padded center">
+            <div class="twothirds"><p>A centered <tt>.twothirds</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+          </div>
+          <div class="container padded center">
+            <div class="threequarters"><p>A centered <tt>.threequarters</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+          </div>
+        </div>
+        
+        <div class="container padded center">
+          <div class="threequarters spaced">
+            <center>
+              <h4>Complete list of stupid.css classes</h4>
+            </center>
+            <table>
               <tbody>
-                <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
-                <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
-                <tr><th>Bla</th><td>Bla</td><td>Bla</td><td>Bla</td></tr>
+                <tr>
+                  <th>Grid</th>
+                  <td>
+                    <tt>.container</tt>, <tt>.quarter</tt>, <tt>.third</tt>, <tt>.half</tt>, <tt>.twothirds</tt>, <tt>.threequarters</tt>, <tt>.fill</tt>, <tt>.compressible</tt>, <tt>.center</tt>, <tt>.right</tt>, <tt>.max900</tt>, <tt>.xscroll</tt>, <tt>.yscroll</tt>
+                </td>
+                </tr>
+                <tr>
+                  <th>Modifiers</th>
+                  <td>
+                    <tt>.hidden</tt>, <tt>.lifted</tt>, <tt>.rounded</tt>, <tt>.oval</tt>, <tt>.nowrap</tt>, <tt>.padded</tt>, <tt>.spaced</tt>, <tt>.relative</tt>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Buttons</th>
+                  <td>
+                    <tt>.btn</tt>, <tt>.small</tt>, <tt>.large</tt>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Menu</th>
+                <td>
+                  <tt>.menu</tt>, <tt>.dark</tt>
+                </td>
+                </tr>
+                <tr>
+                  <th>Effects</th>
+                  <td>
+                    <tt>.accordion</tt>, <tt>.card</tt>, <tt>.pulse</tt>, <tt>.modal</tt>, <tt>.close</tt>, <tt>.progress</tt>, <tt>.determinate</tt>, <tt>.indeterminate</tt>, <tt>.noeffect</tt>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Colors</th>
+                  <td>
+                    <button style="width:120px" class="aqua">.aqua</button>
+                    <button style="width:120px" class="aquamarine">.aquamarine</button>
+                    <button style="width:120px" class="black">.black</button>
+                    <button style="width:120px" class="blue">.blue</button>
+                    <button style="width:120px" class="fuchsia">.fuchsia</button>
+                    <button style="width:120px" class="gray">.gray</button>
+                    <button style="width:120px" class="green">.green</button>
+                    <button style="width:120px" class="lime">.lime</button>
+                    <button style="width:120px" class="maroon">.maroon</button>
+                    <button style="width:120px" class="navy">.navy</button>
+                    <button style="width:120px" class="olive">.olive</button>
+                    <button style="width:120px" class="orange">.orange</button>
+                    <button style="width:120px" class="pink">.pink</button>
+                    <button style="width:120px" class="purple">.purple</button>
+                    <button style="width:120px" class="red">.red</button>
+                    <button style="width:120px" class="silver">.silver</button>
+                    <button style="width:120px" class="teal">.teal</button>
+                    <button style="width:120px" class="yellow">.yellow</button>
+                    <button style="width:120px" class="white">.white</button>
+                    <button style="width:120px" class="glass">.glass</button>
+                    
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-
-      <div class="container black max900">
-        <div class="quarter">
-          <div class="padded">
-            <h5>Sidebar</h5>    
-            <p><tt>.quarter</tt> padded sidebar in a <tt>.black.container</tt>  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-          </div>
-        </div>
-        <div class="threequarters white">          
-          <div class="padded">
-            <h5>Main content</h5>
-            <p><tt>.threequarters.white</tt> in the same <tt>.black.container</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container pink max900 spaced">
-        <div class="fill padded">
-          <ul class="menu">
-            <li><a class="pink">Option One</a></li>
-            <li><a class="pink">Option Two</a></li>
-            <li><a class="pink">Option Three</a></li>
-          </ul>
-        </div>
-        <div class="threequarters white">          
-          <div class="padded">
-            <h5>Main content</h5>
-            <p><tt>.threequarters.white</tt> in <tt>.pink.container</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-          </div>
-        </div>
-        <div class="quarter">
-          <div class="padded">
-            <h5>Sidebar</h5>    
-            <p><tt>.quarter</tt> padded sidebar in a <tt>.pink.container</tt> </p>
-            <div class="container">
-              <a class="btn teal fill">Option One</a>
-              <a class="btn teal fill">Option Two</a>
-              <a class="btn teal fill">Option Three</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container padded center">
-        <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-      </div>
-      <div class="container padded center">
-        <div class="third"><p>A centered <tt>.third</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-      </div>
-      <div class="container padded center">
-        <div class="half"><p>A centered <tt>.half</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-      </div>
-      <div class="container padded center">
-        <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p></div>
-        <div class="quarter"><p>A centered <tt>.quarter</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p></div>
-      </div>
-      <div class="container padded center">
-        <div class="twothirds"><p>A centered <tt>.twothirds</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-      </div>
-      <div class="container padded center">
-        <div class="threequarters"><p>A centered <tt>.threequarters</tt> column. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-      </div>
-      
-      <div class="container padded center">
-        <div class="threequarters spaced">
-          <center>
-            <h4>Complete list of stupid.css classes</h4>
-          </center>
-          <table>
-            <tbody>
-              <tr>
-                <th>Grid</th>
-                <td>
-                  <tt>.container</tt>, <tt>.quarter</tt>, <tt>.third</tt>, <tt>.half</tt>, <tt>.twothirds</tt>, <tt>.threequarters</tt>, <tt>.fill</tt>, <tt>.compressible</tt>, <tt>.center</tt>, <tt>.right</tt>, <tt>.max900</tt>, <tt>.xscroll</tt>, <tt>.yscroll</tt>
-                </td>
-              </tr>
-              <tr>
-                <th>Modifiers</th>
-                <td>
-                  <tt>.hidden</tt>, <tt>.lifted</tt>, <tt>.rounded</tt>, <tt>.oval</tt>, <tt>.nowrap</tt>, <tt>.padded</tt>, <tt>.spaced</tt>, <tt>.relative</tt>
-                </td>
-              </tr>
-              <tr>
-                <th>Buttons</th>
-                <td>
-                  <tt>.btn</tt>, <tt>.small</tt>, <tt>.large</tt>
-                </td>
-              </tr>
-              <tr>
-                <th>Menu</th>
-                <td>
-                  <tt>.menu</tt>, <tt>.dark</tt>
-                </td>
-              </tr>
-              <tr>
-                <th>Effects</th>
-                <td>
-                  <tt>.accordion</tt>, <tt>.card</tt>, <tt>.pulse</tt>, <tt>.modal</tt>, <tt>.close</tt>, <tt>.progress</tt>, <tt>.determinate</tt>, <tt>.indeterminate</tt>, <tt>.noeffect</tt>
-                </td>
-              </tr>
-              <tr>
-                <th>Colors</th>
-                <td>
-            <button style="width:120px" class="aqua">.aqua</button>
-            <button style="width:120px" class="aquamarine">.aquamarine</button>
-            <button style="width:120px" class="black">.black</button>
-            <button style="width:120px" class="blue">.blue</button>
-            <button style="width:120px" class="fuchsia">.fuchsia</button>
-            <button style="width:120px" class="gray">.gray</button>
-            <button style="width:120px" class="green">.green</button>
-            <button style="width:120px" class="lime">.lime</button>
-            <button style="width:120px" class="maroon">.maroon</button>
-            <button style="width:120px" class="navy">.navy</button>
-            <button style="width:120px" class="olive">.olive</button>
-            <button style="width:120px" class="orange">.orange</button>
-            <button style="width:120px" class="pink">.pink</button>
-            <button style="width:120px" class="purple">.purple</button>
-            <button style="width:120px" class="red">.red</button>
-            <button style="width:120px" class="silver">.silver</button>
-            <button style="width:120px" class="teal">.teal</button>
-            <button style="width:120px" class="yellow">.yellow</button>
-            <button style="width:120px" class="white">.white</button>
-            <button style="width:120px" class="glass">.glass</button>
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </main>
-    <footer class="black">
+    <footer class="black stupid-example">
       <div class="container padded max900">
         <div class="fill">
           <p>This is a <tt>&lt;footer class="black container padded" /&gt;</tt> element. You can use the grid here too.</p>
         </div>
         <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
         <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
-        <div class="third"><p><tt>.third</tt> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p></div>
+        <div class="third"><p><tt>.third</tt>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+          <div class="btn oval center" style="width:120px;height:120px;background:url(http://bit.ly/1HjkXhG) center center;background-size:cover"></div>
+        </div>
         <div class="fill"><p>Made by <a href="mailto:massimo.dipierro@gmail.com">Massimo</a> at <a href="http://experts4solutions.com">experts4solutions</a> - Copyright 2016 - BSD License</p></div>
       </div>
     </footer>
-    <a class="noeffect" href="https://github.com/mdipierro/stupid.css" style="z-index: 9999;position: absolute; top: 0; right: 0; border: 0;"><img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <a class="noeffect" href="https://github.com/mdipierro/stupid.css" style="z-index: 9999;position: absolute; top: 0; right: 0; border: 0;"><img src="http://bit.ly/1TWEWYQ"/></a>
+    <script>
+      // prevent android horizontal scrolling
+      window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
+    </script>
+
+    <!-- 
+         code below is not necessary for stupid.css to work 
+         it is just here so that when you click on the page
+         it shows the html source of the stupid-examples
+      -->
+    <div class="modal" id="service-modal">
+      <div class="twothirds rounded white padded relative">
+        <h2>Example Source</h2>
+        <a class="close" href="#service-modal">&times;</a>
+        <pre style="max-height:50vh;background-color:black;color:yellow" class="yscroll xscroll">
+        </pre>
+        <div class="right">
+          <a class="close btn" href="#service-modal" >close</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+      var m = jQuery('#service-modal').css({visibility:'visible', opacity:1}).hide(); m.find('.close').click(function(){jQuery('#service-modal').hide();}); jQuery('.stupid-example').each(function(){ var t = jQuery(this); var purge = function(t) { var txt=((t.prop('tagName')=='DIV')?t.html():t[0].outerHTML).replace(/\n      /ig,'\n').replace(/\<p\>.*?\<\/p\>/ig,'{content}'); return txt;}; t.attr('data-source',purge(t)).css('cursor','help').on('click',function(e){if(['A','LABEL','INPUT','TEXTAREA','SELECT','OPTION'].indexOf(jQuery(e.target).prop('tagName'))<0) {m.find('pre').text(t.attr('data-source'));m.show();}});});
+    </script>
   </body>  
-  <script>
-    // prevent android horizontal scrolling
-    window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
-  </script>
 </html>
