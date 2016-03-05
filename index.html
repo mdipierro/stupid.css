@@ -84,11 +84,9 @@
         <p>It it readable.</p>
         <p>All the effects are PURE CSS - NO JS USED (*)</p>
         <p>It flows the page content on narrow screens.</p>
-        <p>It is easy to style. Stupid-Example themes:
-          <a href="themes/marine-theme.html">Marine</a>,
-          <a href="themes/like-bootstrap-jumbotron.html">Jumbotron</a>.
-        </p>
+        <p>It is easy to style. We show examples of themes below></p>
         <p>It it free (BSD).</p>
+        <p>This page is intentionally not pretty.</p>
         <p>Read the source of this page to learn it.</p>
         <p>To use it simply include <tt>&lt;link href="stupid.css" rel="stylesheet" type="text/css"/&gt;</tt></p>
         <div class="padded spaced">
@@ -519,6 +517,89 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <div class="container padded center">
+          <div class="threequarters spaced">
+            <center>
+              <h4>Styling and themes</h4>
+            </center>
+            <p>Stupid is easy to style. Here are some examples of themed pages:
+              <a href="themes/marine-theme.html">Marine</a>,
+              <a href="themes/like-bootstrap-jumbotron.html">Jumbotron</a>.</p>
+            <div class="accordion">
+              <input type="checkbox" name="group2" id="x07"/>
+              <p>Here is the typical page structure: <label for="x07"><a>Open</a></label></p>
+              <div>
+                <pre class="black padded">
+&lt;html&gt;
+  &lt;head&gt;&lt;script src="stupid.css"&gt;&lt;/script&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;header class="black"&gt;
+      &lt;div class="container middle max900"&gt;
+        &lt;div class="fill middle"&gt;
+          &lt;ul class="menu"&gt;...&lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;div class="container middle max900"&gt;
+        &lt;div class="quarter"&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class="threequarters"&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer class="black"&gt;
+      &lt;div class="container middle max900"&gt;
+        &lt;div class="third"&gt;...&lt;/div&gt;
+        &lt;div class="third"&gt;...&lt;/div&gt;
+        &lt;div class="third"&gt;...&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="checkbox" name="group2" id="x08"/>
+              <p>You only need to override the colors below:
+                <label for="x08"><a>Open</a></label>
+              </p>
+              <div>
+                <pre class="black padded">
+header { background-color: #111111; color: #FFFFFF }
+header a { color: #FFFFFF }
+main { background-color: #111111; color: #FFFFFF }
+footer { background-color: #111111; color: #FFFFFF }
+
+/* link effects */
+a { color: #26A69A }
+a:not(.btn):not(.noeffect):after { background-color: #26A69A }
+a:not(.btn):not(.noeffect):hover { color: #26A69A }
+a:not(.btn):not(.noeffect):hover:after { color: #26A69A }
+
+/* buttons */
+.btn, button, [type=button], [type=submit]
+ { color: white; background-color: #26A69A }
+.btn-default   { background-color: #26A69A }
+.btn-primary   { background-color: #1C959E }
+.btn-error     { background-color: #FF0000 }
+.btn-alert     { background-color: #D2CDB6 }
+.btn-info      { background-color: #8AC7FD }
+
+/* tables */
+tbody tr:hover { background-color: #fbf6d9 }
+thead tr       { background-color: #f1f1f1 }
+tbody tr       { border-bottom: 2px solid #f1f1f1 }
+                </pre>
+              </div>
+            </div>
+            <p>Note that <tt>.btn-*</tt> are not defined in stupid.css but we recommend you defined and use them in your themes.</p>.
           </div>
         </div>
       </div>
