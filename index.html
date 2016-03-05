@@ -7,10 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <script>
-      var url = 'http://mdipierro.github.io/stupid.css/index.html';
-      if(window.location.href.split(':')[0]!='file' && window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
-    </script>
   </head>
   <body>        
     <header class="black padded stupid-example">
@@ -86,7 +82,7 @@
         <p><a href="stupid.css">Stupid.css</a> is yet another CSS frameworks, designed for those of us who are CSS challenged.</p>
         <p>It is super small (~13kb uncompressed).</p>
         <p>It it readable.</p>
-        <p>All the effects are PURE CSS - NO JS REQUIRED (*)</p>
+        <p>All the effects are PURE CSS - NO JS USED (*)</p>
         <p>It flows the page content on narrow screens.</p>
         <p>It is easy to style. Stupid-Example themes:
           <a href="themes/marine-theme.html">Marine</a>,
@@ -210,6 +206,8 @@
         <p>There are two types of accordions. Exclusive.</p>
         <div class="stupid-example">
           <div class="accordion">
+            <!-- radio here is to keep the state of the accordion
+                 its id must be unique and referened by the label -->
             <input type="radio" name="group1" id="one"/>
             <label for="one"><a>One</a></label>
             <div>
@@ -231,6 +229,8 @@
         <p>Non exclusive:</p>
         <div class="stupid-example">
           <div class="accordion">
+            <!-- checkbox here is to keep the state of the accordion
+                 its id must be unique and referened by the label -->
             <input type="checkbox" id="three"/>
             <label for="three"><a>Three</a></label>
             <div>
@@ -260,6 +260,8 @@
             </div>
             <div class="threequarters">
               <div class="accordion">
+                <!-- radio here is to keep the state of the accordion
+                     its id must be unique and referened by the label -->
                 <input type="radio" name="group1" id="five"/>
                 <div>
                   <div class="padded">
@@ -536,15 +538,19 @@
     </footer>
     <a class="noeffect" href="https://github.com/mdipierro/stupid.css" style="z-index: 9999;position: absolute; top: 0; right: 0; border: 0;"><img src="http://bit.ly/1TWEWYQ"/></a>
     <script>
-      // prevent android horizontal scrolling
+      // prevent annoying Android horizontal scrolling
       window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
     </script>
-
     <!-- 
          code below is not necessary for stupid.css to work 
          it is just here so that when you click on the page
          it shows the html source of the stupid-examples
       -->
+    <script> 
+      // prevent pahe from being cached
+      var url = 'http://mdipierro.github.io/stupid.css/index.html';
+      if(window.location.href.split(':')[0]!='file' && window.location.href.split(':')[1]!=url.split(':')[1]) window.location=url;
+    </script>
     <div class="modal" id="service-modal">
       <div class="twothirds rounded white padded relative">
         <h2>Example Source</h2>
