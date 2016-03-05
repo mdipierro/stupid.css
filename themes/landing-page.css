@@ -3,6 +3,10 @@ header {
   padding-bottom: 15px;
 }
 
+h1, h2, h3, h4 {text-transform:none }
+    
+#jumbotron, #jumbotron-bottom { text-shadow: 2px 2px 3px rgba(0,0,0,0.6); }
+
 p, li {
   font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvet\
 ica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
