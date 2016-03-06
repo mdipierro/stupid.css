@@ -648,7 +648,7 @@ tbody tr       { border-bottom: 2px solid #f1f1f1 }
     </div>
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script>
-      var m = jQuery('#service-modal').css({visibility:'visible', opacity:1}).hide(); m.find('.close').click(function(){jQuery('#service-modal').hide();}); jQuery('.stupid-example').each(function(){ var t = jQuery(this); var purge = function(t) { var txt=((t.prop('tagName')=='DIV')?t.html():t[0].outerHTML).replace(/\n      /ig,'\n').replace(/\<p\>.*?\<\/p\>/ig,'{content}'); return txt;}; t.attr('data-source',purge(t)).css('cursor','help').on('click',function(e){if(['A','LABEL','INPUT','TEXTAREA','SELECT','OPTION'].indexOf(jQuery(e.target).prop('tagName'))<0) {m.find('pre').text(t.attr('data-source'));m.show();}});});
+      var m = jQuery('#service-modal').css({visibility:'visible', opacity:1}).hide(); m.find('.close').click(function(){jQuery('#service-modal').hide();}); jQuery('.stupid-example').each(function(){ var t = jQuery(this); var purge = function(t) { var txt=((t.prop('tagName')=='DIV')?t.html():t[0].outerHTML).replace(/\n      /ig,'\n').replace(/\<p\>.*?\<\/p\>/ig,'{content}'); return txt;}; t.hidden_html=purge(t);t.css('cursor','help').on('click',function(e){if(['A','LABEL','INPUT','TEXTAREA','SELECT','OPTION'].indexOf(jQuery(e.target).prop('tagName'))<0) {m.find('pre').text(t.hidden_html);m.show();}});});
     </script>
   </body>  
 </html>
