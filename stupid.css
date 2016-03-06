@@ -343,20 +343,23 @@ a:not(.btn):not(.noeffect):after {
 
 /**** tags ****/
 .tags > span, .tags > span.off:hover {
-    height: 30px;
-    padding: 4px 9px;
-    text-decoration: none;
-    margin: 0 5px 30px 0 !important;
-    white-space: nowrap;
-    color: white;
-    background-color: #26a69a;
-    border-radius: 5px;
-    line-height: 32px;
+  height: 30px;
+  padding: 4px 9px;
+  text-decoration: none;
+  margin: 0 5px 30px 0 !important;
+  white-space: nowrap;
+  color: white;
+  background-color: #26a69a;
+  border-radius: 5px;
+  line-height: 32px;
+}
+.tags.dismissible > span:not(.off):hover {
+  background-color: #ccc !important;
 }
 .tags.dismissible > span:not(.off):after {
-    content: " \f00d";
-    font-family: FontAwesome;
+  content: " \f00d";
+  font-family: FontAwesome;
 }
 .tags > span.off {
-    background-color: #ccc;
+  background-color: #ccc;
 }
