@@ -197,7 +197,7 @@ ul.menu.dark ul a {color:white}
 ul.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
 
 @media (max-width:599px) {
-  header ul.menu li {min-width:90vw}
+  header ul.menu li, header ul.menu ul {width: 100%}  
   header ul.menu.right {float:left; text-align:left}
   header ul.menu ul ul {top:2.5em; left:-1px; z-index:2000}
 }
