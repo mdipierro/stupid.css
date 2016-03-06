@@ -41,3 +41,5 @@ ica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin-left:-300px;
   text-align:center;
 }
+
+img {max-width:400px !important;}
