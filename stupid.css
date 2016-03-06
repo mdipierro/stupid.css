@@ -66,11 +66,11 @@ header, footer {with:100%}
 .hidden {display:none}
 
 /*** forms ***/
-input:not([type]), [type=text], [type=password], [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd; width:100%}
+input:not([type]), input:not([type=checkbox]):not([type=radio]), [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd; width:100%}
 textarea {width:100%; border:1px solid #ddd; padding:4px 8px; outline:none; outline:none}
 select {-webkit-appearance:none; outline:none; padding:0.5em 1em; border-radius:0; margin:0.5px; border-bottom:1px solid #ddd}
 input, textarea, select, button {font-size:12px}
-select:hover, input:not([type]):hover, [type=text]:hover, [type=password]:hover, textarea:hover {background-color:#fbf6d9; transition:background-color 1s ease}
+input:not([type]), input:not([type=checkbox]):not([type=radio]):hover, select:hover, textarea:hover {background-color:#fbf6d9; transition:background-color 1s ease}
 
 /*** grid ***/
 .container {margin-right:-20px}
