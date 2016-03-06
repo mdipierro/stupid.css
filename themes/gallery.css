@@ -25,3 +25,7 @@ p, li {
   background-position: center;
   background-size: cover;
 }
+
+@media (min-width:600px) and (max-width:799px) {
+  .gallery .quarter {width:50%; margin-right:-10px}
+}
