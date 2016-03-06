@@ -174,7 +174,13 @@
           </div>
         </div>
         <h2>Tooltips</h2>
-        <p>For tooltips, you can used the <tt>data-tooltip="..."</tt> attribute as in <a class="stupid-example"><span data-tooltip="Hello tooltip!">this stupid-example</span></a>.</p>
+        <p>For tooltips, you can used the <tt>data-tooltip="..."</tt> attribute as in <a class="stupid-example"><span data-tooltip="Hello tooltip!">this stupid-example</span></a>. They can be colored as buttons.</p>
+        <h2>Tags</h2>
+        <p>Tags are just <tt>&lt;span&gt;</tt> inside <tt>.tags</tt>. They can be <tt>.tags.dismissible</tt>. Individual tags can be <tt>.off</tt>.</p>
+        <div class="stupid-example">
+          <div class="tags"><span>one</span><span class="pink">two</span><span class="off">three</span></div>
+          <div class="tags dismissible"><span class="teal">one</span><span>two</span><span class="off">three</span></div>
+        </div>
         <h2>Lists</h2>
         <p>Lists do not have bullets but are indented.</p>
         <div class="stupid-example">
@@ -473,7 +479,8 @@
               <tr>
                 <th>Buttons</th>
                 <td>
-                  <tt>.btn</tt>, <tt>.small</tt>, <tt>.large</tt>
+                  <tt>.btn</tt>, <tt>.small</tt>, <tt>.large</tt>,
+                  <tt>.tags</tt>, <tt>.dismissible</tt>, <tt>.off</tt>
                 </td>
               </tr>
               <tr>

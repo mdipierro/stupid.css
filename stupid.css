@@ -41,9 +41,9 @@ header, footer {with:100%}
 }
 
 /*** buttons ***/
-.btn, button, [type=button], [type=submit] {padding:0.5em 1em !important; margin:0 0.5em 0.5em 0; line-height:2em; background-color:#26a69a; color:white}
+.btn, button, [type=button], [type=submit] {padding:0.5em 1em !important; margin:0 0.5em 0.5em 0; line-height:2.4em; background-color:#26a69a; color:white}
 .btn:hover, button:hover, [type=button]:hover, [type=submit]:hover {box-shadow:0 0 10px #666; text-decoration:none; cursor:pointer}
-.btn.small, table .btn {padding:0.25em 0.5em !important; font-size:0.8em; line-height:1.3em}
+.btn.small, table .btn {padding:0.25em 0.5em !important; font-size:0.8em; line-height:1.5em}
 .btn.large {padding:1em 2em !important; font-size:1.2em; line-height:3em}
 .btn.oval {border-radius:50%}
 
@@ -339,4 +339,24 @@ a:not(.btn):not(.noeffect):after {
 }
 
 /*** colors from http://clrs.cc/ ***/
-.navy{background-color:#001f3f;color:white}.blue{background-color:#0074d9;color:white}.aqua{background-color:#7fdbff;color:black}.teal{background-color:#39cccc;color:white}.olive{background-color:#3d9970;color:white}.green{background-color:#2ecc40;color:white}.acquamarine{background-color:#26a69a;color:white}.lime{background-color:#01ff70;color:black}.yellow{background-color:#ffdc00;color:black}.orange{background-color:#ff851b;color:white}.red{background-color:#cc1f00;color:white}.fuchsia{background-color:#f012be;color:white}.pink{background-color:#ee6e73;color:white}.purple{background-color:#b10dc9;color:white}.maroon{background-color:#85144b;color:white}.white{background-color:#fff;color:black;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa;color:white}.silver{background-color:#f1f1f1;color:black}.black{background-color:#000;color:white}.glass{background:rgba(255,255,255,0.5);color:black}
+.navy{background-color:#001f3f!important;color:white}.blue{background-color:#0074d9!important;color:white}.aqua{background-color:#7fdbff!important;color:black}.teal{background-color:#39cccc!important;color:white}.olive{background-color:#3d9970!important;color:white}.green{background-color:#2ecc40!important;color:white}.acquamarine{background-color:#26a69a!important;color:white}.lime{background-color:#01ff70!important;color:black}.yellow{background-color:#ffdc00!important;color:black}.orange{background-color:#ff851b!important;color:white}.red{background-color:#cc1f00!important;color:white}.fuchsia{background-color:#f012be!important;color:white}.pink{background-color:#ee6e73!important;color:white}.purple{background-color:#b10dc9!important;color:white}.maroon{background-color:#85144b!important;color:white}.white{background-color:#fff!important;color:black;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa!important;color:white}.silver{background-color:#f1f1f1!important;color:black}.black{background-color:#000!important;color:white}.glass{background:rgba(255,255,255,0.5)!important;color:black}
+
+/**** tags ****/
+.tags > span, .tags > span.off:hover {
+    height: 30px;
+    padding: 4px 9px;
+    text-decoration: none;
+    margin: 0 5px 30px 0 !important;
+    white-space: nowrap;
+    color: white;
+    background-color: #26a69a;
+    border-radius: 5px;
+    line-height: 32px;
+}
+.tags.dismissible > span:not(.off):after {
+    content: " \f00d";
+    font-family: FontAwesome;
+}
+.tags > span.off {
+    background-color: #ccc;
+}
