@@ -432,7 +432,7 @@
     jQuery('.color').addClass(name);
     var color = jQuery('.color').css('background-color');
     if(name!='white') {
-      jQuery('.menu').addClass('dark');                                                     
+      if(prob(50)) jQuery('.menu').addClass('dark');
       jQuery('a').css({'color':color});
       jQuery('.menu li, .menu a').css({'color':'white'});
       jQuery('input[type=submit],.btn:not(.white)').css({'color':'white'});
