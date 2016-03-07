@@ -49,7 +49,7 @@
         text-align:center;
       }
       img {width:300px; height; 300px}
-      .card {width:200px; height: 300;}
+      .card {width:200px; height: 300; }
       iframe {height:400px; pointer-events: none;}
       .oval {width:120px;height:120px;background-size:cover}
       .high {position:relative!important; height:50px; text-align:right}
@@ -368,12 +368,13 @@
         </div>
         <div class="twothirds">
           <div class="padded">
-            <ul class="menu fill">
+            <ul class="menu">
               <li><a>Home</a></li>
               <li><a>About</a></li>
               <li><a>Services</a></li>
               <li><a>Contact</a></li>
             </ul>          
+            <br/><br/>
             <div class="fill">
               <p class="rt"></p>
               <p class="rt"></p>
@@ -415,16 +416,16 @@
     }
     jQuery('input[type=submit],.btn:not(.white),.tags>span:not(.off),.tags>span.off:hover').addClass(name);
     var rt=function(self,length) {
-      var t='';for(var k=0; k<length; k++) t+='bla ';
-      jQuery(self).html(t);
+      var t="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+      jQuery(self).html(t.split(' ').splice(0,length).join(' ')+'...');
     };
-    jQuery('p.rt').each(function(){rt(this,100);});
-    jQuery('.card p.rt').each(function(){rt(this,25);});
-    jQuery('h1.rt').each(function(){rt(this,5);});
-    jQuery('h2.rt').each(function(){rt(this,15);});
-    jQuery('h3.rt').each(function(){rt(this,5);});
-    jQuery('h4.rt').each(function(){rt(this,5);});
-    jQuery('h5.rt').each(function(){rt(this,10);});
+    jQuery('p.rt').each(function(){rt(this,50);});
+    jQuery('.card p.rt').each(function(){rt(this,12);});
+    jQuery('h1.rt').each(function(){rt(this,2);});
+    jQuery('h2.rt').each(function(){rt(this,4);});
+    jQuery('h3.rt').each(function(){rt(this,2);});
+    jQuery('h4.rt').each(function(){rt(this,2);});
+    jQuery('h5.rt').each(function(){rt(this,4);});
     var footers = jQuery('footer').hide();
     jQuery(footers.get(choice([0,1,2]))).show();
     var containers = jQuery('main>div').hide();
