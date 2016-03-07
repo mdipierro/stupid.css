@@ -285,7 +285,6 @@ a:not(.btn):not(.noeffect):after {
 
 /*** accordion ***/
 .accordion {
-  border: 1px solid white;
   margin: 0 auto;
   list-style: none outside;
 }
