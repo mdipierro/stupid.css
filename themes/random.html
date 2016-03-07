@@ -93,18 +93,18 @@
             <a class="btn large" href="random.html">Randomize!</a>
             <a class="btn large" href="#modal">Learn more</a>
           </center>
-          <button class="white">
+          <a class="btn white" href="https://twitter.com/mdipierro">
             <i class="fa fa-twitter fa-fw"></i>
             twitter
-          </button>
-          <button class="white">
-            <i class="fa fa-github fa-fw"></i>
-            github
-          </button>
-          <button class="white">
+          </a>
+          <a class="btn white" href="https://www.linkedin.com/in/massimodipierro">
             <i class="fa fa-linkedin fa-fw"></i>
             linkedin
-          </button>
+          </a>
+          <a class="btn white" href="https://github.com/mdipierro">
+            <i class="fa fa-github fa-fw"></i>
+            github
+          </a>
         </div>
       </div>
       <div class="color" id="jumbotron2">
@@ -121,6 +121,18 @@
                   <a class="btn large" href="#modal">Learn more</a>
                 </div>
                 <p class="rt"></p>
+                <a class="btn white" href="https://twitter.com/mdipierro">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  twitter
+                </a>
+                <a class="btn white" href="https://www.linkedin.com/in/massimodipierro">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  linkedin
+                </a>
+                <a class="btn white" href="https://github.com/mdipierro">
+                  <i class="fa fa-github fa-fw"></i>
+                  github
+                </a>
               </div>
             </div>
           </div>
@@ -396,10 +408,10 @@
       jQuery('.menu').addClass('dark');                                                     
       jQuery('a').css({'color':color});
       jQuery('.menu li, .menu a').css({'color':'white'});
-      jQuery('input[type=submit],.btn').css({'color':'white'});
+      jQuery('input[type=submit],.btn:not(.white)').css({'color':'white'});
       if(prob(50)) jQuery('header,footer').addClass('gradient');
     }
-    jQuery('input[type=submit],.btn,.tags>span:not(.off),.tags>span.off:hover').addClass(name);
+    jQuery('input[type=submit],.btn:not(.white),.tags>span:not(.off),.tags>span.off:hover').addClass(name);
     var rt=function(self,length) {
       var t='';for(var k=0; k<length; k++) t+='bla ';
       jQuery(self).html(t);
