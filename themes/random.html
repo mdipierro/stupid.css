@@ -80,19 +80,19 @@
           <h2>Made with stupid.css</h2>
           <h3>Reload this page to get a different one</h3>
           <center class="padded">
-            <a class="btn large rounded download"><i class="fa fa-download"></i></a>
-            <a class="btn large rounded" href="random.html">Randomize!</a>
-            <a class="btn large rounded" href="#modal">Learn more</a>
+            <a class="btn large download"><i class="fa fa-download"></i></a>
+            <a class="btn large" href="random.html">Randomize!</a>
+            <a class="btn large" href="#modal">Learn more</a>
           </center>
-          <button class="white rounded">
+          <button class="white">
             <i class="fa fa-twitter fa-fw"></i>
             twitter
           </button>
-          <button class="white rounded">
+          <button class="white">
             <i class="fa fa-github fa-fw"></i>
             github
           </button>
-          <button class="white rounded">
+          <button class="white">
             <i class="fa fa-linkedin fa-fw"></i>
             linkedin
           </button>
@@ -106,9 +106,9 @@
               <h3>Made with stupid.css</h3>
               <h4>Reload this page to get a different one</h4>
               <div class="spaced">
-                <a class="btn large rounded download"><i class="fa fa-download"></i></a>
-                <a class="btn large rounded" href="random.html">Randomize!</a>
-                <a class="btn large rounded" href="#modal">Learn more</a>
+                <a class="btn large download"><i class="fa fa-download"></i></a>
+                <a class="btn large" href="random.html">Randomize!</a>
+                <a class="btn large" href="#modal">Learn more</a>
               </div>
               <p class="rt"></p>
             </div>
@@ -360,7 +360,7 @@
           Even random pages are beautiful with <a href="http://mdipierro.github.io/stupid.css/index.html">stupid.css</a>!
         </p>
         <div class="high">
-          <a class="close right btn rounded" href="#modal-stupid-example" >close</a>
+          <a class="close right btn" href="#modal-stupid-example" >close</a>
         </div>
       </div>
     </div>
@@ -368,7 +368,7 @@
   <script>
     var prob = function(p) {return (Math.random()<0.01*p);};
     var choice = function(a) {return a[parseInt(Math.random()*a.length)];};
-    jQuery('.btn').addClass('rounded');
+    if(prob(50)) jQuery('.btn').addClass('rounded');
     jQuery('img').addClass('rounded');
     var name = choice(['white','black','aquamarine','pink','navy','olive']);
     jQuery('.color').addClass(name);
