@@ -462,7 +462,7 @@
     if(prob(50)) jQuery('header').css({'padding':'50px 0','font-size':'1.5em'});
     jQuery('script').remove();
     jQuery('.download').attr('href',"data:application/octet-stream;base64,"+btoa("<html>\n"+jQuery('html').html()+"\n</html>")).attr('download','random.html');
-    setTimeout(function(){jQuery('.progress').slideUp();},3000);
+    $(window).on("load", function(){jQuery('.progress').slideUp();});
   </script>
 </html>
 
