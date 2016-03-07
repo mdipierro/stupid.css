@@ -1,0 +1,396 @@
+<html>
+  <head>
+    <link href="http://mdipierro.github.io/stupid.css/stupid.css" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          rel="stylesheet" >
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    
+    <style>
+      header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .gradient {background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACWCAYAAAAfduJyAAAAaUlEQVQoFa2SQQrAIAwEU/v/P7fdHgYHBQV7kCSzuxFp1YHvam8IR31t62fQVKLTNkD07pMlgQIIWKCy0U69kYQiVrVFJWavAHvzpqFImHGXfTpKGc3YAU0FSLVA0eGNTV7ioXhF/3/yAbOjAgrSfBhhAAAAAElFTkSuQmCC);background-size: auto 100%;background-repeat: repeat-x;background-position: bottom;}
+      h1, h2, h3, h4 {text-transform:none }
+      #jumbotron { text-shadow: 2px 2px 3px rgba(0,0,0,0.6); }
+      p, li {
+      font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvet\
+        ica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.5em;
+        font-siz: 1.3em;
+      }
+      #jumbotron {
+        height: 500px;
+      }
+      #jumbotron, #jumbotron2 {
+        background: url(https://unsplash.it/1200/600/?random);
+      }
+      #jumbotron div {
+        left: 50%;
+        color: white;
+        width: 600px;
+        top: 20px;
+        margin-left:-300px;
+        text-align:center;
+      }
+      img {width:300px; height; 300px}
+      .card {width:200px; height: 300;}
+      iframe {height:400px; pointer-events: none;}
+      .oval {width:120px;height:120px;background-size:cover}
+      .high {position:relative!important; height:50px; text-align:right}
+      input, textarea { margin-top:10px!important;}
+    </style>
+  </head>
+  <body>
+    <header class="color">
+      <div class="container max900">
+        <div class="fill middle">
+          <ul class="menu">
+            <li>
+              <a href="http://mdipierro.github.io/stupid.css/index.html">stupid.css</a>
+            </li>
+            <li>
+              <a>Submenu</a>
+              <ul>
+                <li><a>Sub Menu 1</a><li>
+                <li><a>Sub Menu 2</a></li>
+                <li><a>Sub Menu 3</a>
+              </ul>
+            </li>
+          </ul>
+          <ul class="menu right">
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contract</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="progress fill"><div class="indeterminate"></div></div>
+    <main>
+      <div class="container relative" id="jumbotron">
+        <div>
+          <h1>Random Page</h1>
+          <h2>Made with stupid.css</h2>
+          <h3>Reload this page to get a different one</h3>
+          <center class="padded">
+            <a class="btn large rounded download"><i class="fa fa-download"></i></a>
+            <a class="btn large rounded" href="random.html">Randomize!</a>
+            <a class="btn large rounded" href="#modal">Learn more</a>
+          </center>
+          <button class="white rounded">
+            <i class="fa fa-twitter fa-fw"></i>
+            twitter
+          </button>
+          <button class="white rounded">
+            <i class="fa fa-github fa-fw"></i>
+            github
+          </button>
+          <button class="white rounded">
+            <i class="fa fa-linkedin fa-fw"></i>
+            linkedin
+          </button>
+        </div>
+      </div>
+      <div class="color" id="jumbotron2">
+        <div class="container max900">
+          <div class="fill padded">
+            <div class="glass padded">
+              <h2>Random Page</h2>
+              <h3>Made with stupid.css</h3>
+              <h4>Reload this page to get a different one</h4>
+              <div class="spaced">
+                <a class="btn large rounded download"><i class="fa fa-download"></i></a>
+                <a class="btn large rounded" href="random.html">Randomize!</a>
+                <a class="btn large rounded" href="#modal">Learn more</a>
+              </div>
+              <p class="rt"></p>
+            </div>
+          </div>
+        </div>
+      </div>      
+      
+      <div class="silver">
+        <div class="container max900">
+          <div class="half">
+            <div class="padded">
+              <h4 class="rt"></h4>
+              <h5 class="rt"></h5>
+              <p class="rt"></p>
+              <div class="tags">
+                <span>tag1</span>
+                <span>tag2</span>
+                <span>tag3</span>
+              </div>
+            </div>
+          </div>
+          <div class="half">
+            <div class="padded center">
+              <img src="https://unsplash.it/300/300/?random">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white">
+        <div class="container max900">
+          <div class="half">
+            <div class="padded center">
+              <img src="https://unsplash.it/300/301/?random">
+            </div>
+          </div>
+          <div class="half">
+            <div class="padded">
+              <h4 class="rt"></h4>
+              <h5 class="rt"></h5>
+              <p class="rt"></p>
+              <div class="tags">
+                <span>tag1</span>
+                <span>tag2</span>
+                <span>tag3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="silver">
+        <div class="container max900">
+          <div class="half">
+            <div class="padded">
+              <h4 class="rt"></h4>
+              <h5 class="rt"></h5>
+              <p class="rt"></p>
+              <div class="tags">
+                <span class="off">tag1</span>
+                <span class="off">tag2</span>
+                <span class="off">tag3</span>
+              </div>
+            </div>
+          </div>
+          <div class="half">
+            <div class="padded center">
+              <img src="https://unsplash.it/400/400/?random">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white">
+        <div class="container max900">
+          <div class="third">
+            <div class="padded">
+              <center class="spaced">
+                <i class="fa fa-gear fa-5x"></i>
+              </center>
+              <p class="rt"></p>
+            </div>
+          </div>
+          <div class="third">
+            <div class="padded">
+              <center class="spaced">
+                <i class="fa fa-group fa-5x"></i>
+              </center>
+              <p class="rt"></p>
+            </div>
+          </div>
+          <div class="third">
+            <div class="padded">
+              <center class="spaced">
+                <i class="fa fa-eye fa-5x"></i>
+              </center>
+              <p class="rt"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white">
+        <div class="container max900">
+          <div class="third">
+            <div class="padded">
+              <center>
+                <div class="card">
+                  <div>
+                    <div class="white padded">
+                      <button class="btn oval" style="background:url(https://unsplash.it/120/120/?random);"></button>
+                      <p class="rt"><p>
+                    </div>
+                    <div class="black padded">
+                      <h4 class="rt"></h4>
+                      <p class="rt"><p>
+                    </div>                    
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <div class="third">
+            <div class="padded">
+              <center>
+                <div class="card">
+                  <div>
+                    <div class="white padded">
+                      <button class="btn oval" style="background:url(https://unsplash.it/120/121/?random);"></button>
+                      <p class="rt"><p>
+                    </div>
+                    <div class="black padded">
+                      <h4 class="rt"></h4>
+                      <p class="rt"><p>
+                    </div>                    
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <div class="third">
+            <div class="padded">
+              <center>
+                <div class="card">
+                  <div>
+                    <div class="white padded">
+                      <button class="btn oval" style="background:url(https://unsplash.it/120/122/?random);"></button>
+                      <p class="rt"><p>
+                    </div>
+                    <div class="black padded">
+                      <h4 class="rt"></h4>
+                      <p class="rt"><p>
+                    </div>                    
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="white">
+        <div class="container spaced max900">         
+          <div class="half padded">
+            <input type="text" placeholder="your name">
+            <input type="text" placeholder="your email">
+            <textarea placeholder="tell us about you"></textarea>
+          </div>
+          <div class="half padded">          
+            <h3>Contact Us</h3>          
+            <button class="spaced">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="container silver">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194152504!2d-74.03927092356082!3d40.759040329429915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C+New+York%2C+NY!5e0!3m2!1sen!2sus!4v1457308636300" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </main>
+    <footer class="color">
+      <div class="container max900">
+        <div class="fill padded">
+          <ul class="menu">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="fill padded">
+          <p>Copyright © Your Company 2016. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <footer class="color">
+      <div class="container max900">        
+        <div class="half padded">
+          <p class="rt"></p>
+          <ul class="menu middle">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="half padded">
+          <p class="rt"></p>
+          <p>Copyright © Your Company 2016. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <footer class="color">
+      <div class="container max900">        
+        <div class="third padded">          
+          <p>Copyright © Your Company 2016.</p>
+          <p>All Rights Reserved</p>
+          <p class="rt"></p>
+        </div>
+        <div class="twothirds padded container">
+          <ul class="menu fill">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+          </ul>          
+          <div class="fill">
+            <p class="rt"></p>
+            <p class="rt"></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="modal">
+      <div class="twothirds rounded white padded relative">
+        <a class="close" href="#modal-stupid-example">&times;</a>
+        <h2>Random template from stupid.css</h2>
+        <p>
+          This is a random template generator. It uses <a href="http://mdipierro.github.io/stupid.css/index.html">stupid.css</a>, a pure CSS library for style and effects.
+        </p>
+        <p>
+          Even random pages are beautiful with <a href="http://mdipierro.github.io/stupid.css/index.html">stupid.css</a>!
+        </p>
+        <div class="high">
+          <a class="close right btn rounded" href="#modal-stupid-example" >close</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var prob = function(p) {return (Math.random()<0.01*p);};
+    var choice = function(a) {return a[parseInt(Math.random()*a.length)];};
+    jQuery('.btn').addClass('rounded');
+    jQuery('img').addClass('rounded');
+    var name = choice(['white','black','aquamarine','pink','navy','olive']);
+    jQuery('.color').addClass(name);
+    var color = jQuery('.color').css('background-color');
+    if(name!='white') {
+      jQuery('.menu').addClass('dark');                                                     
+      jQuery('a').css({'color':color});
+      jQuery('.menu li, .menu a').css({'color':'white'});
+      jQuery('input[type=submit],.btn').css({'color':'white'});
+      if(prob(50)) jQuery('header,footer').addClass('gradient');
+    }
+    jQuery('input[type=submit],.btn,.tags>span:not(.off),.tags>span.off:hover').addClass(name);
+    var rt=function(self,length) {
+      var t='';for(var k=0; k<length; k++) t+='bla ';
+      jQuery(self).html(t);
+    };
+    jQuery('p.rt').each(function(){rt(this,100);});
+    jQuery('.card p.rt').each(function(){rt(this,25);});
+    jQuery('h1.rt').each(function(){rt(this,5);});
+    jQuery('h2.rt').each(function(){rt(this,15);});
+    jQuery('h3.rt').each(function(){rt(this,5);});
+    jQuery('h4.rt').each(function(){rt(this,5);});
+    jQuery('h5.rt').each(function(){rt(this,10);});
+    var footers = jQuery('footer').hide();
+    jQuery(footers.get(choice([0,1,2]))).show();
+    var containers = jQuery('main>div').hide();
+    jQuery(containers.get(choice([0,1]))).show();
+    jQuery(containers.get(choice([2,3,4,5,6,7,8,9]))).show();
+    jQuery(containers.get(choice([2,3,4,5,6,7,8,9]))).show();
+    jQuery(containers.get(choice([2,3,4,5,6,7,8,9]))).show();
+    jQuery(containers.get(choice([2,3,4,5,6,7,8,9]))).show();
+    if(prob(50)) jQuery('img').css('border-radius','50%');
+    if(prob(50)) jQuery('header').css({'padding':'50px 0','font-size':'1.5em'});
+    jQuery('script').remove();
+    jQuery('.download').attr('href',"data:application/octet-stream;base64,"+btoa("<html>\n"+jQuery('html').html()+"/n</html>")).attr('download','random.html');
+    setTimeout(function(){jQuery('.progress').slideUp();},3000);
+  </script>
+</html>
+
