@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link href="../stupid.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+  </head>
+  <body>    
+    <header class="padded black">      
+      <div class="container middle">
+        <div class="fill middle">                    
+          <label class="hamburger fa fa-bars" for="left-menu"></label>
+          <div class="accordion">
+            <input type="checkbox" id="left-menu">
+            <ul class="menu">
+              <li>
+                <a href="../index.html"><strong>Stupid.css</strong></a>          
+              </li>
+              <li><a href="#">Menu 1</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a><li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3 (nested)</a>
+                    <ul>
+                      <li><a href="#">Deep Menu 1</a></li>
+                      <li><a href="#">Deep Menu 2</a></li>
+                      <li><a href="#">Deep Menu 3 (nested)</a>
+                        <ul>
+                          <li><a href="#">Sub Deep 1</a></li>
+                          <li><a href="#">Sub Deep 2</a></li>
+                          <li><a href="#">Sub Deep 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Menu 2</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Menu 3</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+              <li>
+                <input class="fill rounded" placeholder="search"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </header>
+    <main>
+      <div class="container jumbotron silver">        
+        <div class="fill">
+          <div class="padded">
+            <h2>"I would like to buy a hamburger"</h2>
+            <h3>Squeeze page to less than 600px to see the hamburger</h3>
+            <center>
+              <iframe width="320" height="240" src="https://www.youtube.com/embed/U1P_Nfj_ozo" frameborder="0" allowfullscreen></iframe>
+            </center>            
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>  
+  <script>
+    // prevent android horizontal scrolling
+    window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
+  </script>
+</html>
