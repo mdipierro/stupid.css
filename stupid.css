@@ -200,6 +200,13 @@ ul.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
   header ul.menu li, header ul.menu ul {width: 100%}  
   header ul.menu.right {float:left; text-align:left}
   header ul.menu ul ul {top:2.5em; left:-1px; z-index:2000}
+  .hamburger ~ .accordion input:checked ~ ul {overflow:visible;}
+}
+
+@media (min-width:600px) {
+  .hamburger {display:none!important}
+  .hamburger ~ .accordion {display:block;}
+  .hamburger ~ .accordion ul {max-height:1000px; overflow:visible;}
 }
 
 /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
@@ -284,27 +291,15 @@ a:not(.btn):not(.noeffect):after {
 }
 
 /*** accordion ***/
-.accordion {
-  margin: 0 auto;
-  list-style: none outside;
-}
-.accordion>li {
-  display: block;
-  padding: 15px 30px 15px 0;
-  position: relative;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-}
 .accordion>input ~ label:before {content:"▲ "; color:#ddd}
 .accordion>input:checked ~ label:before {content:"▼ "; color:#ddd}
 .accordion>input {display:none}
-.accordion>input:checked ~ div {
+.accordion>input:checked ~ *:not(label) {
   max-height: 1000px;
   -webkit-transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
   transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
 }
-.accordion>div {
+.accordion>*:not(label) {
   max-height: 0;
   margin-bottom: 0;
   overflow: hidden;

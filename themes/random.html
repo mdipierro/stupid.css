@@ -1,6 +1,7 @@
 <html>
   <head>
-    <link href="http://mdipierro.github.io/stupid.css/stupid.css" rel="stylesheet" type="text/css"/>
+    <link href="http://mdipierro.github.io/stupid.css/stupid.css" rel="stylesheet" type="text/css">
+    <link href="../stupid.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
           rel="stylesheet" >
     
@@ -18,6 +19,7 @@
       }
       .gradient {background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACWCAYAAAAfduJyAAAAaUlEQVQoFa2SQQrAIAwEU/v/P7fdHgYHBQV7kCSzuxFp1YHvam8IR31t62fQVKLTNkD07pMlgQIIWKCy0U69kYQiVrVFJWavAHvzpqFImHGXfTpKGc3YAU0FSLVA0eGNTV7ioXhF/3/yAbOjAgrSfBhhAAAAAElFTkSuQmCC);background-size: auto 100%;background-repeat: repeat-x;background-position: bottom;}
       h1, h2, h3, h4 {text-transform:none }
+      .hamburger {padding-left:20px}
       #jumbotron { text-shadow: 2px 2px 3px rgba(0,0,0,0.6); }
       p, li {
       font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvet\
@@ -61,43 +63,49 @@
     <header class="color">
       <div class="container max900">
         <div class="fill middle">
-          <ul class="menu">
-            <li>
-              <a href="http://mdipierro.github.io/stupid.css/index.html">Stupid.css</a>
-            </li>
-            <li>
-              <a>Submenu</a>
-              <ul>
-                <li><a>Sub Menu 1</a><li>
-                <li><a>Sub Menu 2</a></li>
-                <li><a>Sub Menu 3</a>
-              </ul>
-            </li>
-          </ul>
-          <ul class="menu right">
-            <li><a>About</a></li>
-            <li><a>Services</a></li>
-            <li><a>Contract</a></li>
-            <li>
-              <a><label for="drawer"><i class="fa fa-search pulse"></i></label></a>
-            </li>
-            <li>
-              <a><i class="fa fa-bell"></i></a>
-              <ul>
-                <li><a class="green">Ok</a></li>
-                <li><a class="yellow">Warning</a></li>
-                <li><a class="red">Error</a></li>
-              </ul>
-            </li>
-            <li>
-              <a><i class="fa fa-group"></i></a>
-              <ul>
-                <li><a>Login</a></li>
-                <li><a>Logout</a></li>
-                <li><a>Etc Etc</a></li>
-              </ul>
-            </li>
-          </ul>
+          <span class="hamburger">
+            <label class="fa fa-bars" for="left-menu"></label>
+          </span>
+          <div class="accordion">
+            <input type="checkbox" id="left-menu">
+            <ul class="menu">
+              <li>
+                <a href="http://mdipierro.github.io/stupid.css/index.html">Stupid.css</a>
+              </li>
+              <li>
+                <a>Submenu</a>
+                <ul>
+                  <li><a>Sub Menu 1</a><li>
+                  <li><a>Sub Menu 2</a></li>
+                  <li><a>Sub Menu 3</a>
+                </ul>
+              </li>
+            </ul>
+            <ul class="menu right">
+              <li><a>About</a></li>
+              <li><a>Services</a></li>
+              <li><a>Contract</a></li>
+              <li>
+                <a><label for="drawer"><i class="fa fa-search pulse"></i></label></a>
+              </li>
+              <li>
+                <a><i class="fa fa-bell"></i></a>
+                <ul>
+                  <li><a class="green">Ok</a></li>
+                  <li><a class="yellow">Warning</a></li>
+                  <li><a class="red">Error</a></li>
+                </ul>
+              </li>
+              <li>
+                <a><i class="fa fa-group"></i></a>
+                <ul>
+                  <li><a>Login</a></li>
+                  <li><a>Logout</a></li>
+                  <li><a>Etc Etc</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>

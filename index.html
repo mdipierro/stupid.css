@@ -12,54 +12,58 @@
     <header class="black padded stupid-example">
       <div class="container max900">
         <div class="fill middle">                    
-          <ul class="menu">
-            <li>
-              <a href="stupid.css" class="black"><strong>Stupid.css</strong></a>          
-            </li>
-            <li><a class="black">Menu 1</a>
-              <ul>
-                <li><a>Sub Menu 1</a><li>
-                <li><a>Sub Menu 2</a></li>
-                <li><a>Sub Menu 3 (nested)</a>
-                  <ul>
-                    <li><a>Deep Menu 1</a></li>
-                    <li><a>Deep Menu 2</a></li>
-                    <li><a>Deep Menu 3 (nested)</a>
-                      <ul>
-                        <li><a>Sub Deep 1</a></li>
-                        <li><a>Sub Deep 2</a></li>
-                        <li><a>Sub Deep 3</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a class="black">Menu 2</a>
-              <ul>
-                <li><a>Sub Menu 1</a></li>
-                <li><a>Sub Menu 2</a></li>
-                <li><a>Sub Menu 3</a></li>
-              </ul>
-            </li>
-            <li><a class="black">Menu 3</a>
-              <ul>
-                <li><a>Sub Menu 1</a></li>
-                <li><a>Sub Menu 2</a></li>
-                <li><a>Sub Menu 3</a></li>
-              </ul>
-            </li>
-          </ul>        
-          <ul class="menu right">
-            <li><a class="black">Right Menu</a>
-              <ul>
-                <li><a>Login</a></li>
-                <li><a>Logout</a></li>
-                <li><a>Etc Etc</a></li>
-              </ul>              
-            </li>
-            <li style="width:100px"></li>
-          </ul>
+          <label class="hamburger fa fa-bars" for="left-menu"></label>
+          <div class="accordion">
+            <input type="checkbox" id="left-menu">
+            <ul class="menu">
+              <li>
+                <a href="stupid.css" class="black"><strong>Stupid.css</strong></a>          
+              </li>
+              <li><a class="black">Menu 1</a>
+                <ul>
+                  <li><a>Sub Menu 1</a><li>
+                  <li><a>Sub Menu 2</a></li>
+                  <li><a>Sub Menu 3 (nested)</a>
+                    <ul>
+                      <li><a>Deep Menu 1</a></li>
+                      <li><a>Deep Menu 2</a></li>
+                      <li><a>Deep Menu 3 (nested)</a>
+                        <ul>
+                          <li><a>Sub Deep 1</a></li>
+                          <li><a>Sub Deep 2</a></li>
+                          <li><a>Sub Deep 3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="black">Menu 2</a>
+                <ul>
+                  <li><a>Sub Menu 1</a></li>
+                  <li><a>Sub Menu 2</a></li>
+                  <li><a>Sub Menu 3</a></li>
+                </ul>
+              </li>
+              <li><a class="black">Menu 3</a>
+                <ul>
+                  <li><a>Sub Menu 1</a></li>
+                  <li><a>Sub Menu 2</a></li>
+                  <li><a>Sub Menu 3</a></li>
+                </ul>
+              </li>
+            </ul>        
+            <ul class="menu right">
+              <li><a class="black">Right Menu</a>
+                <ul>
+                  <li><a>Login</a></li>
+                  <li><a>Logout</a></li>
+                  <li><a>Etc Etc</a></li>
+                </ul>              
+              </li>
+              <li style="width:100px"></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="container max900">        
@@ -489,7 +493,7 @@
               <tr>
                 <th>Menu</th>
                 <td>
-                  <tt>.menu</tt>, <tt>.dark</tt>
+                  <tt>.menu</tt>, <tt>.dark</tt>, <tt>.hamburger</tt>
                 </td>
               </tr>
               <tr>
