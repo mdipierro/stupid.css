@@ -182,30 +182,30 @@ input:not([type]), input:not([type=checkbox]):not([type=radio]):not([type=submit
 }
 
 /**** dropdown menu from http://codepen.io/philhoyt/pen/ujHzd ***/
-ul.menu {list-style:none; position:relative; margin:0; padding:0}
-ul.menu.right {float:right}
-ul.menu a {padding:0 15px; text-decoration:none;text-align:left;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; text-align:left}
-ul.menu li {position:relative; float:left; margin:0; padding:0}
-ul.menu ul {background:white; border:1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index:1000; transition:all 0.2s ease-out; list-style-type:none; box-shadow:5px 5px 10px #666}
-ul.menu ul a {padding:10px 15px; color:#333; font-weight:700; font-size:12px; line-height:16px; display: block}
-ul.menu ul li {float:none; width:200px}
-ul.menu ul ul {top:0; left:80%; z-index:2000}
-ul.menu li:hover > ul {visibility:visible; opacity:1}
-ul.menu>li>ul>li:first-child:before{content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; border-bottom-color:white}
-ul.menu.dark ul {background:black; border:1px solid black}
-ul.menu.dark ul a {color:white}
-ul.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
+.menu {list-style:none; position:relative; margin:0; padding:0}
+.menu.right {float:right}
+.menu a {padding:0 15px; text-decoration:none;text-align:left;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; text-align:left}
+.menu li {position:relative; float:left; margin:0; padding:0}
+.menu ul {background:white; border:1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index:1000; transition:all 0.2s ease-out; list-style-type:none; box-shadow:5px 5px 10px #666}
+.menu ul a {padding:10px 15px; color:#333; font-weight:700; font-size:12px; line-height:16px; display: block}
+.menu ul li {float:none; width:200px}
+.menu ul ul {top:0; left:80%; z-index:2000}
+.menu li:hover > ul {visibility:visible; opacity:1}
+.menu>li>ul>li:first-child:before{content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; border-bottom-color:white}
+.menu.dark ul {background:black; border:1px solid black}
+.menu.dark ul a {color:white}
+.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
 
 @media (max-width:599px) {
-  header ul.menu li, header ul.menu ul {width: 100%}  
-  header ul.menu.right {float:left; text-align:left}
-  header ul.menu ul ul {top:2.5em; left:-1px; z-index:2000}
-  .burger input:checked ~ ul {overflow:visible;}
+  header .menu li, header .menu ul {width: 100%}  
+  header .menu.right {float:left; text-align:left}
+  header .menu ul ul {top:2.5em; left:-1px; z-index:2000}
+  .burger input:checked ~ * {overflow:visible;}
 }
 
 @media (min-width:600px) {
   .ham {display:none!important}
-  .burger.accordion ul {max-height:1000px; overflow:visible;}
+  .burger.accordion * {max-height:1000px; overflow:visible;}
 }
 
 /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
