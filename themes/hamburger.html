@@ -71,14 +71,14 @@
             </center>            
 
             <p>This is a padded black header</p>
-              <pre>
+              <pre class="xscroll">
 &lt;header class="padded black"&gt;
   ...
 &lt;/header&gt;
           </pre>
 
             <p>This is a container in a padded black header, with content vertical aligned in the middle</p>
-              <pre>
+              <pre class="scrollx">
 &lt;header class="padded black"&gt;
   &lt;div class="container middle"&gt;
     ...
@@ -87,7 +87,7 @@
           </pre>
 
             <p>This adds a div filling the container</p>
-              <pre>
+              <pre class="scrollx">
 &lt;header class="padded black"&gt;
   &lt;div class="container middle"&gt;
     &lt;div class="fill middle"&gt;
@@ -98,12 +98,14 @@
           </pre>
 
             <p>This is a menu in the container</p>
-            <pre>
+            <pre class="scrollx">
 &lt;header class="padded black"&gt;
   &lt;div class="container middle"&gt;
     &lt;div class="fill middle"&gt;
       &lt;ul class="menu"&gt;
-          ...
+       &lt;li&gt;&lt;a href="#"&gt;Menu Item 1&lt;/a&gt;&lt;li&gt;
+       &lt;li&gt;&lt;a href="#"&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href="#"&gt;Menu Item 3&lt;/a&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -111,7 +113,7 @@
           </pre>
 
             <p>Now the menu is inside an accordion and the value of the checkbox is the status of the accordion. The label <tt>for</tt> must be the <tt>id</tt> if the checkbox in the accordion, so clicking on the label toggles the accordion. The checkbox is hidden.</p>
-            <pre>
+            <pre class="scrollx">
 &lt;header class="padded black"&gt;
   &lt;div class="container middle"&gt;
     &lt;div class="fill middle"&gt;
@@ -128,7 +130,7 @@
           </pre>
             <p><tt>fa fa-bars</tt> uses FontAwesome to display an icon with 3 bars.</tt>
             <p><tt>.ham</tt> on the label and <tt>.burger</tt> on the accordion turn the accordion into a special one that is open or closed depending on the window width.</p>
-            <pre>
+            <pre class="scrollx">
 &lt;header class="padded black"&gt;
   &lt;div class="container middle"&gt;
     &lt;div class="fill middle"&gt;
