@@ -200,7 +200,7 @@ ul.menu.dark>li>ul>li:first-child:before{border-bottom-color:black}
   header ul.menu li, header ul.menu ul {width: 100%}  
   header ul.menu.right {float:left; text-align:left}
   header ul.menu ul ul {top:2.5em; left:-1px; z-index:2000}
-  .burger ~ .accordion input:checked ~ ul {overflow:visible;}
+  .burger.accordion input:checked ~ ul {overflow:visible;}
 }
 
 @media (min-width:600px) {
