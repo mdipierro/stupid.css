@@ -309,7 +309,7 @@ a:not(.btn):not(.noeffect):after {
 
 
 /*** cards from http://codepen.io/edeesims/pen/iGDzk ***/
-.card { perspective: 500px;}
+.card {perspective: 500px; max-width:100%}
 .card>div {
   position: absolute;
   width: 100%;
