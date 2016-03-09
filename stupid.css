@@ -189,7 +189,7 @@ input:not([type]), input:not([type=checkbox]):not([type=radio]):not([type=submit
 .menu ul {background:white; border:1px solid #e1e1e1; visibility:hidden; opacity:0;  position:absolute; top:110%; padding:0; z-index:1000; transition:all 0.2s ease-out; list-style-type:none; box-shadow:5px 5px 10px #666}
 .menu ul a {padding:10px 15px; color:#333; font-weight:700; font-size:12px; line-height:16px; display: block}
 .menu ul li {float:none; width:200px}
-.menu ul ul {top:0; left:80%; z-index:2000}
+.menu ul ul {top:0; left:80%; z-index:1100}
 .menu li:hover > ul {visibility:visible; opacity:1}
 .menu>li>ul>li:first-child:before{content:''; position:absolute; width:1px; height:1px; border:10px solid transparent; left:50px; top:-20px; margin-left:-10px; border-bottom-color:white}
 .menu.dark ul {background:black; border:1px solid black}
@@ -199,7 +199,7 @@ input:not([type]), input:not([type=checkbox]):not([type=radio]):not([type=submit
 @media (max-width:599px) {
   header .menu li, header .menu ul {width: 100%}  
   header .menu.right {float:left; text-align:left}
-  header .menu ul ul {top:2.5em; left:-1px; z-index:2000}
+  header .menu ul ul {top:2.5em; left:-1px}
 }
 
 @media (min-width:600px) {
@@ -264,24 +264,27 @@ a:not(.btn):not(.noeffect):after {
 
 /*** tooltips from http://codepen.io/trezy/pen/Khnzy ***/
 [data-tooltip] {position:relative}
-[data-tooltip]:hover:after,[data-tooltip]:hover:before {display:block}
 [data-tooltip]:before, [data-tooltip]:after {display:none; position:absolute; top:0}
-[data-tooltip]:before {
+[data-tooltip]:hover:after,[data-tooltip]:hover:before {display:block}
+[data-tooltip]:hover:before {
   border-bottom:.6em solid black;
   border-bottom:.6em solid black;
   border-left:7px solid transparent;
   border-right:7px solid transparent;
   content:"";
-  left:20px;
+  left:0;
   margin-top:1em;
+  z-index:2000;
 }
-[data-tooltip]:after {
+[data-tooltip]:hover:after {
+  z-index:2000;
   background-color:rgba(0,0,0,0.8);
   border:4px solid rgba(0,0,0,0.8);
   border-radius:7px;
   color:white;
   content:attr(data-tooltip);
   left:0;
+  margin-left:-20;
   margin-top:1.5em;
   padding:5px 15px;
   white-space:pre-wrap;
