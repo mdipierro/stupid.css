@@ -200,12 +200,11 @@ input:not([type]), input:not([type=checkbox]):not([type=radio]):not([type=submit
   header .menu li, header .menu ul {width: 100%}  
   header .menu.right {float:left; text-align:left}
   header .menu ul ul {top:2.5em; left:-1px; z-index:2000}
-  .burger input:checked ~ * {overflow:visible;}
 }
 
 @media (min-width:600px) {
   .ham {display:none!important}
-  .burger.accordion * {max-height:1000px; overflow:visible;}
+  .burger.accordion * {max-height:1000px; overflow:visible}
 }
 
 /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
@@ -294,16 +293,18 @@ a:not(.btn):not(.noeffect):after {
 .accordion>input:checked ~ label:before {content:"▼ "; color:#ddd}
 .accordion>input {display:none}
 .accordion>input:checked ~ *:not(label) {
-  max-height: 1000px;
-  -webkit-transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
-  transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
+  max-height: 1000px !important;
+  overflow:visible !important;
+  -webkit-transition: max-height .3s ease-in;
+  transition: max-height .3s ease-in;
 }
 .accordion>*:not(label) {
   max-height: 0;
-  margin-bottom: 0;
   overflow: hidden;
-  -webkit-transition: max-height .15s ease-out, margin-bottom .3s ease-out, padding .3s ease-out;
-  transition: max-height .15s ease-out, margin-bottom .3s ease-out, padding .3s ease-out;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: max-height .3s ease-out;
+  transition: max-height .3s ease-out;
 }
 
 
