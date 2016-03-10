@@ -26,11 +26,14 @@
           <div class="fill padded">
             <h1>Form widgets</h1>
             <p>Although we designed these widgets for stupid.css, they will work with any CSS library. They are designed to be simple to use and yet powerful by inferring the proper behaviour from the HTML tags. They work great with Bootstrap and Metarialize for example. The size of "widgets.min.js" is ~6KB.</p>
+            
             <input placeholder="integer" class="integer"/>
             <input placeholder="number" class="number"/>
             <input placeholder="number in range 0..100" class="number" data-range="0,100"/>
-            <input placeholder="click and slide" 
-                   value="30" class="number slider" data-range="0,100,5"/>
+            <div>
+              <input placeholder="click and slide" 
+                     value="30" class="number slider" data-range="0,100,5"/>
+            </div>
             <input placeholder="date, for example 'two days ago'" class="date"
                    value="2011-01-01" data-format="{Dow} {dd} {Mon} {year}" name="date"/>
             <input placeholder="datetime" class="datetime" 

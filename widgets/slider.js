@@ -17,7 +17,7 @@ $.fn.slider = function() {
     var left = parseInt(t.css('padding-left').replace('px',''));
     var right = parseInt(t.css('padding-right').replace('px',''));
     var update = (function(e){
-            var shift = e.offsetX-t.offset().left+left+right;
+            var shift = e.offsetX;
             var percent = Math.max(0,Math.min(1.0,shift/(t.outerWidth())));
             var value = range[0]+percent*(range[1]-range[0]);
             if(range[2]) value=range[2]*Math.round(value/range[2]);
@@ -39,6 +39,9 @@ $.fn.slider = function() {
     t.mousedown(function() {isDragging = true;});
     t.mousemove(function(e) {if(isDragging) update(e);});
     t.mouseup(function() {isDragging = false;});
+    jQuery(window).resize(function(){
+            s.css({top:t.offset().top+'px',left:t.offset().left+'px'});
+        });
 };
 
 jQuery(function(){ jQuery('.slider').slider(); });
