@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link href="../stupid.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <style>pre {background-color:black;color:yellow;padding:10px 20px}</style>
+  </head>
+  <body>    
+    <header class="padded black">      
+      <div class="container middle">
+        <div class="fill middle">                    
+          <ul class="menu">
+            <li>
+              <a href="../index.html"><strong>Stupid.css</strong></a>          
+            </li>
+          </ul>
+        </div>
+      </div>      
+    </header>
+    <main>
+      <div class="jumbotron silver">        
+        <div class="container max900">
+          <div class="fill padded">
+            <h1>Form widgets</h1>
+            <p>Although we designed these widgets for stupid.css, they will work with any CSS library. They are designed to be simple to use and yet powerful by inferring the proper behaviour from the HTML tags. They work great with Bootstrap and Metarialize for example.</p>
+            <input placeholder="integer" class="integer"/>
+            <input placeholder="number" class="number"/>
+            <input placeholder="number in range 0..100" class="number" data-range="0,100"/>
+            <input placeholder="click and slide" 
+                   value="30" class="number slider" data-range="0,100,5"/>
+            <input placeholder="date, for example 'two days ago'" class="date"
+                   value="2011-01-01" data-format="{Dow} {dd} {Mon} {year}" name="date"/>
+            <input placeholder="datetime" class="datetime" 
+                   value="2011-01-01 11:12:13" name="datetime"/>
+            <input placeholder="time" class="time" 
+                   value="11:12:12" data-format="{hh}:{mm} {TT}" name="time"/>
+            <input placeholder="zip code" data-regex="^(\d{5}(\-\d{4})?)?$"/>
+
+          </div>
+        </div>
+      </div>
+      <div class="white">        
+        <div class="container max900">
+          <div class="fill padded">
+            <h2>Instructions</h2>
+            <p>All you need to do it include the following:</p>
+            <pre>&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="sugar.min.js"&gt;&lt;/script&gt;
+&lt;script src="widgets.min.js"&gt;&lt;/script></pre>
+            <p>And then use the proper classes and attributes to apply the widgets.</p>
+            <h3>Integer Widget</h3>
+            <p>You need is a class <tt>.integer</tt>:</p>
+            <pre>&lt;input class="integer"/&gt;</pre>
+            <p>The widget will prevent you from trying invalid numbers in the field.</p>
+            <p>Optionally you can specify a <tt>data-range</tt>:</p>
+            <pre>&lt;input class="integer" data-range="0:100"/&gt;</pre>
+            <p>If the number is outside bounds, an <tt>.error</tt> class is applied.</p>
+            <p>Notice you can use a <tt>data-range</tt> also for numbers, dates, times, and strings.</p>
+            <h3>Number Widget</h3>
+            <p>All you need is a class <tt>.number</tt>:</p>
+            <pre>&lt;input class="number"/&gt;</pre>
+            <p>The widget will prevent you from tying invalid numbers in the field.</p>
+            <p>Optionally you can specify a <tt>data-range</tt>:</p>
+            <pre>&lt;input class="number" data-range="0:100"/&gt;</pre>
+            <p>If the number is outside bounds, an <tt>.error</tt> class is applied</p>
+
+            <h3>Slider Widget</h3>
+            <p>You need is a class <tt>.slider</tt> applied to an <tt>.integer</tt> or a <tt>number</tt> field and a <tt>data-range</tt> attribute:</p>
+            <pre>&lt;input class="number slider" data-range="0:100:1"/&gt;</pre>
+            <p>It will display a slider on top of the input field.</p>
+            <p>It automatically figures out the precision (number of digits) from the range.</p>
+            <p>The third argument of the <tt>data-range</tt> is an optional step.</p>
+
+            <h3>Date/Time/Datetime Widget</h3>
+            <p>This widget requires "sugar.js".</p>
+            <p>To activate the widget you need one of the following classes: <tt>.date</tt>, <tt>.time</tt>, <tt>.datetime</tt>(does not matter which one) and a <tt>data-format</tt> attribute (very important). The format must be in the "sugar.js" format. For example:</p>
+            <pre>&lt;input class="date" data-format="{dd}/{MM}/{year}"/&gt;</pre>
+            <pre>&lt;input class="time" data-format="{HH}:{mm}:{ss} {TT}"/&gt;</pre>
+            <pre>&lt;input class="datetime" data-format="{dd}/{MM}/{year} {HH}:{mm}:{ss} {tt}"/&gt;</pre>
+            <p>Notice that despite the arbitrary representation for date/time/datetime, the actual value of the field is always expected to be in ISO format and when the form is submitted, it will be submitted in ISO format. If you choose to specify a <tt>data-range</tt>, the values of the range should also be in ISO format. The idea of the widget is to complete decouple the UI represnetation with the server side handling (which should always be in ISO format). To internationalize the widet set the locale using "sugar.js".</p>
+            <h3>Regex Validation</h3>
+            <p>You can specify a regex validator for any field (including dates) with a <tt>data-regex</tt>. For example you can specify a 5 digits zip code:</p>
+            <pre>&lt;input data-regex="^(\d{5})?$"/&gt;</pre>
+            <h3>Autocomomplete</h3>
+            <p>COMING SOON</p>
+            <h3>Tags</h3>
+            <p>COMING SOON</p>
+            <h3>For Angular, React, and Ractive.js users</h3>
+            <p>If you use library that manipulates the DOM, the calendar and slider may break. All you have to do it re-apply them when new input elements are injected in the DOM:</p>
+            <pre>jQuery('.date,.datetime,.time').calendar();
+jQuery('.slider').slider();</pre>              
+            <p>
+              These functions take no argments.
+            </p>
+            <h3>What about styling?</h3>
+            <p>They are easy to style with regular CSS. Should work with any CSS framework without too much trouble.</p>
+            <h3>License</h3>
+            The license is BSD.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body> 
+  <script src="jquery.js"></script> 
+  <script src="sugar.min.js"></script> 
+  <script src="widgets.min.js"></script> 
+</html>
