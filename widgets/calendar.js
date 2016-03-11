@@ -19,7 +19,10 @@ $.fn.calendar = function() {
     var update = (function() {date=Date.create(t.val()); redraw(true);}).debounce(100);
     var func = function(dt){return function(e){
             e.stopPropagation();
-            date=Date.create(q).advance(dt);redraw()
+            date=Date.create(q);
+            if(dt['minutes']) 
+                date.set({seconds:0,minutes:5*parseInt(date.getMinutes()/5)});
+            date.advance(dt);redraw()
         };
     };
     var tr = function(x){return '<tr>'+x+'</tr>';}
