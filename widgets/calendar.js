@@ -79,7 +79,6 @@ $.fn.calendar = function() {
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
-                console.log('checking:'+w.is(':hover'));
                 if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
