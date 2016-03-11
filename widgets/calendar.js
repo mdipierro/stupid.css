@@ -75,8 +75,9 @@ $.fn.calendar = function() {
         jQuery('.cal-wrapper').not(w).hide();
         w.fadeIn();        
     }
-    var close = function(e){
-        if(jQuery(e.target).is('input')||w.closest('.cal-wrapper').length>0) return;
+    var close = function(e){ 
+        var q=jQuery(e.target);
+        if(q.is('input')||q.closest('.cal-wrapper').length>0) return;
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
