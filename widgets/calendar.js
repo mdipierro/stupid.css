@@ -15,7 +15,7 @@ $.fn.calendar = function() {
     if(format_time.indexOf('{year}')>=0)
         format_time = format_time.split(' ')[1];
     var timeout = null;
-    var set = function() {s.val(t.val().trim().length&&date&&date.format(ISO)||'');};
+    var set = function() {s.val(t.val().trim().length&&date&&date.format(ISO)||'').change();};
     var update = (function() {date=Date.create(t.val()); redraw(true);}).debounce(100);
     var func = function(dt){return function(e){
             e.stopPropagation();

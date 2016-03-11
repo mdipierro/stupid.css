@@ -23,7 +23,7 @@ $.fn.slider = function() {
             if(range[2]) value=range[2]*Math.round(value/range[2]);
             if(t.is('.integer')) value = parseInt(value);
             else value=Math.round(value,decimals);            
-            t.val(value);
+            t.val(value).change();
             s.css({width:shift+'px'});
         }).throttle(10);
     var onchange = function(){
