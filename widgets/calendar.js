@@ -73,13 +73,14 @@ $.fn.calendar = function() {
             });
         w.find('.cal-y,.cal-t,.cal-selected').css('font-weight','bold');
         jQuery('.cal-wrapper').not(w).hide();
-        w.fadeIn();
+        w.fadeIn();        
     }
-    var close = function(){
+    var close = function(e){
+        if(jQuery(e.target).is('input')) return;
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
-                if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
+                if(t.not(':focus')&&w.find('td:hover').length==0) w.fadeOut(); }, 300);
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
     t.keyup(update).blur(close).click(redraw);
