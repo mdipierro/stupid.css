@@ -358,8 +358,7 @@ a:not(.btn):not(.noeffect):after {
   background-color: #ccc !important;
 }
 .tags.dismissible > span:not(.off):after {
-  content: " \f00d";
-  font-family: FontAwesome;
+  content: " ✕";
 }
 .tags > span.off {
   background-color: #ccc;
