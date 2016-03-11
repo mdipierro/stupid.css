@@ -75,12 +75,12 @@ $.fn.calendar = function() {
         jQuery('.cal-wrapper').not(w).hide();
         w.fadeIn();        
     }
-    var close = function(e){
-        if(jQuery(e.target).is('input')) return;
+    var close = function(e){        
+        if(jQuery(e.target).is('input')||jQuery(e.target).is('.cal-wrapper td')) return;
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
-                if(t.not(':focus')&&w.find('td:hover').length==0) w.fadeOut(); }, 300);
+                if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
     t.keyup(update).blur(close).click(redraw);
