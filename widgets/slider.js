@@ -9,9 +9,9 @@ $.fn.slider = function() {
     range = range.map(parseFloat);
     s.css({position:'absolute',
                 'z-index':1,                
-                top:t.offset().top+'px',
+                top:(t.offset().top+t.outerHeight()-5)+'px',
                 left:t.offset().left+'px',
-                height:t.outerHeight()+'px',
+                height:5+'px',
                 'pointer-events':'none',
                 background:'rgba(0,0,0,0.2)'});
     var left = parseInt(t.css('padding-left').replace('px',''));
