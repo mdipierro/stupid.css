@@ -78,15 +78,16 @@ $.fn.calendar = function() {
     var close = function(){
         set();
         if(timeout) clearTimeout(timeout);
-        timeout = setTimeout(function(){
-                if(!jQuery('.cal-wrapper:hover').is(w)) w.fadeOut();
-            },300);
+        timeout = setTimeout(function(){ 
+                console.log('checking:'+w.is(':hover'));
+                if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
     t.keyup(update).blur(close).click(redraw);
-    w.mouseout(close);
+    jQuery('body').on('click',close);
     w.css({'position':'absolute',
                 'z-index':3000,
+                'cursor':'pointer',
                 'top':(t.offset().top+t.height()+10)+'px',
                 'left':(t.offset().left)+'px',
                 'background':'white',
