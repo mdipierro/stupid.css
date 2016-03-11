@@ -82,7 +82,6 @@ $.fn.calendar = function() {
     }
     var close = function(e){         
         var q = jQuery(e.target);
-        console.log(q);
         if(q.is('input')||q.closest('.cal-wrapper').length>0) return;
         set();
         if(timeout) clearTimeout(timeout);
