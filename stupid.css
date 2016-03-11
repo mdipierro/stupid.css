@@ -69,7 +69,7 @@ header, footer {with:100%}
 input:not([type]):not([type=checkbox]):not([type=radio]):not([type=submit]), [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd; width:100%}
 textarea {width:100%; border:1px solid #ddd; padding:4px 8px; outline:none; outline:none}
 select {-webkit-appearance:none; outline:none; padding:0.5em 1em; border-radius:0; margin:0.5px; border-bottom:1px solid #ddd}
-input, textarea, select, button {font-size:12px}
+input, textarea, select, button, .tags {font-size:12px}
 input:not([type]):not([type=checkbox]):not([type=radio]):not([type=submit]):hover, select:hover, textarea:hover {background-color:#fbf6d9; transition:background-color 1s ease}
 input:invalid, input.error {background:#cc1f00!important;color:white}
 
@@ -343,6 +343,7 @@ a:not(.btn):not(.noeffect):after {
 .navy{background-color:#001f3f!important;color:white}.blue{background-color:#0074d9!important;color:white}.aqua{background-color:#7fdbff!important;color:black}.teal{background-color:#39cccc!important;color:white}.olive{background-color:#3d9970!important;color:white}.green{background-color:#2ecc40!important;color:white}.aquamarine{background-color:#26a69a!important;color:white}.lime{background-color:#01ff70!important;color:black}.yellow{background-color:#ffdc00!important;color:black}.orange{background-color:#ff851b!important;color:white}.red{background-color:#cc1f00!important;color:white}.fuchsia{background-color:#f012be!important;color:white}.pink{background-color:#ee6e73!important;color:white}.purple{background-color:#b10dc9!important;color:white}.maroon{background-color:#85144b!important;color:white}.white{background-color:#fff!important;color:black;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa!important;color:white}.silver{background-color:#f1f1f1!important;color:black}.black{background-color:#000!important;color:white}.glass{background:rgba(255,255,255,0.5)!important;color:black}
 
 /**** tags ****/
+.tags {padding-left:1em}
 .tags > span, .tags > span.off:hover {
   height: 30px;
   padding: 4px 9px;
