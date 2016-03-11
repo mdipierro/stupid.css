@@ -1,8 +1,10 @@
 /* Created by Massimo Di Pierro (massimo.dipierro@gmail.com) -  License: BSD */
 
 $.fn.slider = function() {
+    if(this.length>1)
+        return this.each(function(){$(this).slider();});
     var t = this;
-    var s = jQuery('<div/>');    
+    var s = $('<div/>');    
     var range = t.attr('data-range').split(',');
     var decimals = range[1]&&range[1].split('.')[1];
     decimals = decimals&&decimals.length||0;
@@ -39,9 +41,9 @@ $.fn.slider = function() {
     t.mousedown(function() {isDragging = true;});
     t.mousemove(function(e) {if(isDragging) update(e);});
     t.mouseup(function() {isDragging = false;});
-    jQuery(window).resize(function(){
+    $(window).resize(function(){
             s.css({top:t.offset().top+'px',left:t.offset().left+'px'});
         });
 };
 
-jQuery(function(){ jQuery('.slider').slider(); });
+$(function(){ $('.slider').slider(); });

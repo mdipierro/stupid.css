@@ -2,11 +2,11 @@
 
 $.fn.calendar = function() {
     if(this.length>1)
-        return this.each(function(){jQuery(this).calendar();});
+        return this.each(function(){$(this).calendar();});
     var ISO = '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss}';
     var t = this;
-    var s = jQuery('<input type="hidden"/>');
-    var w = jQuery('<table class="cal-wrapper"/>');    
+    var s = $('<input type="hidden"/>');
+    var w = $('<table class="cal-wrapper"/>');    
     var value = t.val();
     var date = Date.create(value);
     var start = t.data('start')||'Sunday';
@@ -77,14 +77,14 @@ $.fn.calendar = function() {
         w.find('.cal-day').click(function(e){
                 e.stopPropagation();
                 date = q;
-                var d=parseInt(jQuery(this).text());date.set({day:d});redraw();
+                var d=parseInt($(this).text());date.set({day:d});redraw();
             });
         w.find('.cal-y,.cal-t,.cal-selected').css('font-weight','bold');
-        jQuery('.cal-wrapper').not(w).hide();
+        $('.cal-wrapper').not(w).hide();
         w.fadeIn();        
     }
     var close = function(e){         
-        var q = jQuery(e.target);
+        var q = $(e.target);
         if(q.is('input')||q.closest('.cal-wrapper').length>0) return;
         set();
         if(timeout) clearTimeout(timeout);
@@ -93,7 +93,7 @@ $.fn.calendar = function() {
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
     t.keyup(update).blur(close).click(function(e){e.stopPropagation();redraw();});
-    jQuery('html').on('click',close);
+    $('html').on('click',close);
     w.click(function(e){e.stopPropagation();});
     w.css({'position':'absolute',
                 'z-index':3000,
@@ -106,4 +106,4 @@ $.fn.calendar = function() {
     set();
 };
 
-jQuery(function(){ jQuery('.date,.datetime,.time').calendar();});
+$(function(){ $('.date,.datetime,.time').calendar();});

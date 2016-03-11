@@ -1,6 +1,6 @@
 /* Created by Massimo Di Pierro (massimo.dipierro@gmail.com) -  License: BSD */
 
-jQuery(function(){
+$(function(){
         var confirm_delete = 'Are you sure you want to delete this object?';
         var date_format = '%m/%d/%Y';
         var datetime_format = '%Y-%m-%d %H:%M:%S';
@@ -31,7 +31,7 @@ jQuery(function(){
                     this.checked = false;
             });
         doc.on('keyup', 'input[data-range]', function () {
-                var t=jQuery(this);
+                var t=$(this);
                 var v=t.val();
                 var range = t.attr('data-range').split(',');
                 if(t.is('.integer')||t.is('.number')) {
@@ -44,7 +44,7 @@ jQuery(function(){
                 else remove(t,'error');
             });
         doc.on('keyup', 'input[data-regex]', function () {
-                var t=jQuery(this);
+                var t=$(this);
                 var v=t.val();
                 var re = new RegExp(t.attr('data-regex'));
                 if(!v.match(re)) t.addClass('error'); else remove(t,'error');
