@@ -46,7 +46,7 @@
                        value="11:12:12" data-format="{hh}:{mm} {TT}" name="time"/>
                 <input placeholder="zip code" data-regex="^(\d{5}(\-\d{4})?)?$"/>
                 
-                <input placeholder="tags" class="tags" value="one|two|three"/>
+                <input placeholder="tags" class="tags" value="one,two,three" data-options="one,two,three,four,five"/>
                 <input value="3" class="number stars"/>
               </div>
             </div>
@@ -98,9 +98,10 @@
               <pre class="xscroll">&lt;input data-regex="^(\d{5})?$"/&gt;</pre>
               <h3>Tags</h3>
               <p>You need is a class <tt>.tags</tt>.
-              <pre class="xscroll">&lt;input class="tags" value="one|two|three" data-separator="|"/&gt;</pre>
+              <pre class="xscroll">&lt;input class="tags" value="one,two,three" data-options="four,five" data-separator=","/&gt;</pre>
               <p>It will display dismissible tags on top of the input field.</p>
-              <p>The <tt>data-separator</tt> is optional and defaults to "|".</p>
+              <p>The <tt>data-options</tt> is optional and lists suggested tags. It is not a constraint. To constraint tags simply use jQuery to hide the input field.</tt>
+              <p>The <tt>data-separator</tt> is optional and defaults to ",".</p>
               <h3>Stars</h3>
               <p>You need is a class <tt>.stars</tt>.
               <pre class="xscroll">&lt;input class="stars"&gt;</pre>
