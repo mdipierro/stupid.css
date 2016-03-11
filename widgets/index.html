@@ -48,7 +48,10 @@
                 
                 <input placeholder="tags" class="tags" value="one,two,three" data-options="one,two,three,four,five"/>
                 <input value="3" class="number stars"/>
-                <input class="autocomplete" data-source=""/>
+                <input class="autocomplete" data-source="OPTIONS" data-mode="chain"/>
+                <script>
+                  var OPTIONS = [['aaaa'],['aaab'],['aabb'],['abbb'],['bbbb']];
+                </script>
               </div>
             </div>
           </div>
@@ -129,4 +132,5 @@ jQuery('.slider').slider();</pre>
   <script src="jquery.js"></script> 
   <script src="sugar.min.js"></script> 
   <script src="widgets.min.js"></script> 
+  <script src="autocomplete.js"></script> 
 </html>
