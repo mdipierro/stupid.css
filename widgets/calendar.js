@@ -17,7 +17,11 @@ $.fn.calendar = function() {
     var timeout = null;
     var set = function() {s.val(t.val().trim().length&&date&&date.format(ISO)||'');};
     var update = (function() {date=Date.create(t.val()); redraw(true);}).debounce(100);
-    var func = function(dt){return function(event){date=Date.create(q).advance(dt);redraw()};};
+    var func = function(dt){return function(e){
+            e.stopPropagation();
+            date=Date.create(q).advance(dt);redraw()
+        };
+    };
     var tr = function(x){return '<tr>'+x+'</tr>';}
     var td = function(x,c,d){return '<td'+(c&&(' class="cal-'+c+'"')||'')+(d&&(' colspan="'+d+'"')||'')+'>'+(x||'')+'</td>';}
     var q = date;
@@ -67,7 +71,8 @@ $.fn.calendar = function() {
         w.find('.cal-Hp').click(func({hours:+1}));
         w.find('.cal-mim').click(func({minutes:-5}));
         w.find('.cal-mip').click(func({minutes:+5}));
-        w.find('.cal-day').click(function(){
+        w.find('.cal-day').click(function(e){
+                e.stopPropagation();
                 date = q;
                 var d=parseInt(jQuery(this).text());date.set({day:d});redraw();
             });
@@ -75,8 +80,9 @@ $.fn.calendar = function() {
         jQuery('.cal-wrapper').not(w).hide();
         w.fadeIn();        
     }
-    var close = function(e){ 
-        var q=jQuery(e.target);
+    var close = function(e){         
+        var q = jQuery(e.target);
+        console.log(q);
         if(q.is('input')||q.closest('.cal-wrapper').length>0) return;
         set();
         if(timeout) clearTimeout(timeout);
@@ -84,8 +90,9 @@ $.fn.calendar = function() {
                 if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
     };
     t.removeAttr('name').after(s.prop('name',t.prop('name')));
-    t.keyup(update).blur(close).click(redraw);
-    jQuery('body').on('click',close);
+    t.keyup(update).blur(close).click(function(e){e.stopPropagation();redraw();});
+    jQuery('html').on('click',close);
+    w.click(function(e){e.stopPropagation();});
     w.css({'position':'absolute',
                 'z-index':3000,
                 'cursor':'pointer',
