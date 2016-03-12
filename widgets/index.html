@@ -48,9 +48,17 @@
                 
                 <input placeholder="tags" class="tags" value="one,two,three" data-options="one,two,three,four,five"/>
                 <input value="3" class="number stars"/>
-                <input class="autocomplete" data-source="OPTIONS" data-mode="chain"/>
+                <input class="autocomplete" 
+                       placeholder="simple autocomplete (aa...)"
+                       data-source="OPTIONS" data-mode="simple"/>
+                <input class="autocomplete"
+                       placeholder="keyed autocomplete (aa:1...)"
+                       data-source="OPTIONS" data-mode="keyed"/>
+                <input class="autocomplete" 
+                       placeholder="chained autocomplete"
+                       data-source="OPTIONS" data-mode="chained"/>
                 <script>
-                  var OPTIONS = [['aaaa'],['aaab'],['aabb'],['abbb'],['bbbb']];
+                  var OPTIONS = [['aaaa',1],['aaab',2],['aabb',3],['abbb',4],['bbbb',5],['hello world',6],['this is a test',7]];
                 </script>
               </div>
             </div>
@@ -111,7 +119,7 @@
               <pre class="xscroll">&lt;input class="stars"&gt;</pre>
               <p>It will replace the input field with standard 5 stars</p>
               <h3>Autocomplete</h3>
-              <p>COMING SOON</p>
+              <p>DOCS COMING SOON</p>
               <h3>For Angular, React, and Ractive.js users</h3>
               <p>If you use library that manipulates the DOM, the calendar and slider may break. All you have to do it re-apply them when new input elements are injected in the DOM:</p>
               <pre class="xscroll">jQuery('.date,.datetime,.time').calendar();

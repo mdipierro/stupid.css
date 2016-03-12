@@ -3,7 +3,7 @@ $.fn.calendar = function() {
     if(this.length>1)
         return this.each(function(){$(this).calendar();});
 
-    var swap=function(x){var w = $('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')); x.hide().after(w); return w;};
+    var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder'));x.hide().after(w);return w;};
     
     var ISO = '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss}';
     var self = this;
@@ -12,23 +12,40 @@ $.fn.calendar = function() {
     var value = self.val();
     var date = Date.create(value);
     var start = self.data('start')||'Sunday';
-    var format = self.data('format')||'{dd}/{MM}/{year} {hh}:{mm} {TT}';
+    var DEFAULT_FORMAT = '{dd}/{MM}/{year} {hh}:{mm} {TT}';
+    var format = self.data('format')||DEFAULT_FORMAT;
     var format_time = format;
     if(format_time.indexOf('{year}')>=0)
         format_time = format_time.split(' ')[1];
     var timeout = null;
-    var set = function() {self.val(input.val().trim().length&&date&&date.format(ISO)||'').change();};
-    var update = (function() {date=Date.create(input.val());redraw(true);}).debounce(100);
-    var func = function(dt){return function(e){
+    var set = function() {
+        self.val(input.val().trim().length && 
+                 date && 
+                 date.format(ISO)||'').change();
+    };
+    var update = (function() {
+            date=Date.create(input.val());
+            redraw(true);
+        }).debounce(100);
+    var func = function(dt){
+        return function(e){
             e.stopPropagation();
             date=Date.create(q);
             if(dt['minutes']) 
-                date.set({seconds:0,minutes:5*parseInt(date.getMinutes()/5)});
+                date.set({seconds:0,
+                            minutes:5*parseInt(date.getMinutes()/5)});
             date.advance(dt);redraw()
         };
     };
-    var tr = function(x){return '<tr>'+x+'</tr>';}
-    var td = function(x,c,d){return '<td'+(c&&(' class="cal-'+c+'"')||'')+(d&&(' colspan="'+d+'"')||'')+'>'+(x||'')+'</td>';}
+    var tr = function(x){
+        return '<tr>'+x+'</tr>';
+    }
+    var td = function(x,c,d){
+        return ('<td'+
+                (c&&(' class="cal-'+c+'"')||'')+
+                (d&&(' colspan="'+d+'"')||'')+
+                '>'+(x||'')+'</td>');
+    };
     var q = date;
     var redraw = function(mute) {
         console.log(date);
@@ -54,10 +71,14 @@ $.fn.calendar = function() {
                     return td((n).daysAfter(start).format('{Dow}'));});
             html += tr(tds.join(''));
             while(day.isBefore(next)) {            
-                if(k%7==0) row = '';
-                if(day.is(q)) row+=td(day.format('{d}'),'selected');
-                else if(day.getMonth()==q.getMonth()) row+=td(day.format('{d}'),'day');
-                else row+=td('');
+                if(k%7==0)
+                    row = '';
+                if(day.is(q))
+                    row+=td(day.format('{d}'),'selected');
+                else if(day.getMonth()==q.getMonth())
+                    row+=td(day.format('{d}'),'day');
+                else
+                    row+=td('');
                 day.advance({days:1}); 
                 k++;
                 if(k%7==0) html += tr(row);
@@ -80,9 +101,12 @@ $.fn.calendar = function() {
         popup.find('.cal-day').click(function(e){
                 e.stopPropagation();
                 date = q;
-                var d=parseInt($(this).text());date.set({day:d});redraw();
+                var d = parseInt($(this).text());
+                date.set({day:d});
+                redraw();
             });
-        popup.find('.cal-y,.cal-t,.cal-selected').css('font-weight','bold');
+        popup.find('.cal-y,.cal-t,.cal-selected')
+        .css('font-weight','bold');
         $('.cal-wrapper').not(popup).hide();
         popup.fadeIn();        
     }
@@ -92,9 +116,14 @@ $.fn.calendar = function() {
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
-                if(popup.find('td:hover').length==0) popup.fadeOut(); }, 300);
+                if(popup.find('td:hover').length==0) 
+                    popup.fadeOut(); 
+            }, 300);
     };
-    input.keyup(update).blur(close).click(function(e){e.stopPropagation();redraw();});
+    input.keyup(update).blur(close).click(function(e){
+            e.stopPropagation();
+            redraw();
+        });
     $('html').on('click',close);
     popup.click(function(e){e.stopPropagation();});
     popup.css({'position':'absolute',
