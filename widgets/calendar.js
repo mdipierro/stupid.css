@@ -11,8 +11,8 @@ $.fn.calendar = function() {
     var popup = $('<table class="cal-wrapper"/>');    
     var value = self.val();
     var date = Date.create(value);
-    var start = input.data('start')||'Sunday';
-    var format = input.data('format')||'{dd}/{MM}/{year} {hh}:{mm} {TT}';
+    var start = self.data('start')||'Sunday';
+    var format = self.data('format')||'{dd}/{MM}/{year} {hh}:{mm} {TT}';
     var format_time = format;
     if(format_time.indexOf('{year}')>=0)
         format_time = format_time.split(' ')[1];
