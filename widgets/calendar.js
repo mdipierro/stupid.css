@@ -1,22 +1,24 @@
 /* Created by Massimo Di Pierro (massimo.dipierro@gmail.com) -  License: BSD */
-
 $.fn.calendar = function() {
     if(this.length>1)
         return this.each(function(){$(this).calendar();});
+
+    var swap=function(x){var w = $('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')); x.hide().after(w); return w;};
+    
     var ISO = '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss}';
-    var t = this;
-    var s = $('<input type="hidden"/>');
-    var w = $('<table class="cal-wrapper"/>');    
-    var value = t.val();
+    var self = this;
+    var input = swap(self);
+    var popup = $('<table class="cal-wrapper"/>');    
+    var value = self.val();
     var date = Date.create(value);
-    var start = t.data('start')||'Sunday';
-    var format = t.data('format')||'{dd}/{MM}/{year} {hh}:{mm} {TT}';
+    var start = input.data('start')||'Sunday';
+    var format = input.data('format')||'{dd}/{MM}/{year} {hh}:{mm} {TT}';
     var format_time = format;
     if(format_time.indexOf('{year}')>=0)
         format_time = format_time.split(' ')[1];
     var timeout = null;
-    var set = function() {s.val(t.val().trim().length&&date&&date.format(ISO)||'').change();};
-    var update = (function() {date=Date.create(t.val()); redraw(true);}).debounce(100);
+    var set = function() {self.val(input.val().trim().length&&date&&date.format(ISO)||'').change();};
+    var update = (function() {date=Date.create(input.val());redraw(true);}).debounce(100);
     var func = function(dt){return function(e){
             e.stopPropagation();
             date=Date.create(q);
@@ -29,14 +31,15 @@ $.fn.calendar = function() {
     var td = function(x,c,d){return '<td'+(c&&(' class="cal-'+c+'"')||'')+(d&&(' colspan="'+d+'"')||'')+'>'+(x||'')+'</td>';}
     var q = date;
     var redraw = function(mute) {
-        if(!mute) t.val(date.format(format));        
-        if(t.is('.error')) t.removeClass('error');
-        if(t.val().trim()=='') {
+        console.log(date);
+        if(!mute) input.val(date.format(format));        
+        if(input.is('.error')) input.removeClass('error');
+        if(input.val().trim()=='') {
             set(); q=Date.create();
         } else if(date && date!='Invalid Date') { 
             set(); q=Date.create(date);
         } else { 
-            t.addClass('error'); q=Date.create();
+            input.addClass('error'); q=Date.create();
         }
         var row='', k=0, html='';
         var day = Date.create(q).set({day:1});
@@ -65,23 +68,23 @@ $.fn.calendar = function() {
                        td(q.format(format_time),'t',3)+
                        td('&rsaquo;','mip')+td('&raquo;','Hp'));
         }
-        w.html(html).find('td').css({'text-align':'center'});
-        w.find('.cal-ym').click(func({years:-1}));
-        w.find('.cal-yp').click(func({years:+1}));
-        w.find('.cal-mm').click(func({months:-1}));
-        w.find('.cal-mp').click(func({months:+1}));
-        w.find('.cal-Hm').click(func({hours:-1}));
-        w.find('.cal-Hp').click(func({hours:+1}));
-        w.find('.cal-mim').click(func({minutes:-5}));
-        w.find('.cal-mip').click(func({minutes:+5}));
-        w.find('.cal-day').click(function(e){
+        popup.html(html).find('td').css({'text-align':'center'});
+        popup.find('.cal-ym').click(func({years:-1}));
+        popup.find('.cal-yp').click(func({years:+1}));
+        popup.find('.cal-mm').click(func({months:-1}));
+        popup.find('.cal-mp').click(func({months:+1}));
+        popup.find('.cal-Hm').click(func({hours:-1}));
+        popup.find('.cal-Hp').click(func({hours:+1}));
+        popup.find('.cal-mim').click(func({minutes:-5}));
+        popup.find('.cal-mip').click(func({minutes:+5}));
+        popup.find('.cal-day').click(function(e){
                 e.stopPropagation();
                 date = q;
                 var d=parseInt($(this).text());date.set({day:d});redraw();
             });
-        w.find('.cal-y,.cal-t,.cal-selected').css('font-weight','bold');
-        $('.cal-wrapper').not(w).hide();
-        w.fadeIn();        
+        popup.find('.cal-y,.cal-t,.cal-selected').css('font-weight','bold');
+        $('.cal-wrapper').not(popup).hide();
+        popup.fadeIn();        
     }
     var close = function(e){         
         var q = $(e.target);
@@ -89,20 +92,19 @@ $.fn.calendar = function() {
         set();
         if(timeout) clearTimeout(timeout);
         timeout = setTimeout(function(){ 
-                if(w.find('td:hover').length==0) w.fadeOut(); }, 300);
+                if(popup.find('td:hover').length==0) popup.fadeOut(); }, 300);
     };
-    t.removeAttr('name').after(s.prop('name',t.prop('name')));
-    t.keyup(update).blur(close).click(function(e){e.stopPropagation();redraw();});
+    input.keyup(update).blur(close).click(function(e){e.stopPropagation();redraw();});
     $('html').on('click',close);
-    w.click(function(e){e.stopPropagation();});
-    w.css({'position':'absolute',
+    popup.click(function(e){e.stopPropagation();});
+    popup.css({'position':'absolute',
                 'z-index':3000,
+                'top':(input.offset().top+input.height()+10)+'px',
+                'left':(input.offset().left)+'px',
                 'cursor':'pointer',
-                'top':(t.offset().top+t.height()+10)+'px',
-                'left':(t.offset().left)+'px',
                 'background':'white',
                 'box-shadow':'0 0 12px #ddd'});
-    t.val(date.format(format)).after(w);    
+    input.val(date.format(format)).after(popup);    
     set();
 };
 
