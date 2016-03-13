@@ -7,7 +7,7 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <style>
-      pre {background-color:black;max-width:100%;color:yellow;padding:10px 20px}
+      pre {background-color:black;max-width:100%;color:yellow;padding:10px 20px; margin-bottom:10px;border-radius:5px}
     </style>
   </head>
   <body>    
@@ -33,30 +33,48 @@
               <div class="white">
                 <input placeholder="integer" class="integer"/>
                 <input placeholder="number" class="number"/>
-                <input placeholder="number in range 0..100" class="number" data-range="0,100"/>
+                <input placeholder="number in range 0..100" 
+                       class="number" data-range="0,100"/>
+                <input placeholder="zip code" 
+                       data-regex="^(\d{5}(\-\d{4})?)?$"/>
+
                 <div>
                   <input placeholder="click and slide" 
-                         value="30" class="number slider" data-range="0,100,5"/>
+                         value="30" class="number slider" 
+                         data-range="0,100,5"/>
                 </div>
-                <input placeholder="date, for example 'two days ago'" class="date"
-                       value="2011-01-01" data-format="{Dow} {dd} {Mon} {year}" name="date"/>
+                <input placeholder="date, for example 'two days ago'" 
+                       class="date" value="2011-01-01" 
+                       data-format="{Dow} {dd} {Mon} {year}" />
                 <input placeholder="datetime" class="datetime" 
-                       value="2011-01-01 11:12:13" name="datetime"/>
+                       value="2011-01-01 11:12:13" />
                 <input placeholder="time" class="time" 
-                       value="11:12:12" data-format="{hh}:{mm} {TT}" name="time"/>
-                <input placeholder="zip code" data-regex="^(\d{5}(\-\d{4})?)?$"/>
-                
-                <input placeholder="tags" class="tags" value="one;two;three" data-options="one;two;three;four;five"/>
+                       value="11:12:12" 
+                       data-format="{hh}:{mm} {TT}" />
+                <input placeholder="tags" class="tags" 
+                       value="one;two;three" 
+                       data-options="one;two;three;four;five"/>
                 <input value="3" class="number stars"/>
                 <input class="autocomplete" 
-                       placeholder="simple autocomplete (aa...)"
-                       data-source="OPTIONS" data-mode="simple"/>
+                       placeholder="simple autocomplete (try: aa)"
+                       data-source="OPTIONS" 
+                       data-mode="simple"/>
                 <input class="autocomplete"
-                       placeholder="keyed autocomplete (aa:1...)"
-                       data-source="OPTIONS" data-mode="keyed"/>
+                       placeholder="keyed autocomplete (try: aa)"
+                       data-source="OPTIONS" 
+                       data-mode="keyed"/>
                 <input class="autocomplete" 
-                       placeholder="chained autocomplete"
-                       data-source="OPTIONS" data-mode="chained"/>
+                       placeholder="chained autocomplete (try: aaaa aa)"
+                       data-source="OPTIONS" 
+                       data-mode="chained"/>
+                <input class="autocomplete" 
+                       placeholder="autocomplete with simple ajax (try: aa)"
+                       data-source="url:options.json" 
+                       data-mode="simple"/>
+                <input class="autocomplete" 
+                       placeholder="autocomplete with ajax search (try: aa)"
+                       data-source="search:options.json?s={1}" 
+                       data-mode="simple"/>
                 <script>
                   var OPTIONS = [['aaaa',1],['aaab',2],['aabb',3],['abbb',4],['bbbb',5],['hello world',6],['this is a test',7]];
                 </script>
@@ -109,17 +127,31 @@
               <p>You can specify a regex validator for any field (including dates) with a <tt>data-regex</tt>. For example you can specify a 5 digits zip code:</p>
               <pre class="xscroll">&lt;input data-regex="^(\d{5})?$"/&gt;</pre>
               <h3>Tags</h3>
-              <p>You need is a class <tt>.tags</tt>.
+              <p>You need is a class <tt>.tags</tt>.</p>
               <pre class="xscroll">&lt;input class="tags" value="one;two;three" data-options="four;five" data-separator=";"/&gt;</pre>
               <p>It will display dismissible tags on top of the input field.</p>
-              <p>The <tt>data-options</tt> is optional and lists suggested tags. It is not a constraint. To constraint tags simply use jQuery to hide the input field.</tt>
+              <p>The <tt>data-options</tt> is optional and lists suggested tags. It is not a constraint. To constraint tags simply use jQuery to hide the input field.</p>
               <p>The <tt>data-separator</tt> is optional and defaults to ";".</p>
               <h3>Stars</h3>
-              <p>You need is a class <tt>.stars</tt>.
+              <p>You need is a class <tt>.stars</tt>.</p>
               <pre class="xscroll">&lt;input class="stars"&gt;</pre>
               <p>It will replace the input field with standard 5 stars</p>
               <h3>Autocomplete</h3>
-              <p>DOCS COMING SOON</p>
+              <p>The simplest way to use the autocomplete widget is the following:</p>
+              <pre class="xscroll">&lt;input class="autocomplete" data-source="[['one'],['two'],['three']]" data-mode="simple"/&gt;</pre>
+              <p>In this case the options are in an array of arrays of single options.</p>
+              <p>The <tt>data-source</tt> can be the name of a JS variable which contains the source:</p>
+              <pre class="xscroll">&lt;input class="autocomplete" data-source="myoptions" data-mode="simple"/&gt;
+&lt;script&gt;myoptions=[['one'],['two'],['three']]&lt;/script&gt;</pre>
+              <p>It can be a URL form which to fetch all the options in JSON at once:</p>
+              <pre class="xscroll">&lt;input class="autocomplete" data-source="url:options.json" data-mode="simple"/&gt;</pre>
+              <p>Or it can be the URL of a search API the returns matches in JSON (always in the same 2d array format):</p>
+              <pre class="xscroll">&lt;input class="autocomplete" data-source="search:endpoint?s={1}" data-mode="simple"/&gt;</pre>
+              (<tt>{1}</tt> will be automatically substituted by the text typed in the input field).
+              <p>The <tt>data-mode</tt> specifies the mode of operation of the autocomplete. When <tt>data-mode</tt> is "simple" then the autocomplete can contain any of the available options or any arbitrary text. When the value is "keyed" then the value is replaced with a key that corresponds to the text being displayed, for example a record it. In this case the <tt>data-source</tt> must have two columns representing the text and the corresponding key, for example:</p>
+              <pre class="xscroll">[['one',1],['two',2],['three',3]]</pre>
+              <p>A third option for <tt>data-mode</tt> is "chained". This allows autocompleting of multiple words in arbitrary long text, one after the other.</p>
+              <p>Notice the autocomplete widget uses a binary search clientside therefore it can efficienly search milions of items even if they all sent via json at once. Moreover it can autocomplete text containing spaces.</p>
               <h3>For Angular, React, and Ractive.js users</h3>
               <p>If you use library that manipulates the DOM, the calendar and slider may break. All you have to do it re-apply them when new input elements are injected in the DOM:</p>
               <pre class="xscroll">jQuery('.date,.datetime,.time').calendar();
@@ -129,9 +161,9 @@ jQuery('.slider').slider();</pre>
               </p>
               <h3>Events</h3>
               All widgets emit a <tt>change</tt> event when their value change and it can be capured with:
-              <pre>jQuery(selector).change(function(){...});</pre>
+              <pre class="xscroll">jQuery(selector).change(function(){...});</pre>
               To set the value of a widget (calendar, stars, tags) you can use the set event:
-              <pre>jQuery(selector).trigger('set',value);</pre>
+              <pre class="xscroll">jQuery(selector).trigger('set',value);</pre>
               <h3>What about styling?</h3>
               <p>Most of the widgets do not require styling as they adopt the style of the underlying element. They are easy to re-style with regular CSS. Should work with any CSS framework without too much trouble. Here we are using them with stupid.css.</p>
               <h3>License</h3>

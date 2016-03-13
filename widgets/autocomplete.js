@@ -3,14 +3,12 @@
 $.fn.autocomplete = function() {
     if(this.length>1)
         return this.each(function(){jQuery(this).autocomplete();});
-
     var _options=[],_callback=null;
     if(this.data('source').substr(0,4)=='url:') {
         $.getJSON(this.data('source').substr(4))
             .done(function(data){_options=data;});
-    } else if(this.data('source').substr(0,9)=='callback:') {
-        _callback = this.data('source').substr(9);
-        /* not implemented yet */
+    } else if(this.data('source').substr(0,7)=='search:') {
+        _callback = this.data('source').substr(7);
     } else {
         try {
             _options = eval('('+(this.data('source')||[])+')');
@@ -55,13 +53,17 @@ $.fn.autocomplete = function() {
         });
     var p = 0;
     var get = function(){return input.val().split(/\s+/ig); }
-    var cmp = function(a,b){return a.toLowerCase()==b.toLowerCase();};
+    var cmp = function(a,b){
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        return (a==b)?0:((a<b)?-1:+1);
+    }
     var getval = function(item) {
         var keywords = get();
         var v;
         for(var k=0; k<keywords.length; k++) {
             v = keywords.slice(k).join(' ');
-            if(cmp(v,item[0].substr(0,v.length))) break;
+            if(cmp(v,item[0].substr(0,v.length))==0) break;
         }
         return input.val()+item[0].substr(v.length);
     };
@@ -79,22 +81,57 @@ $.fn.autocomplete = function() {
     };
     var items = [];
     var tab = function(e) {
-        if((e.keyCode==39 || e.keyCode==9) && items.length) {
-            e.preventDefault();
-            popup.hide();
-            select(items[p]);
+        if(e.keyCode==39 || e.keyCode==9) {                        
+            if(items.length) {
+                e.preventDefault();
+                popup.hide();
+                select(items[p]);
+            }
         }
     };
     var keypress = function(e){                    
+        if(_callback) {
+            $.getJSON(_callback.assign(input.get()))
+            .done(function(data){
+                    _options=data;
+                    handle_keypress(e);
+                });
+        } else handle_keypress(e);
+        
+    };
+    var binary_search = function(v) {
+        var imin=0, imax=_options.length;
+        while(imax>imin) {
+            var i = parseInt((imin+imax)/2);
+            var s = _options[i][0].substr(0,v.length);
+            var z = cmp(s,v);
+            if(z==0) {
+                while(i>imin) {
+                    var s = _options[i-1][0].substr(0,v.length);
+                    if(cmp(s,v)<0) return i;
+                    i--;
+                }
+                return i;
+            }
+            else if(z<0) imin=i+1;
+            else if(z>0) imax=i;
+        }
+        return -1;
+    };
+    var handle_keypress =  function(e) {
         var keywords = get();
         items = [];
         for(var k=0; k<keywords.length; k++) {
             var v = keywords.slice(k).join(' ');
             if(v.length>=min_length) {
-                for(var i=0;i<_options.length;i++) {
+                // find first match
+                var i = binary_search(v);
+                // find all following matches
+                while(i>=0 && i<_options.length) {
                     var s = _options[i][0].substr(0,v.length);
-                    if(cmp(s,v))
-                        items.push(_options[i]);
+                    if(cmp(s,v)==0) items.push(_options[i]);
+                    else break;
+                    i++;
                 }
             }
         }
