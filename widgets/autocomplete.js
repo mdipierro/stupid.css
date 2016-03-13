@@ -3,26 +3,33 @@
 $.fn.autocomplete = function() {
     if(this.length>1)
         return this.each(function(){jQuery(this).autocomplete();});
-    
-    var options = eval('('+(this.data('source')||[])+')');
+
+    var _options=[],_callback=null;
+    if(this.data('source').substr(0,4)=='url:') {
+        $.getJSON(this.data('source').substr(4))
+            .done(function(data){_options=data;});
+    } else if(this.data('source').substr(0,9)=='callback:') {
+        _callback = this.data('source').substr(9);
+        /* not implemented yet */
+    } else {
+        try {
+            _options = eval('('+(this.data('source')||[])+')');
+        } catch(e) { 
+            console.log('invalid source:'+this.data('source'));
+        }
+    }
     var self = this;
     if(self.data('has-widget'))return; else self.data('has-widget',1);
     var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder')).addClass('has-widget');x.hide().after(w);return w;};
     var mode = this.data('mode')||'simple'; // 'chained' or 'keyed'
     var min_length = parseInt(this.data('min-length')||'2');
     var input = (mode=='keyed')?swap(self):self;
-    options.sort(function(a,b){
+    _options.sort(function(a,b){
             return (a[0]<b[0])?(-1):((a[0]>b[0])?(+1):0);});
-    var map={},reverse={};
     var suggestion = input.clone().attr('placeholder','').hide();
     input.after(suggestion);
     var popup = jQuery('<ul class="autocomplete"/>').hide();    
     input.after(popup);
-    if(mode=='map')
-        for(var k=0;k<options.length;k++) {
-            map[options[k][0]]=options[k][1];
-            reverse[options[k][1]]=options[k][0];
-        }
     input.focus(function(){
             popup.show();
             suggestion.show();
@@ -84,10 +91,10 @@ $.fn.autocomplete = function() {
         for(var k=0; k<keywords.length; k++) {
             var v = keywords.slice(k).join(' ');
             if(v.length>=min_length) {
-                for(var i=0;i<options.length;i++) {
-                    var s = options[i][0].substr(0,v.length);
+                for(var i=0;i<_options.length;i++) {
+                    var s = _options[i][0].substr(0,v.length);
                     if(cmp(s,v))
-                        items.push(options[i]);
+                        items.push(_options[i]);
                 }
             }
         }
