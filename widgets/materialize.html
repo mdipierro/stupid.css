@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Form Widgets</title>
+    
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style type="text/css">
+      .error {background-color:red; color:white;}
+      .tags > span {
+        padding: 4px 9px;
+        margin: 0 5px 30px 0 !important;
+        white-space: nowrap;
+        color: white;
+        background-color: #26a69a;
+        border-radius: 5px;
+        line-height: 32px;
+        font-size:12px
+      }
+      .tags.dismissible > span:hover {opacity: 0.5}
+      .tags.dismissible > span:not(.off):after {content:" ✕"}
+      .tags > span.off {background-color: #ccc}
+      .tags.dismissible > span.off:hover {background-color:#26a69a}      
+      ul.autocomplete {list-style-type: none; padding-left:10px;}
+    </style>
+  </head>
+  <body>
+    <nav class="orange" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Form Widgets</a>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">      
+      <div class="container">
+        <h1 class="header center orange-text">Form Widget</h1>
+        <h3 class="center orange-text">(Materialize Example)</h3>
+        <p>A collection of widgets built from scratch to work in an intuitive manner with any CSS framework and without need for JS programming. They work with regular HTML forms and make them smarter.</p>
+        <div class="row center">
+          <div class="header col s12 light">
+            <a class="btn btn-default" href="bootstrap.html">
+              Bootstrap.css example
+            </a>
+            <a class="btn btn-default" href="index.html">
+              Stupid.css example
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <form>
+              <div class="input-field">
+                <label>Integer widget</label>                            
+                <input type="text" placeholder="integer" class="integer"/>
+              </div>
+              <div class="input-field">
+                <label>Number widget</label>
+                <input type="text" placeholder="number" class="number"/>
+              </div>
+              <div class="input-field">
+                <label>Number widget with range</label>
+                <input type="text" placeholder="number in range 0..100"
+                       class="number" data-range="0,100"/>
+              </div>
+              <div class="input-field">
+                <label>Regex validation</label>
+                <input type="text" placeholder="zip code" class="form-control"
+                       data-regex="^(\d{5}(\-\d{4})?)?$"/>
+              </div>
+              <div class="input-field">
+                <label>Slider widget</label>
+                <input type="text" placeholder="click and slide"
+                       value="30" class="number slider"
+                       data-range="0,100,5"/>
+              </div>
+              <div class="input-field">
+                <label>Date widget</label>
+                <input type="text" placeholder="date, for example 'two days ago'"
+                       class="date" value="2011-01-01"
+                       data-format="{Dow} {dd} {Mon} {year}" />
+              </div>
+              <div class="input-field">
+                <label>Datetime widget</label>
+                <input type="text" placeholder="datetime" class="datetime"
+                       value="2011-01-01 11:12:13" />
+              </div>
+              <div class="input-field">
+                <label>Time widget</label>
+                <input type="text" placeholder="time" class="time"
+                       value="11:12:12"
+                       data-format="{hh}:{mm} {TT}" />
+              </div>
+              <div class="input-field">
+                <label>Tags widget</label>
+                <input type="text" placeholder="tags" class="tags"
+                       value="one;two;three"
+                       data-options="one;two;three;four;five"/>
+                
+              </div>
+              <div class="input-field">
+                <label>Stars widget</label>
+                <input type="text" value="3" class="number stars"/>
+              </div>
+              <div class="input-field">
+                <label>Autocomplete widget (simple)</label>
+                <input type="text" class="autocomplete"
+                       placeholder="simple autocomplete (try: aa)"
+                       data-source="OPTIONS"
+                       data-mode="simple"/>
+              </div>
+              <div class="input-field">
+                <label>Autocomplete widget (keyed)</label>
+                <input type="text" class="autocomplete"
+                       placeholder="keyed autocomplete (try: aa)"
+                       data-source="OPTIONS"
+                       data-mode="keyed"/>
+              </div>
+              <div class="input-field">
+                <label>Autocomplete widget (chained)</label>
+                <input type="text" class="autocomplete"
+                   placeholder="chained autocomplete (try: aaaa aa)"
+                       data-source="OPTIONS"
+                       data-mode="chained"/>
+              </div>
+              <div class="input-field">
+                <label>Autocomplete widget (ajax)</label>
+                <input type="text" class="autocomplete"
+                       placeholder="autocomplete with simple ajax (try: aa)"
+                       data-source="url:options.json"
+                   data-mode="simple"/>
+              </div>
+              <div class="input-field">
+                <label>Autocomplete widget (search)</label>
+                <input type="text" class="autocomplete"
+                       placeholder="autocomplete with ajax search (try: aa)"
+                       data-source="search:options.json?s={1}"
+                       data-mode="simple"/>
+              </div>
+            </form>
+            <script>
+              var OPTIONS = [['aaaa',1],['aaab',2],['aabb',3],['abbb',4],
+              ['bbbb',5],['hello world',6],['this is a test',7]];
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <iframe src="learn.html" width="100%" scrolling="no" onLoad="jQuery(this).height(jQuery(this)[0].contentWindow.document.body.scrollHeight)" height="1px" frameborder="0" ></iframe>
+    
+    <footer class="page-footer orange">
+      <div class="footer-copyright">
+        <div class="container">
+        </div>
+      </div>
+    </footer>
+    <a class="noeffect" href="https://github.com/mdipierro/stupid.css" style="z-index: 9999;position: absolute; top: 0; right: 0; border: 0;"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"/></a>
+  </body>
+
+  <!--  Scripts-->
+  <script src="jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+  <script src="sugar.min.js"></script> 
+  <script src="widgets.min.js"></script>   
+</html>

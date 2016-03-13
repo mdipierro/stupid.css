@@ -3,13 +3,12 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     
-    <title>Bootstrap 3 widgets</title>
+    <title>Form widgets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
-      .widgets input {border-radius:5px !important;}
+      body { padding-top: 100px}
       .error {background-color:red; color:white;}
-      .input-group {width:100%}
       .tags > span {
         padding: 4px 9px;
         margin: 0 5px 30px 0 !important;
@@ -28,9 +27,28 @@
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Form Widgets
+          </a>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
+          <div>
+            <h1>Form Widget (Boostrap Example)</h1>
+            <p>A collection of widgets built from scratch to work in an intuitive manner with any CSS framework and without need for JS programming. They work with regular HTML forms and make them smarter.</p>
+            <a class="btn btn-primary" href="materialize.html">
+              materialize.css example
+            </a>
+            <a class="btn btn-primary" href="index.html">
+              Stupid.css example
+            </a>
+          </div>
           <form class="widgets">  
             <div class="form-group">
               <label>Integer widget</label>
@@ -160,6 +178,9 @@
         </div>
       </div>
     </div>
+    <iframe src="learn.html" width="100%" scrolling="no" onLoad="jQuery(this).height(jQuery(this)[0].contentWindow.document.body.scrollHeight)" height="1px" frameborder="0" ></iframe>
+    <a class="noeffect" href="https://github.com/mdipierro/stupid.css" style="z-index: 9999;position: absolute; top: 0; right: 0; border: 0;"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"/></a>
+    
   </body>
   <script>
     var OPTIONS = [['aaaa',1],['aaab',2],['aabb',3],['abbb',4],
