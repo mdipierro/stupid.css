@@ -128,6 +128,10 @@ $.fn.autocomplete = function() {
     };
 
     input.keyup(keypress).keydown(tab);
+    $(window).on('resize',function(){
+            suggestion.css({top:input.offset().top+'px',left:input.offset().left+'px'});
+            popup.css({top:(input.offset().top+input.height()+10)+'px',left:input.offset().left+'px'});
+        });
 };
 
 jQuery(function(){ jQuery('.autocomplete').autocomplete();});

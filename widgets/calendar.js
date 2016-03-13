@@ -135,6 +135,11 @@ $.fn.calendar = function() {
                 'box-shadow':'0 0 12px #ddd'});
     input.val(date.format(format)).after(popup);    
     set();
+
+    $(window).on('resize',function(){
+            popup.css({top:(input.offset().top+input.height()+10)+'px',
+                        left:input.offset().left+'px'});
+        });
 };
 
 $(function(){ $('.date,.datetime,.time').calendar();});
