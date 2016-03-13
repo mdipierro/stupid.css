@@ -128,8 +128,8 @@ $.fn.calendar = function() {
     popup.click(function(e){e.stopPropagation();});
     popup.css({'position':'absolute',
                 'z-index':3000,
-                'top':(input.offset().top+input.height()+10)+'px',
-                'left':(input.offset().left)+'px',
+                'top':(input.position().top+input.height()+10)+'px',
+                'left':(input.position().left)+'px',
                 'cursor':'pointer',
                 'background':'white',
                 'box-shadow':'0 0 12px #ddd'});
@@ -142,8 +142,8 @@ $.fn.calendar = function() {
             input.val(date.format(format));
         });
     $(window).on('resize',function(){
-            popup.css({top:(input.offset().top+input.height()+10)+'px',
-                        left:input.offset().left+'px'});
+            popup.css({top:(input.position().top+input.height()+10)+'px',
+                        left:input.position().left+'px'});
         });
 };
 

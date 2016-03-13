@@ -25,25 +25,26 @@ $.fn.autocomplete = function() {
     _options.sort(function(a,b){
             return (a[0]<b[0])?(-1):((a[0]>b[0])?(+1):0);});
     var suggestion = input.clone().attr('placeholder','').hide();
-    input.after(suggestion);
-    var popup = jQuery('<ul class="autocomplete"/>').hide();    
+    var popup = jQuery('<ul class="autocomplete"/>').hide();
     input.after(popup);
+    input.after(suggestion);
     input.focus(function(){
             popup.show();
             suggestion.show();
             suggestion.css({position:'absolute',
                         'z-index':1,
-                        top:input.offset().top+'px',
-                        left:input.offset().left+'px',
+                        top:input.position().top+'px',
+                        left:input.position().left+'px',
                         height:input.outerHeight()+'px',
+                        width:input.outerWidth()+'px',
                         color:'rgba(0,0,0,0.3)',
                         background:'transparent'});
     popup.css({'position':'absolute',
                 'z-index':3000,
                 'cursor':'pointer',
-                'top':(input.offset().top+input.height()+10)+'px',
-                'left':(input.offset().left)+'px',
-                'width':input.width()+'px',
+                'top':(input.position().top+input.outerHeight())+'px',
+                'left':(input.position().left)+'px',
+                'width':input.outerWidth()+'px',
                 'background':'white',
                 'box-shadow':'0 0 12px #ddd'});
         });
@@ -172,8 +173,8 @@ $.fn.autocomplete = function() {
 
     input.keyup(keypress).keydown(tab);
     $(window).on('resize',function(){
-            suggestion.css({top:input.offset().top+'px',left:input.offset().left+'px'});
-            popup.css({top:(input.offset().top+input.height()+10)+'px',left:input.offset().left+'px',width:input.width()+'px'});
+            suggestion.css({top:input.position().top+'px',left:input.position().left+'px'});
+            popup.css({top:(input.position().top+input.height()+10)+'px',left:input.position().left+'px',width:input.width()+'px'});
         });
 };
 

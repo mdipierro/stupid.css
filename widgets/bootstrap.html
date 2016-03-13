@@ -1,0 +1,168 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    
+    <title>Bootstrap 3 widgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+      .widgets input {border-radius:5px !important;}
+      .error {background-color:red; color:white;}
+      .input-group {width:100%}
+      .tags > span {
+        padding: 4px 9px;
+        margin: 0 5px 30px 0 !important;
+        white-space: nowrap;
+        color: white;
+        background-color: #26a69a;
+        border-radius: 5px;
+        line-height: 32px;
+        font-size:12px
+      }
+      .tags.dismissible > span:hover {opacity: 0.5}
+      .tags.dismissible > span:not(.off):after {content:" ✕"}
+      .tags > span.off {background-color: #ccc}
+      .tags.dismissible > span.off:hover {background-color:#26a69a}      
+      ul.autocomplete {list-style-type: none; padding-left:10px;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form class="widgets">  
+          <div class="form-group">
+            <label>Integer widget</label>
+            
+              <input placeholder="integer" class="form-control integer"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Number widget</label>
+            
+              <input placeholder="number" class="form-control number"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Number widget with range</label>
+            
+              <input placeholder="number in range 0..100"
+                     class="form-control number" data-range="0,100"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Regex validation</label>
+            
+              <input placeholder="zip code" class="form-control"
+                     data-regex="^(\d{5}(\-\d{4})?)?$"/>
+              
+      
+          </div>
+          <div class="form-group">
+            <label>Slider widget</label>
+            <input placeholder="click and slide"
+                     value="30" class="form-control number slider"
+                   data-range="0,100,5"/>
+          </div>
+          <div class="form-group">
+            <label>Date widget</label>
+            
+              <input placeholder="date, for example 'two days ago'"
+                     class="form-control date" value="2011-01-01"
+                     data-format="{Dow} {dd} {Mon} {year}" />
+      
+          </div>
+          <div class="form-group">
+            <label>Datetime widget</label>
+            
+              <input placeholder="datetime" class="form-control datetime"
+                     value="2011-01-01 11:12:13" />
+      
+          </div>
+          <div class="form-group">
+            <label>Time widget</label>
+            
+              <input placeholder="time" class="form-control time"
+                     value="11:12:12"
+                     data-format="{hh}:{mm} {TT}" />
+      
+          </div>
+          <div class="form-group">
+            <label>Tags widget</label>
+            
+
+              <input placeholder="tags" class="form-control tags"
+                     value="one;two;three"
+                     data-options="one;two;three;four;five"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Stars widget</label>
+            
+              
+              <input value="3" class="form-control number stars"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Autocomplete widget (simple)</label>
+            
+              
+              <input class="form-control autocomplete"
+                       placeholder="simple autocomplete (try: aa)"
+                     data-source="OPTIONS"
+                     data-mode="simple"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Autocomplete widget (keyed)</label>
+            
+              
+                <input class="form-control autocomplete"
+                       placeholder="keyed autocomplete (try: aa)"
+                       data-source="OPTIONS"
+                       data-mode="keyed"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Autocomplete widget (chained)</label>
+            
+              
+              <input class="form-control autocomplete"
+                     placeholder="chained autocomplete (try: aaaa aa)"
+                       data-source="OPTIONS"
+                     data-mode="chained"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Autocomplete widget (ajax)</label>
+            
+
+              <input class="form-control autocomplete"
+                     placeholder="autocomplete with simple ajax (try: aa)"
+                     data-source="url:options.json"
+                     data-mode="simple"/>
+      
+          </div>
+          <div class="form-group">
+            <label>Autocomplete widget (search)</label>
+            
+
+              <input class="form-control autocomplete"
+                     placeholder="autocomplete with ajax search (try: aa)"
+                     data-source="search:options.json?s={1}"
+                     data-mode="simple"/>
+      
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    var OPTIONS = [['aaaa',1],['aaab',2],['aabb',3],['abbb',4],
+                   ['bbbb',5],['hello world',6],['this is a test',7]];
+  </script>
+  <script src="jquery.js"></script>
+  <script src="sugar.min.js"></script>
+  <script src="widgets.min.js"></script>  
+</html>
+

@@ -11,15 +11,15 @@ $.fn.slider = function() {
     range = range.map(parseFloat);
     slider.css({position:'absolute',
                 'z-index':1,                
-                top:(self.offset().top+self.outerHeight()-5)+'px',
-                left:self.offset().left+'px',
+                top:(self.position().top+self.outerHeight()-5)+'px',
+                left:self.position().left+'px',
                 height:5+'px',
                 'pointer-events':'none',
                 background:'rgba(0,0,0,0.2)'});
     var left = parseInt(self.css('padding-left').replace('px',''));
     var right = parseInt(self.css('padding-right').replace('px',''));
     var update = (function(e){
-            var shift = e.offsetX;
+            var shift = e.pageX-self.position().left;
             var percent = Math.max(0,Math.min(1.0,shift/(self.outerWidth())));
             var value = range[0]+percent*(range[1]-range[0]);
             if(range[2]) value=range[2]*Math.round(value/range[2]);
@@ -43,7 +43,7 @@ $.fn.slider = function() {
     self.mouseout(function(e) {isDragging = false});
     self.mouseup(function() {isDragging = false;});    
     $(window).on('resize',function(){
-            slider.css({top:(self.offset().top+self.outerHeight()-5)+'px', left:self.offset().left+'px'});
+            slider.css({top:(self.position().top+self.outerHeight()-5)+'px', left:self.position().left+'px'});
         });
 };
 
