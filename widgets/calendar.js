@@ -48,7 +48,6 @@ $.fn.calendar = function() {
     };
     var q = date;
     var redraw = function(mute) {
-        console.log(date);
         if(!mute) input.val(date.format(format));        
         if(input.is('.error')) input.removeClass('error');
         if(input.val().trim()=='') {
