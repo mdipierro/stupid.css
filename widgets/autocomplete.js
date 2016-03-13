@@ -6,7 +6,8 @@ $.fn.autocomplete = function() {
     
     var options = eval('('+(this.data('source')||[])+')');
     var self = this;
-    var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder'));x.hide().after(w);return w;};
+    if(self.data('has-widget'))return; else self.data('has-widget',1);
+    var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder')).addClass('has-widget');x.hide().after(w);return w;};
     var mode = this.data('mode')||'simple'; // 'chained' or 'keyed'
     var min_length = parseInt(this.data('min-length')||'2');
     var input = (mode=='keyed')?swap(self):self;
@@ -37,35 +38,37 @@ $.fn.autocomplete = function() {
                 'cursor':'pointer',
                 'top':(input.offset().top+input.height()+10)+'px',
                 'left':(input.offset().left)+'px',
+                'width':input.width()+'px',
                 'background':'white',
                 'box-shadow':'0 0 12px #ddd'});
         });
-    popup.on('click','option',function(){
-            /* todo */
-        });
     input.blur(function(){
-            popup.hide();
+            popup.fadeOut();
             suggestion.hide();
         });
     var p = 0;
     var get = function(){return input.val().split(/\s+/ig); }
     var cmp = function(a,b){return a.toLowerCase()==b.toLowerCase();};
+    var getval = function(item) {
+        var keywords = get();
+        var v;
+        for(var k=0; k<keywords.length; k++) {
+            v = keywords.slice(k).join(' ');
+            if(cmp(v,item[0].substr(0,v.length))) break;
+        }
+        return input.val()+item[0].substr(v.length);
+    };
     var select = function(item) {
-        console.log(item);
         if(mode=='simple') {
             input.val(item[0]).change();            
         } else if(mode=='keyed') {
             input.val(item[0]);
             self.val(item[1]).change();
         } else if(mode=='chained') {
-            var keywords = get();
-            var k, v;
-            for(k=0; k<keywords.length; k++) {
-                v = keywords.slice(k).join(' ');
-                if(cmp(v,item[0].substr(0,v.length))) break;
-            }            
-            input.val(input.val()+item[0].substr(v.length));
+            input.val(getval(item));
         }
+        p = 0;
+        items = [];
     };
     var items = [];
     var tab = function(e) {
@@ -73,16 +76,12 @@ $.fn.autocomplete = function() {
             e.preventDefault();
             popup.hide();
             select(items[p]);
-            p = 0;
-            items = [];
         }
     };
     var keypress = function(e){                    
         var keywords = get();
-        console.log('keywords:'+keywords+' :'+keywords.length);
         items = [];
         for(var k=0; k<keywords.length; k++) {
-            console.log(k);
             var v = keywords.slice(k).join(' ');
             if(v.length>=min_length) {
                 for(var i=0;i<options.length;i++) {
@@ -109,12 +108,12 @@ $.fn.autocomplete = function() {
         }
         if(items.length) {
             p = Math.max(0,Math.min(p,items.length-1));
-            var v = input.val();
-            suggestion.val(v+items[p][0].substr(v.length));
+            suggestion.val(getval(items[p]));
             suggestion.show();
             popup.show().html('');
             for(var i=0;i<items.length;i++) {
-                var q = jQuery('<li>'+items[i][0]+'</li>');
+                var li = '<li data-index="'+i+'">'+items[i][0]+'</li>';
+                var q = jQuery(li);
                 if(i==p) q.css('font-weight','bold');
                 q.click((function(i){return function(){
                                 select(items[i]);
@@ -130,8 +129,8 @@ $.fn.autocomplete = function() {
     input.keyup(keypress).keydown(tab);
     $(window).on('resize',function(){
             suggestion.css({top:input.offset().top+'px',left:input.offset().left+'px'});
-            popup.css({top:(input.offset().top+input.height()+10)+'px',left:input.offset().left+'px'});
+            popup.css({top:(input.offset().top+input.height()+10)+'px',left:input.offset().left+'px',width:input.width()+'px'});
         });
 };
 
-jQuery(function(){ jQuery('.autocomplete').autocomplete();});
+jQuery(function(){ jQuery('input.autocomplete').autocomplete();});

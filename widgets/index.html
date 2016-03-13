@@ -127,6 +127,11 @@ jQuery('.slider').slider();</pre>
               <p>
                 These functions take no argments.
               </p>
+              <h3>Events</h3>
+              All widgets emit a <tt>change</tt> event when their value change and it can be capured with:
+              <pre>jQuery(selector).change(function(){...});</pre>
+              To set the value of a widget (calendar, stars, tags) you can use the set event:
+              <pre>jQuery(selector).trigger('set',value);</pre>
               <h3>What about styling?</h3>
               <p>Most of the widgets do not require styling as they adopt the style of the underlying element. They are easy to re-style with regular CSS. Should work with any CSS framework without too much trouble. Here we are using them with stupid.css.</p>
               <h3>License</h3>
@@ -139,5 +144,5 @@ jQuery('.slider').slider();</pre>
   </body> 
   <script src="jquery.js"></script> 
   <script src="sugar.min.js"></script> 
-  <script src="widgets.min.js"></script> 
+  <script src="widgets.min.js"></script>   
 </html>

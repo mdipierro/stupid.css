@@ -3,10 +3,12 @@ $.fn.calendar = function() {
     if(this.length>1)
         return this.each(function(){$(this).calendar();});
 
-    var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder'));x.hide().after(w);return w;};
+    var self = this;
+    if(self.data('has-widget'))return; else self.data('has-widget',1);
+    var swap=function(x){var w=$('<input/>').addClass(x.attr('class')).attr('style',x.attr('style')).attr('placeholder',x.attr('placeholder')).addClass('has-widget');x.hide().after(w);return w;};
     
     var ISO = '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss}';
-    var self = this;
+    if(self.hasClass('time')) ISO='{hh}:{mm}:{ss}';
     var input = swap(self);
     var popup = $('<table class="cal-wrapper"/>');    
     var value = self.val();
@@ -15,13 +17,12 @@ $.fn.calendar = function() {
     var DEFAULT_FORMAT = '{dd}/{MM}/{year} {hh}:{mm} {TT}';
     var format = self.data('format')||DEFAULT_FORMAT;
     var format_time = format;
-    if(format_time.indexOf('{year}')>=0)
+    if(!self.hasClass('time'))
         format_time = format_time.split(' ')[1];
     var timeout = null;
-    var set = function() {
-        self.val(input.val().trim().length && 
-                 date && 
-                 date.format(ISO)||'').change();
+    var set = function() {        
+        var d = input.val().trim().length && date && date.format(ISO);
+        self.val(d||'').change();
     };
     var update = (function() {
             date=Date.create(input.val());
@@ -135,10 +136,16 @@ $.fn.calendar = function() {
     input.val(date.format(format)).after(popup);    
     set();
 
+    self.on('set',function(event,k){
+            self.val(k);
+            date=Date.create(k);
+            input.val(date.format(format));
+        });
     $(window).on('resize',function(){
             popup.css({top:(input.offset().top+input.height()+10)+'px',
                         left:input.offset().left+'px'});
         });
 };
 
-$(function(){ $('.date,.datetime,.time').calendar();});
+$(function(){ $('input.date,input.datetime,input.time').calendar();});
+$(function(){ $('.date[date-format]:not(input),.datetime[date-format]:not(input),.time[date-format]:not(input)').each(function(){t=$(this);t.html(Date.create(t.html()).format(t.date('format')));});});

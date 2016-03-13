@@ -4,7 +4,7 @@ $.fn.slider = function() {
     if(this.length>1)
         return this.each(function(){$(this).slider();});
     var self = this;
-    var slider = $('<div/>');    
+    if(self.data('has-widget')) return; else self.data('has-widget',1);    var slider = $('<div/>');    
     var range = self.attr('data-range').split(',');
     var decimals = range[1]&&range[1].split('.')[1];
     decimals = decimals&&decimals.length||0;
@@ -47,4 +47,4 @@ $.fn.slider = function() {
         });
 };
 
-$(function(){ $('.slider').slider(); });
+$(function(){ $('input.slider').slider(); });

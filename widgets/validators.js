@@ -35,7 +35,6 @@ $(function(){
                 var v=t.val();
                 var range = t.attr('data-range').split(',');
                 if(t.is('.integer')||t.is('.number')) {
-                    console.log(v);
                     v = parseFloat(v);
                     range = [range[0]||parseFloat(range[0]),range[1]||parseFloat(range[1])];
                 }
