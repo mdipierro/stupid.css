@@ -345,13 +345,13 @@ a:not(.btn):not(.noeffect):after {
 /**** tags ****/
 .tags > span {
   padding: 4px 9px;
-  margin: 0 5px 30px 0 !important;
   white-space: nowrap;
   color: white;
   background-color: #26a69a;
   border-radius: 5px;
+  font-size:12px;
+  margin: 5px 5px 5px 0 !important;
   line-height: 32px;
-  font-size:12px
 }
 .tags.dismissible > span:hover {opacity: 0.5}
 .tags.dismissible > span:not(.off):after {content:" ✕"}
