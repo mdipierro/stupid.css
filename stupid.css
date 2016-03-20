@@ -75,7 +75,7 @@ input:invalid, input.error {background:#cc1f00!important;color:white}
 
 /*** grid ***/
 .container {margin-right:-20px}
-.container>.quarter, .container>.half, .container>.third, .container>.twothirds, .container>.threequarters, .container>.fill{display:inline-block; padding:5px 20px 5px 0; vertical-align:top}
+.container>.quarter, .container>.half, .container>.third, .container>.twothirds, .container>.threequarters, .container>.fill{display:inline-block; padding: 0 20px 0 0; vertical-align:top}
 .container>.fill {width:100%; margin-right:-20px}
 .container img, .container video {max-width:100%}
 @media (min-width:800px) {
