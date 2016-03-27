@@ -288,7 +288,7 @@ a:not(.btn):not(.noeffect):after {
   content:attr(data-tooltip);
   left:0;
   top:2px;
-  margin-left:-20;
+  margin-left:-20px;
   margin-top:1.5em;
   padding:5px 15px;
   white-space:pre-wrap;
