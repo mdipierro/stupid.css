@@ -350,8 +350,8 @@ a:not(.btn):not(.noeffect):after {
   background-color: #26a69a;
   border-radius: 5px;
   font-size:12px;
-  margin: 5px 5px 5px 0 !important;
-  line-height: 32px;
+  margin: 2px 5px 2px 0 !important;
+  display: inline-block;
 }
 .tags.dismissible > span:hover {opacity: 0.5}
 .tags.dismissible > span:not(.off):after {content:" ✕"}
