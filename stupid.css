@@ -23,12 +23,10 @@ h5{font-size:1.4em; margin:0.6em 0 0.25em 0}
 h6{font-size:1.2em; margin:0.5em 0 0.25em 0}
 table {border-collapse:collapse}
 tbody tr:hover {background-color:#fbf6d9}
-td, th {padding:5px; vertical-align:top; text-align:left; border:0}
 thead tr {background-color:#f1f1f1}
 tbody tr {border-bottom:2px solid #f1f1f1}
-th {font-weight:bold; padding:5px; vertical-align:bottom; text-align:left}
+td, th {padding: 5px; text-align: left; vertical-align:top}
 thead th {vertical-align:bottom}
-tbody th {vertical-align:top}
 header, footer {with:100%}
 
 @media all and (max-width:599px) {
