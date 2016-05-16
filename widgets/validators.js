@@ -42,7 +42,7 @@ $(function(){
                     t.addClass('error');
                 else remove(t,'error');
             });
-        doc.on('keyup', 'input[data-regex]', function () {
+        doc.on('keyup', '[data-regex]', function () {
                 var t=$(this);
                 var v=t.val();
                 var re = new RegExp(t.attr('data-regex'));
