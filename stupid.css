@@ -15,7 +15,7 @@ label, strong {font-weight:bold}
 ul {list-style-type:none; padding-left:20px}
 a {text-decoration:none; color:#26a69a; white-space:nowrap}
 a:hover {cursor:pointer}
-h1,h2,h3,h4,h5,h6{font-weight:bold; text-transform:uppercase}
+h1,h2,h3,h4,h5,h6{font-weight:bold}
 h1{font-size:4em; margin:1.0em 0 0.25em 0}
 h2{font-size:2.4em; margin:0.9em 0 0.25em 0}
 h3{font-size:1.8em; margin:0.8em 0 0.25em 0}
