@@ -44,7 +44,7 @@ header, main, footer {display:block; with:100%} /* IE fix */
 .btn:hover, button:hover, [type=button]:hover, [type=submit]:hover {box-shadow:0 0 10px #666; text-decoration:none; cursor:pointer}
 .btn.small, table .btn {padding:0.25em 0.5em; font-size:0.8em}
 .btn.large {padding:1em 2em; font-size:1.2em}
-.btn.oval {border-radius:50%}
+.oval {border-radius:50%}
 
 /*** helpers ***/
 .rounded {-moz-border-radius:5px; border-radius:5px}
