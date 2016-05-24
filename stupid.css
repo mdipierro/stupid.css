@@ -62,7 +62,7 @@ header, main, footer {display:block; with:100%} /* IE fix */
 .relative {position:relative}
 .relative>div {position:absolute}
 .spaced {margin-bottom:20px; margin-top:20px}
-.hidden {display:none}
+.hidden {display:none !important}
 
 /*** forms ***/
 input:not([type]), input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]), [type=file]:before {outline:none; padding:0.5em 1em; margin:0.5px; border-bottom:1px solid #ddd; width:100%}
