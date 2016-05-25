@@ -208,6 +208,24 @@ input:invalid, input.error, textarea:invalid, textarea.error {background: #ffdfd
   .burger.accordion * {max-height:1000px; overflow:visible}
 }
 
+/*** sliding sidebar ***/
+.sidebar {
+    position:fixed;
+    z-index:1000;
+    -webkit-transition:all 0.5s, -webkit-transform 0.5s;
+    transition:all 0.5s, transform 0.5s;
+    left:0;
+    top:0;
+    height:100vh;
+    box-shadow:0 0 10px #666;    
+    width:220px;
+    padding:0 10px 0 10px;
+    margin-left:-210px;
+}
+.sidebar:hover {margin-left:0}
+.sidebar.right {text-align: left; left: auto; right: 0; margin-right: -210px}
+.sidebar.right:hover {margin-right:0}
+
 /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
 .pulse:after {
     content:"";
