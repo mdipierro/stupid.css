@@ -108,14 +108,10 @@ input:invalid, input.error, textarea:invalid, textarea.error {background: #ffdfd
 
 /*** progress bar from http://codepen.io/holdencreative/details/pvxGxy  ***/
 .progress {
-  margin-left:-15px;
-  margin-right:-15px;
   position:relative;
   height:8px;
   display:block;
-  width:120%;
   background-color:#acece6;
-  border-radius:0;
   background-clip:padding-box;
   overflow:hidden;
 }
