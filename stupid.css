@@ -306,10 +306,11 @@ a:not(.btn):not(.noeffect):after {
   margin-top:1.5em;
   padding:5px 15px;
   white-space:pre-wrap;
-  width:100px;
+  min-width:100px;
 }
 
 /*** accordion ***/
+.accordion>label{cursor:pointer}
 .accordion>input ~ label:before {content:"▲ "; color:#ddd}
 .accordion>input:checked ~ label:before {content:"▼ "; color:#ddd}
 .accordion>input {display:none}
